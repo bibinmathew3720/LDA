@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		94C757EAB6C77A2B52FC7E70 /* libPods-LDA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D69D6543F714AD3B61EF4D /* libPods-LDA.a */; };
 		D057CCC020BDCCAD00C1F9F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D057CCBF20BDCCAD00C1F9F2 /* AppDelegate.m */; };
-		D057CCC320BDCCAD00C1F9F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D057CCC220BDCCAD00C1F9F2 /* ViewController.m */; };
 		D057CCC620BDCCAD00C1F9F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D057CCC420BDCCAD00C1F9F2 /* Main.storyboard */; };
 		D057CCC920BDCCAD00C1F9F2 /* LDA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D057CCC720BDCCAD00C1F9F2 /* LDA.xcdatamodeld */; };
 		D057CCCB20BDCCAF00C1F9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D057CCCA20BDCCAF00C1F9F2 /* Assets.xcassets */; };
 		D057CCCE20BDCCAF00C1F9F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D057CCCC20BDCCAF00C1F9F2 /* LaunchScreen.storyboard */; };
 		D057CCD120BDCCAF00C1F9F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D057CCD020BDCCAF00C1F9F2 /* main.m */; };
+		D057CCD920BDD15A00C1F9F2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D057CCD820BDD15A00C1F9F2 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,14 +24,14 @@
 		D057CCBB20BDCCAD00C1F9F2 /* LDA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LDA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D057CCBE20BDCCAD00C1F9F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D057CCBF20BDCCAD00C1F9F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D057CCC120BDCCAD00C1F9F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D057CCC220BDCCAD00C1F9F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D057CCC520BDCCAD00C1F9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D057CCC820BDCCAD00C1F9F2 /* LDA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LDA.xcdatamodel; sourceTree = "<group>"; };
 		D057CCCA20BDCCAF00C1F9F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D057CCCD20BDCCAF00C1F9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D057CCCF20BDCCAF00C1F9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D057CCD020BDCCAF00C1F9F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D057CCD720BDD15A00C1F9F2 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D057CCD820BDD15A00C1F9F2 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +86,8 @@
 			children = (
 				D057CCBE20BDCCAD00C1F9F2 /* AppDelegate.h */,
 				D057CCBF20BDCCAD00C1F9F2 /* AppDelegate.m */,
-				D057CCC120BDCCAD00C1F9F2 /* ViewController.h */,
-				D057CCC220BDCCAD00C1F9F2 /* ViewController.m */,
+				D057CCD720BDD15A00C1F9F2 /* HomeViewController.h */,
+				D057CCD820BDD15A00C1F9F2 /* HomeViewController.m */,
 				D057CCC420BDCCAD00C1F9F2 /* Main.storyboard */,
 				D057CCCA20BDCCAF00C1F9F2 /* Assets.xcassets */,
 				D057CCCC20BDCCAF00C1F9F2 /* LaunchScreen.storyboard */,
@@ -191,8 +191,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D057CCC920BDCCAD00C1F9F2 /* LDA.xcdatamodeld in Sources */,
-				D057CCC320BDCCAD00C1F9F2 /* ViewController.m in Sources */,
 				D057CCD120BDCCAF00C1F9F2 /* main.m in Sources */,
+				D057CCD920BDD15A00C1F9F2 /* HomeViewController.m in Sources */,
 				D057CCC020BDCCAD00C1F9F2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,8 +337,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WVYK59KXPF;
 				INFOPLIST_FILE = LDA/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lda.LDA;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lda.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -352,8 +356,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WVYK59KXPF;
 				INFOPLIST_FILE = LDA/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lda.LDA;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lda.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
