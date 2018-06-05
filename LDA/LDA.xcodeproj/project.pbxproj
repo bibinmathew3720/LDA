@@ -8,19 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		94C757EAB6C77A2B52FC7E70 /* libPods-LDA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D69D6543F714AD3B61EF4D /* libPods-LDA.a */; };
+		D018C4B320C61D1800DD91C3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D018C4B020C61D1700DD91C3 /* BaseViewController.m */; };
+		D018C4B420C61D1800DD91C3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D018C4B220C61D1700DD91C3 /* HomeViewController.m */; };
+		D018C4D920C61E1500DD91C3 /* roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4CD20C61E1100DD91C3 /* roboto_medium.ttf */; };
+		D018C4DA20C61E1500DD91C3 /* roboto_thinitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4CE20C61E1200DD91C3 /* roboto_thinitalic.ttf */; };
+		D018C4DB20C61E1500DD91C3 /* roboto_blackitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4CF20C61E1200DD91C3 /* roboto_blackitalic.ttf */; };
+		D018C4DC20C61E1500DD91C3 /* roboto_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4D020C61E1300DD91C3 /* roboto_black.ttf */; };
+		D018C4DD20C61E1500DD91C3 /* roboto_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4D120C61E1300DD91C3 /* roboto_light.ttf */; };
+		D018C4DE20C61E1500DD91C3 /* roboto_bolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4D220C61E1300DD91C3 /* roboto_bolditalic.ttf */; };
+		D018C4DF20C61E1500DD91C3 /* roboto_mediumitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4D320C61E1400DD91C3 /* roboto_mediumitalic.ttf */; };
+		D018C4E020C61E1500DD91C3 /* roboto_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4D420C61E1400DD91C3 /* roboto_regular.ttf */; };
+		D018C4E120C61E1500DD91C3 /* roboto_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4D520C61E1400DD91C3 /* roboto_italic.ttf */; };
+		D018C4E220C61E1500DD91C3 /* roboto_lightitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4D620C61E1400DD91C3 /* roboto_lightitalic.ttf */; };
+		D018C4E320C61E1500DD91C3 /* roboto_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4D720C61E1500DD91C3 /* roboto_thin.ttf */; };
+		D018C4E420C61E1500DD91C3 /* roboto_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4D820C61E1500DD91C3 /* roboto_bold.ttf */; };
 		D057CCC020BDCCAD00C1F9F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D057CCBF20BDCCAD00C1F9F2 /* AppDelegate.m */; };
 		D057CCC620BDCCAD00C1F9F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D057CCC420BDCCAD00C1F9F2 /* Main.storyboard */; };
 		D057CCC920BDCCAD00C1F9F2 /* LDA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D057CCC720BDCCAD00C1F9F2 /* LDA.xcdatamodeld */; };
 		D057CCCB20BDCCAF00C1F9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D057CCCA20BDCCAF00C1F9F2 /* Assets.xcassets */; };
 		D057CCCE20BDCCAF00C1F9F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D057CCCC20BDCCAF00C1F9F2 /* LaunchScreen.storyboard */; };
 		D057CCD120BDCCAF00C1F9F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D057CCD020BDCCAF00C1F9F2 /* main.m */; };
-		D057CCD920BDD15A00C1F9F2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D057CCD820BDD15A00C1F9F2 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		50BF2D547272FFE6B19D7068 /* Pods-LDA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LDA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LDA/Pods-LDA.debug.xcconfig"; sourceTree = "<group>"; };
 		71D69D6543F714AD3B61EF4D /* libPods-LDA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LDA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D2A3CE6B7A5E91E0B3E502 /* Pods-LDA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LDA.release.xcconfig"; path = "Pods/Target Support Files/Pods-LDA/Pods-LDA.release.xcconfig"; sourceTree = "<group>"; };
+		D018C4AD20C61CD600DD91C3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		D018C4AF20C61D1700DD91C3 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D018C4B020C61D1700DD91C3 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D018C4B120C61D1700DD91C3 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D018C4B220C61D1700DD91C3 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D018C4CD20C61E1100DD91C3 /* roboto_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_medium.ttf; sourceTree = "<group>"; };
+		D018C4CE20C61E1200DD91C3 /* roboto_thinitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_thinitalic.ttf; sourceTree = "<group>"; };
+		D018C4CF20C61E1200DD91C3 /* roboto_blackitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_blackitalic.ttf; sourceTree = "<group>"; };
+		D018C4D020C61E1300DD91C3 /* roboto_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_black.ttf; sourceTree = "<group>"; };
+		D018C4D120C61E1300DD91C3 /* roboto_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_light.ttf; sourceTree = "<group>"; };
+		D018C4D220C61E1300DD91C3 /* roboto_bolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_bolditalic.ttf; sourceTree = "<group>"; };
+		D018C4D320C61E1400DD91C3 /* roboto_mediumitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_mediumitalic.ttf; sourceTree = "<group>"; };
+		D018C4D420C61E1400DD91C3 /* roboto_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_regular.ttf; sourceTree = "<group>"; };
+		D018C4D520C61E1400DD91C3 /* roboto_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_italic.ttf; sourceTree = "<group>"; };
+		D018C4D620C61E1400DD91C3 /* roboto_lightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_lightitalic.ttf; sourceTree = "<group>"; };
+		D018C4D720C61E1500DD91C3 /* roboto_thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_thin.ttf; sourceTree = "<group>"; };
+		D018C4D820C61E1500DD91C3 /* roboto_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_bold.ttf; sourceTree = "<group>"; };
 		D057CCBB20BDCCAD00C1F9F2 /* LDA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LDA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D057CCBE20BDCCAD00C1F9F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D057CCBF20BDCCAD00C1F9F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -30,8 +60,6 @@
 		D057CCCD20BDCCAF00C1F9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D057CCCF20BDCCAF00C1F9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D057CCD020BDCCAF00C1F9F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D057CCD720BDD15A00C1F9F2 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		D057CCD820BDD15A00C1F9F2 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +91,44 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D018C4AB20C61CD400DD91C3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D018C4D020C61E1300DD91C3 /* roboto_black.ttf */,
+				D018C4CF20C61E1200DD91C3 /* roboto_blackitalic.ttf */,
+				D018C4D820C61E1500DD91C3 /* roboto_bold.ttf */,
+				D018C4D220C61E1300DD91C3 /* roboto_bolditalic.ttf */,
+				D018C4D520C61E1400DD91C3 /* roboto_italic.ttf */,
+				D018C4D120C61E1300DD91C3 /* roboto_light.ttf */,
+				D018C4D620C61E1400DD91C3 /* roboto_lightitalic.ttf */,
+				D018C4CD20C61E1100DD91C3 /* roboto_medium.ttf */,
+				D018C4D320C61E1400DD91C3 /* roboto_mediumitalic.ttf */,
+				D018C4D420C61E1400DD91C3 /* roboto_regular.ttf */,
+				D018C4D720C61E1500DD91C3 /* roboto_thin.ttf */,
+				D018C4CE20C61E1200DD91C3 /* roboto_thinitalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D018C4AC20C61CD600DD91C3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D018C4AD20C61CD600DD91C3 /* Constants.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D018C4AE20C61D1700DD91C3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D018C4AF20C61D1700DD91C3 /* BaseViewController.h */,
+				D018C4B020C61D1700DD91C3 /* BaseViewController.m */,
+				D018C4B120C61D1700DD91C3 /* HomeViewController.h */,
+				D018C4B220C61D1700DD91C3 /* HomeViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		D057CCB220BDCCAD00C1F9F2 = {
 			isa = PBXGroup;
 			children = (
@@ -84,10 +150,11 @@
 		D057CCBD20BDCCAD00C1F9F2 /* LDA */ = {
 			isa = PBXGroup;
 			children = (
+				D018C4AE20C61D1700DD91C3 /* ViewControllers */,
+				D018C4AB20C61CD400DD91C3 /* Fonts */,
+				D018C4AC20C61CD600DD91C3 /* Helpers */,
 				D057CCBE20BDCCAD00C1F9F2 /* AppDelegate.h */,
 				D057CCBF20BDCCAD00C1F9F2 /* AppDelegate.m */,
-				D057CCD720BDD15A00C1F9F2 /* HomeViewController.h */,
-				D057CCD820BDD15A00C1F9F2 /* HomeViewController.m */,
 				D057CCC420BDCCAD00C1F9F2 /* Main.storyboard */,
 				D057CCCA20BDCCAF00C1F9F2 /* Assets.xcassets */,
 				D057CCCC20BDCCAF00C1F9F2 /* LaunchScreen.storyboard */,
@@ -156,8 +223,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D018C4DD20C61E1500DD91C3 /* roboto_light.ttf in Resources */,
+				D018C4E020C61E1500DD91C3 /* roboto_regular.ttf in Resources */,
+				D018C4E320C61E1500DD91C3 /* roboto_thin.ttf in Resources */,
 				D057CCCE20BDCCAF00C1F9F2 /* LaunchScreen.storyboard in Resources */,
+				D018C4E420C61E1500DD91C3 /* roboto_bold.ttf in Resources */,
+				D018C4E120C61E1500DD91C3 /* roboto_italic.ttf in Resources */,
+				D018C4DB20C61E1500DD91C3 /* roboto_blackitalic.ttf in Resources */,
+				D018C4DE20C61E1500DD91C3 /* roboto_bolditalic.ttf in Resources */,
+				D018C4DF20C61E1500DD91C3 /* roboto_mediumitalic.ttf in Resources */,
 				D057CCCB20BDCCAF00C1F9F2 /* Assets.xcassets in Resources */,
+				D018C4DA20C61E1500DD91C3 /* roboto_thinitalic.ttf in Resources */,
+				D018C4DC20C61E1500DD91C3 /* roboto_black.ttf in Resources */,
+				D018C4E220C61E1500DD91C3 /* roboto_lightitalic.ttf in Resources */,
+				D018C4D920C61E1500DD91C3 /* roboto_medium.ttf in Resources */,
 				D057CCC620BDCCAD00C1F9F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,8 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D057CCC920BDCCAD00C1F9F2 /* LDA.xcdatamodeld in Sources */,
+				D018C4B320C61D1800DD91C3 /* BaseViewController.m in Sources */,
 				D057CCD120BDCCAF00C1F9F2 /* main.m in Sources */,
-				D057CCD920BDD15A00C1F9F2 /* HomeViewController.m in Sources */,
+				D018C4B420C61D1800DD91C3 /* HomeViewController.m in Sources */,
 				D057CCC020BDCCAD00C1F9F2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
