@@ -27,13 +27,27 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgView" translatesAutoresizingMaskIntoConstraints="NO" id="oXQ-Tj-i2G">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="603"/>
                                             </imageView>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A6e-sV-tkY">
+                                                <rect key="frame" x="10" y="10" width="354" height="41"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Ehc-Ne-pfw"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="One-way/Round"/>
+                                                    <segment title="MultipleStop"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.14117647058823529" green="0.47450980392156861" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                            </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="oXQ-Tj-i2G" secondAttribute="bottom" id="2qm-Kg-yuh"/>
                                             <constraint firstAttribute="trailing" secondItem="oXQ-Tj-i2G" secondAttribute="trailing" id="LUz-Ro-SId"/>
+                                            <constraint firstItem="A6e-sV-tkY" firstAttribute="top" secondItem="3pc-ka-Fz0" secondAttribute="top" constant="10" id="TaO-Ib-uw6"/>
+                                            <constraint firstAttribute="trailing" secondItem="A6e-sV-tkY" secondAttribute="trailing" constant="10" id="a9S-Ue-yKY"/>
                                             <constraint firstItem="oXQ-Tj-i2G" firstAttribute="leading" secondItem="3pc-ka-Fz0" secondAttribute="leading" id="bpN-qz-hBh"/>
                                             <constraint firstItem="oXQ-Tj-i2G" firstAttribute="top" secondItem="3pc-ka-Fz0" secondAttribute="top" id="coq-sx-2a8"/>
+                                            <constraint firstItem="A6e-sV-tkY" firstAttribute="leading" secondItem="3pc-ka-Fz0" secondAttribute="leading" constant="10" id="hpr-Tg-a4J"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -60,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="-387"/>
+            <point key="canvasLocation" x="878" y="-420"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="33X-ZN-U6y">
