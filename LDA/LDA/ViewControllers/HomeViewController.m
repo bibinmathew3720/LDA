@@ -11,6 +11,7 @@
 
 @interface HomeViewController ()
 @property (nonatomic,strong) OneWayRoundView *onewayRoundView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @end
 
 @implementation HomeViewController
@@ -24,7 +25,7 @@
 
 -(void)addingOneWayView{
     self.onewayRoundView = [[[NSBundle mainBundle] loadNibNamed:@"OneWayRoundView" owner:self options:nil] objectAtIndex:0];
-    self.onewayRoundView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-100);
+    self.onewayRoundView.frame = CGRectMake(0, self.segmentControl.bottom+10, self.view.frame.size.width, self.view.frame.size.height-self.segmentControl.bottom-10);
     [self.view addSubview:self.onewayRoundView];
 }
 
@@ -32,6 +33,8 @@
     self.title = @"Home";
 }
 
+- (IBAction)segmentControlAction:(UISegmentedControl *)sender {
+}
 
 
 - (void)didReceiveMemoryWarning {

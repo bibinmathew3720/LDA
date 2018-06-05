@@ -37,6 +37,9 @@
                                                     <segment title="MultipleStop"/>
                                                 </segments>
                                                 <color key="tintColor" red="0.14117647058823529" green="0.47450980392156861" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="segmentControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fdd-ao-ksM"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,6 +74,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="mo9-oq-j7C"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="A6e-sV-tkY" id="DLi-tP-6RH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
