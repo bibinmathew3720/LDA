@@ -5,7 +5,7 @@
 //  Created by Bibin Mathew on 5/29/18.
 //  Copyright © 2018 lda. All rights reserved.
 //
-
+#import "Constants.h"
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -17,8 +17,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self initNavigationBarAppearence];
     return YES;
 }
+
+- (void)initNavigationBarAppearence {
+    UINavigationBar * navigationBarAppearence = [UINavigationBar appearance];
+    navigationBarAppearence.translucent = NO;
+    navigationBarAppearence.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Roboto-Bold" size:18],NSFontAttributeName ,[UIColor whiteColor], NSForegroundColorAttributeName, nil];
+    navigationBarAppearence.barTintColor = LDAAPPCOMMONBLUECOLOR;
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
