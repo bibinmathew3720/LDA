@@ -28,7 +28,7 @@
 - (void)initNavigationBarAppearence {
     UINavigationBar * navigationBarAppearence = [UINavigationBar appearance];
     navigationBarAppearence.translucent = NO;
-   //navigationBarAppearence.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:fontNormal size:18],NSFontAttributeName ,[UIColor whiteColor], NSForegroundColorAttributeName, nil];
+   navigationBarAppearence.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Roboto-Bold" size:18],NSFontAttributeName ,[UIColor whiteColor], NSForegroundColorAttributeName, nil];
     navigationBarAppearence.barTintColor = LDAAPPCOMMONBLUECOLOR;
     [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];

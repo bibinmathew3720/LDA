@@ -16,6 +16,12 @@
 
 -(void)initView{
     [super initView];
+    [self initialisation];
+    
+}
+
+-(void)initialisation{
+    self.title = @"Home";
 }
 
 
