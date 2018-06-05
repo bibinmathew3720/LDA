@@ -5,11 +5,12 @@
 //  Created by Bibin Mathew on 5/29/18.
 //  Copyright © 2018 lda. All rights reserved.
 //
+#import "OneWayRoundView.h"
 
 #import "HomeViewController.h"
 
 @interface HomeViewController ()
-
+@property (nonatomic,strong) OneWayRoundView *onewayRoundView;
 @end
 
 @implementation HomeViewController
@@ -17,7 +18,14 @@
 -(void)initView{
     [super initView];
     [self initialisation];
+    [self addingOneWayView];
     
+}
+
+-(void)addingOneWayView{
+    self.onewayRoundView = [[[NSBundle mainBundle] loadNibNamed:@"OneWayRoundView" owner:self options:nil] objectAtIndex:0];
+    self.onewayRoundView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-100);
+    [self.view addSubview:self.onewayRoundView];
 }
 
 -(void)initialisation{
