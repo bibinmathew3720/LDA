@@ -12,6 +12,8 @@
 		D00355A420C76B8400674FEB /* MultipleStopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355A320C76B8400674FEB /* MultipleStopView.m */; };
 		D00355AA20C774C100674FEB /* MultipleStopTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355A820C774C100674FEB /* MultipleStopTVC.m */; };
 		D00355AB20C774C100674FEB /* MultipleStopTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00355A920C774C100674FEB /* MultipleStopTVC.xib */; };
+		D00355AE20C8384D00674FEB /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355AD20C8384D00674FEB /* SearchVC.m */; };
+		D00355B120C842D200674FEB /* PassengerDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355B020C842D200674FEB /* PassengerDetailsVC.m */; };
 		D018C4B320C61D1800DD91C3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D018C4B020C61D1700DD91C3 /* BaseViewController.m */; };
 		D018C4B420C61D1800DD91C3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D018C4B220C61D1700DD91C3 /* HomeViewController.m */; };
 		D018C4D920C61E1500DD91C3 /* roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4CD20C61E1100DD91C3 /* roboto_medium.ttf */; };
@@ -54,6 +56,10 @@
 		D00355A720C774C100674FEB /* MultipleStopTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleStopTVC.h; sourceTree = "<group>"; };
 		D00355A820C774C100674FEB /* MultipleStopTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleStopTVC.m; sourceTree = "<group>"; };
 		D00355A920C774C100674FEB /* MultipleStopTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleStopTVC.xib; sourceTree = "<group>"; };
+		D00355AC20C8384D00674FEB /* SearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
+		D00355AD20C8384D00674FEB /* SearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
+		D00355AF20C842D200674FEB /* PassengerDetailsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassengerDetailsVC.h; sourceTree = "<group>"; };
+		D00355B020C842D200674FEB /* PassengerDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassengerDetailsVC.m; sourceTree = "<group>"; };
 		D018C4AD20C61CD600DD91C3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		D018C4AF20C61D1700DD91C3 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D018C4B020C61D1700DD91C3 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -176,6 +182,10 @@
 				D018C4B020C61D1700DD91C3 /* BaseViewController.m */,
 				D018C4B120C61D1700DD91C3 /* HomeViewController.h */,
 				D018C4B220C61D1700DD91C3 /* HomeViewController.m */,
+				D00355AC20C8384D00674FEB /* SearchVC.h */,
+				D00355AD20C8384D00674FEB /* SearchVC.m */,
+				D00355AF20C842D200674FEB /* PassengerDetailsVC.h */,
+				D00355B020C842D200674FEB /* PassengerDetailsVC.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -402,7 +412,9 @@
 				D057CCD120BDCCAF00C1F9F2 /* main.m in Sources */,
 				D00355A420C76B8400674FEB /* MultipleStopView.m in Sources */,
 				D0BE51AC20C703350072EEA9 /* ResponseHandler.m in Sources */,
+				D00355AE20C8384D00674FEB /* SearchVC.m in Sources */,
 				D0BE51B720C704020072EEA9 /* UIView+CLAdditions.m in Sources */,
+				D00355B120C842D200674FEB /* PassengerDetailsVC.m in Sources */,
 				D00355AA20C774C100674FEB /* MultipleStopTVC.m in Sources */,
 				D0BE51AB20C703350072EEA9 /* RequestBodyGenerator.m in Sources */,
 				D0BE51A920C703350072EEA9 /* NetworkHandler.m in Sources */,

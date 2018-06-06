@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
 #import "UIView+CLAdditions.h"
 #import "NSString+Extension.h"
 
