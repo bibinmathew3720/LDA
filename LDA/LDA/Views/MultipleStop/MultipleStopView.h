@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MultipleStopView : UIView
+@interface MultipleStopView : UIView<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *multipleStopTableView;
 
 @end

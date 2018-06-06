@@ -288,6 +288,9 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wE6-Jg-9KP" secondAttribute="trailing" id="sUR-Ax-WZx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="multipleStopTableView" destination="RqD-Kj-j1K" id="Qe4-Sk-dMx"/>
+            </connections>
             <point key="canvasLocation" x="62.5" y="58.5"/>
         </view>
     </objects>

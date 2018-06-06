@@ -10,6 +10,8 @@
 		94C757EAB6C77A2B52FC7E70 /* libPods-LDA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D69D6543F714AD3B61EF4D /* libPods-LDA.a */; };
 		D00355A120C76B6900674FEB /* MultipleStopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00355A020C76B6900674FEB /* MultipleStopView.xib */; };
 		D00355A420C76B8400674FEB /* MultipleStopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355A320C76B8400674FEB /* MultipleStopView.m */; };
+		D00355AA20C774C100674FEB /* MultipleStopTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355A820C774C100674FEB /* MultipleStopTVC.m */; };
+		D00355AB20C774C100674FEB /* MultipleStopTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00355A920C774C100674FEB /* MultipleStopTVC.xib */; };
 		D018C4B320C61D1800DD91C3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D018C4B020C61D1700DD91C3 /* BaseViewController.m */; };
 		D018C4B420C61D1800DD91C3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D018C4B220C61D1700DD91C3 /* HomeViewController.m */; };
 		D018C4D920C61E1500DD91C3 /* roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4CD20C61E1100DD91C3 /* roboto_medium.ttf */; };
@@ -49,6 +51,9 @@
 		D00355A020C76B6900674FEB /* MultipleStopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleStopView.xib; sourceTree = "<group>"; };
 		D00355A220C76B8400674FEB /* MultipleStopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleStopView.h; sourceTree = "<group>"; };
 		D00355A320C76B8400674FEB /* MultipleStopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleStopView.m; sourceTree = "<group>"; };
+		D00355A720C774C100674FEB /* MultipleStopTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleStopTVC.h; sourceTree = "<group>"; };
+		D00355A820C774C100674FEB /* MultipleStopTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleStopTVC.m; sourceTree = "<group>"; };
+		D00355A920C774C100674FEB /* MultipleStopTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleStopTVC.xib; sourceTree = "<group>"; };
 		D018C4AD20C61CD600DD91C3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		D018C4AF20C61D1700DD91C3 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D018C4B020C61D1700DD91C3 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -125,6 +130,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D00355A620C774A300674FEB /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				D00355A720C774C100674FEB /* MultipleStopTVC.h */,
+				D00355A820C774C100674FEB /* MultipleStopTVC.m */,
+				D00355A920C774C100674FEB /* MultipleStopTVC.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
 		D018C4AB20C61CD400DD91C3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +201,7 @@
 		D057CCBD20BDCCAD00C1F9F2 /* LDA */ = {
 			isa = PBXGroup;
 			children = (
+				D00355A620C774A300674FEB /* CustomCells */,
 				D0BE518B20C6D7210072EEA9 /* Views */,
 				D018C4AE20C61D1700DD91C3 /* ViewControllers */,
 				D018C4AB20C61CD400DD91C3 /* Fonts */,
@@ -330,6 +346,7 @@
 				D018C4DD20C61E1500DD91C3 /* roboto_light.ttf in Resources */,
 				D018C4E020C61E1500DD91C3 /* roboto_regular.ttf in Resources */,
 				D018C4E320C61E1500DD91C3 /* roboto_thin.ttf in Resources */,
+				D00355AB20C774C100674FEB /* MultipleStopTVC.xib in Resources */,
 				D057CCCE20BDCCAF00C1F9F2 /* LaunchScreen.storyboard in Resources */,
 				D018C4E420C61E1500DD91C3 /* roboto_bold.ttf in Resources */,
 				D018C4E120C61E1500DD91C3 /* roboto_italic.ttf in Resources */,
@@ -386,6 +403,7 @@
 				D00355A420C76B8400674FEB /* MultipleStopView.m in Sources */,
 				D0BE51AC20C703350072EEA9 /* ResponseHandler.m in Sources */,
 				D0BE51B720C704020072EEA9 /* UIView+CLAdditions.m in Sources */,
+				D00355AA20C774C100674FEB /* MultipleStopTVC.m in Sources */,
 				D0BE51AB20C703350072EEA9 /* RequestBodyGenerator.m in Sources */,
 				D0BE51A920C703350072EEA9 /* NetworkHandler.m in Sources */,
 				D018C4B420C61D1800DD91C3 /* HomeViewController.m in Sources */,
