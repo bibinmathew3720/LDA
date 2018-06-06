@@ -85,6 +85,44 @@
 - (IBAction)tapGestureAction:(UITapGestureRecognizer *)sender {
     [self.view endEditing:YES];
 }
+- (IBAction)submitButtonAction:(UIButton *)sender {
+    if([self isValidInputs]){
+        
+    }
+}
+
+#pragma mark - Validation
+
+-(BOOL)isValidInputs{
+    BOOL isValid = YES;
+    NSString *messageString = @"";
+    if([self.firstNameTF.text empty]){
+        isValid = NO;
+        messageString = @"Please enter first name";
+    }
+    else if([self.lastNameTF.text empty]){
+        isValid = NO;
+        messageString = @"Please enter last name";
+    }
+    else if([self.emailTF.text empty]){
+        isValid = NO;
+        messageString = @"Please enter email id";
+    }
+    else if(![self.emailTF.text validEmail]){
+        isValid = NO;
+        messageString = @"Please enter valid email id";
+    }
+    else if([self.phoneTF.text empty]){
+        isValid = NO;
+        messageString = @"Please enter phone number";
+    }
+    if(!isValid){
+        [self showAlertWithTitle:APPNAME Message:messageString WithCompletion:^{
+            
+        }];
+    }
+    return isValid;
+}
 
 /*
 #pragma mark - Navigation

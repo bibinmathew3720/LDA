@@ -13,4 +13,5 @@
 
 @interface BaseViewController : UIViewController
 -(void)initView;
+-(void)showAlertWithTitle:(NSString *)titleString Message:(NSString *)alertMessage WithCompletion:(void(^)(void))okCompletion;
 @end
