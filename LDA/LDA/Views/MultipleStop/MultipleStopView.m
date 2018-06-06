@@ -33,7 +33,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 100;
 }
 /*
 // Only override drawRect: if you perform custom drawing.
