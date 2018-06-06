@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		94C757EAB6C77A2B52FC7E70 /* libPods-LDA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D69D6543F714AD3B61EF4D /* libPods-LDA.a */; };
+		D00355A120C76B6900674FEB /* MultipleStopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00355A020C76B6900674FEB /* MultipleStopView.xib */; };
+		D00355A420C76B8400674FEB /* MultipleStopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355A320C76B8400674FEB /* MultipleStopView.m */; };
 		D018C4B320C61D1800DD91C3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D018C4B020C61D1700DD91C3 /* BaseViewController.m */; };
 		D018C4B420C61D1800DD91C3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D018C4B220C61D1700DD91C3 /* HomeViewController.m */; };
 		D018C4D920C61E1500DD91C3 /* roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4CD20C61E1100DD91C3 /* roboto_medium.ttf */; };
@@ -44,6 +46,9 @@
 		50BF2D547272FFE6B19D7068 /* Pods-LDA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LDA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LDA/Pods-LDA.debug.xcconfig"; sourceTree = "<group>"; };
 		71D69D6543F714AD3B61EF4D /* libPods-LDA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LDA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D2A3CE6B7A5E91E0B3E502 /* Pods-LDA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LDA.release.xcconfig"; path = "Pods/Target Support Files/Pods-LDA/Pods-LDA.release.xcconfig"; sourceTree = "<group>"; };
+		D00355A020C76B6900674FEB /* MultipleStopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleStopView.xib; sourceTree = "<group>"; };
+		D00355A220C76B8400674FEB /* MultipleStopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleStopView.h; sourceTree = "<group>"; };
+		D00355A320C76B8400674FEB /* MultipleStopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleStopView.m; sourceTree = "<group>"; };
 		D018C4AD20C61CD600DD91C3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		D018C4AF20C61D1700DD91C3 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D018C4B020C61D1700DD91C3 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -219,6 +224,9 @@
 		D0BE519020C6D7EC0072EEA9 /* MultipleStop */ = {
 			isa = PBXGroup;
 			children = (
+				D00355A020C76B6900674FEB /* MultipleStopView.xib */,
+				D00355A220C76B8400674FEB /* MultipleStopView.h */,
+				D00355A320C76B8400674FEB /* MultipleStopView.m */,
 			);
 			path = MultipleStop;
 			sourceTree = "<group>";
@@ -327,6 +335,7 @@
 				D018C4E120C61E1500DD91C3 /* roboto_italic.ttf in Resources */,
 				D018C4DB20C61E1500DD91C3 /* roboto_blackitalic.ttf in Resources */,
 				D018C4DE20C61E1500DD91C3 /* roboto_bolditalic.ttf in Resources */,
+				D00355A120C76B6900674FEB /* MultipleStopView.xib in Resources */,
 				D018C4DF20C61E1500DD91C3 /* roboto_mediumitalic.ttf in Resources */,
 				D057CCCB20BDCCAF00C1F9F2 /* Assets.xcassets in Resources */,
 				D0BE519520C6D8180072EEA9 /* OneWayRoundView.xib in Resources */,
@@ -374,6 +383,7 @@
 				D0BE519320C6D8060072EEA9 /* OneWayRoundView.m in Sources */,
 				D0BE51B620C704020072EEA9 /* NSString+Extension.m in Sources */,
 				D057CCD120BDCCAF00C1F9F2 /* main.m in Sources */,
+				D00355A420C76B8400674FEB /* MultipleStopView.m in Sources */,
 				D0BE51AC20C703350072EEA9 /* ResponseHandler.m in Sources */,
 				D0BE51B720C704020072EEA9 /* UIView+CLAdditions.m in Sources */,
 				D0BE51AB20C703350072EEA9 /* RequestBodyGenerator.m in Sources */,
