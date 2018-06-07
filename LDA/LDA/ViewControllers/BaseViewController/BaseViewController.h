@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "Constants.h"
+#import "MBProgressHUD.h"
 #import "UIView+CLAdditions.h"
 #import "NSString+Extension.h"
 
+
 @interface BaseViewController : UIViewController
--(void)initView;
+@property(nonatomic,strong) UIBarButtonItem *leftBarButton;
+
+- (void) initView;
+- (void) showLeftBarButton;
 -(void)showAlertWithTitle:(NSString *)titleString Message:(NSString *)alertMessage WithCompletion:(void(^)(void))okCompletion;
 @end

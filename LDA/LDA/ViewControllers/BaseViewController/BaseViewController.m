@@ -47,6 +47,17 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+#pragma mark - Show Left Bar Button
+
+- (void)showLeftBarButton {
+    self.leftBarButton = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"backArrow"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]  style:UIBarButtonItemStylePlain target:self action:@selector(leftButtonAction:)];
+    self.navigationItem.leftBarButtonItem =  self.leftBarButton;
+}
+
+-(void)leftButtonAction:(UIBarButtonItem *)barButton{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 /*
 #pragma mark - Navigation
 

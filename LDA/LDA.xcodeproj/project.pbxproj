@@ -12,10 +12,6 @@
 		D00355A420C76B8400674FEB /* MultipleStopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355A320C76B8400674FEB /* MultipleStopView.m */; };
 		D00355AA20C774C100674FEB /* MultipleStopTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355A820C774C100674FEB /* MultipleStopTVC.m */; };
 		D00355AB20C774C100674FEB /* MultipleStopTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00355A920C774C100674FEB /* MultipleStopTVC.xib */; };
-		D00355AE20C8384D00674FEB /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355AD20C8384D00674FEB /* SearchVC.m */; };
-		D00355B120C842D200674FEB /* PassengerDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355B020C842D200674FEB /* PassengerDetailsVC.m */; };
-		D018C4B320C61D1800DD91C3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D018C4B020C61D1700DD91C3 /* BaseViewController.m */; };
-		D018C4B420C61D1800DD91C3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D018C4B220C61D1700DD91C3 /* HomeViewController.m */; };
 		D018C4D920C61E1500DD91C3 /* roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4CD20C61E1100DD91C3 /* roboto_medium.ttf */; };
 		D018C4DA20C61E1500DD91C3 /* roboto_thinitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4CE20C61E1200DD91C3 /* roboto_thinitalic.ttf */; };
 		D018C4DB20C61E1500DD91C3 /* roboto_blackitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4CF20C61E1200DD91C3 /* roboto_blackitalic.ttf */; };
@@ -44,6 +40,11 @@
 		D0BE51B520C704020072EEA9 /* NSArray+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BE51B020C704020072EEA9 /* NSArray+Custom.m */; };
 		D0BE51B620C704020072EEA9 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BE51B220C704020072EEA9 /* NSString+Extension.m */; };
 		D0BE51B720C704020072EEA9 /* UIView+CLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BE51B420C704020072EEA9 /* UIView+CLAdditions.m */; };
+		D0F10F1D20C929950095E68D /* PassengerDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F10F1220C929940095E68D /* PassengerDetailsVC.m */; };
+		D0F10F1E20C929950095E68D /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F10F1620C929950095E68D /* SearchVC.m */; };
+		D0F10F1F20C929950095E68D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F10F1920C929950095E68D /* BaseViewController.m */; };
+		D0F10F2020C929950095E68D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F10F1C20C929950095E68D /* HomeViewController.m */; };
+		D0F10F2920C92B110095E68D /* WebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F10F2820C92B110095E68D /* WebViewVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,15 +57,7 @@
 		D00355A720C774C100674FEB /* MultipleStopTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleStopTVC.h; sourceTree = "<group>"; };
 		D00355A820C774C100674FEB /* MultipleStopTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleStopTVC.m; sourceTree = "<group>"; };
 		D00355A920C774C100674FEB /* MultipleStopTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleStopTVC.xib; sourceTree = "<group>"; };
-		D00355AC20C8384D00674FEB /* SearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
-		D00355AD20C8384D00674FEB /* SearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
-		D00355AF20C842D200674FEB /* PassengerDetailsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassengerDetailsVC.h; sourceTree = "<group>"; };
-		D00355B020C842D200674FEB /* PassengerDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassengerDetailsVC.m; sourceTree = "<group>"; };
 		D018C4AD20C61CD600DD91C3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		D018C4AF20C61D1700DD91C3 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		D018C4B020C61D1700DD91C3 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		D018C4B120C61D1700DD91C3 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		D018C4B220C61D1700DD91C3 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		D018C4CD20C61E1100DD91C3 /* roboto_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_medium.ttf; sourceTree = "<group>"; };
 		D018C4CE20C61E1200DD91C3 /* roboto_thinitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_thinitalic.ttf; sourceTree = "<group>"; };
 		D018C4CF20C61E1200DD91C3 /* roboto_blackitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_blackitalic.ttf; sourceTree = "<group>"; };
@@ -105,6 +98,16 @@
 		D0BE51B220C704020072EEA9 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		D0BE51B320C704020072EEA9 /* UIView+CLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CLAdditions.h"; sourceTree = "<group>"; };
 		D0BE51B420C704020072EEA9 /* UIView+CLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CLAdditions.m"; sourceTree = "<group>"; };
+		D0F10F1120C929940095E68D /* PassengerDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassengerDetailsVC.h; sourceTree = "<group>"; };
+		D0F10F1220C929940095E68D /* PassengerDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassengerDetailsVC.m; sourceTree = "<group>"; };
+		D0F10F1520C929950095E68D /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
+		D0F10F1620C929950095E68D /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
+		D0F10F1820C929950095E68D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D0F10F1920C929950095E68D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D0F10F1B20C929950095E68D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D0F10F1C20C929950095E68D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D0F10F2720C92B110095E68D /* WebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewVC.h; sourceTree = "<group>"; };
+		D0F10F2820C92B110095E68D /* WebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,14 +181,11 @@
 		D018C4AE20C61D1700DD91C3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D018C4AF20C61D1700DD91C3 /* BaseViewController.h */,
-				D018C4B020C61D1700DD91C3 /* BaseViewController.m */,
-				D018C4B120C61D1700DD91C3 /* HomeViewController.h */,
-				D018C4B220C61D1700DD91C3 /* HomeViewController.m */,
-				D00355AC20C8384D00674FEB /* SearchVC.h */,
-				D00355AD20C8384D00674FEB /* SearchVC.m */,
-				D00355AF20C842D200674FEB /* PassengerDetailsVC.h */,
-				D00355B020C842D200674FEB /* PassengerDetailsVC.m */,
+				D0F10F1720C929950095E68D /* BaseViewController */,
+				D0F10F1A20C929950095E68D /* HomeViewController */,
+				D0F10F1020C929940095E68D /* PassengerDetailsVC */,
+				D0F10F1420C929950095E68D /* SearchVC */,
+				D0F10F1320C929950095E68D /* WebViewVC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -293,6 +293,51 @@
 				D0BE51B420C704020072EEA9 /* UIView+CLAdditions.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		D0F10F1020C929940095E68D /* PassengerDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				D0F10F1120C929940095E68D /* PassengerDetailsVC.h */,
+				D0F10F1220C929940095E68D /* PassengerDetailsVC.m */,
+			);
+			path = PassengerDetailsVC;
+			sourceTree = "<group>";
+		};
+		D0F10F1320C929950095E68D /* WebViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				D0F10F2720C92B110095E68D /* WebViewVC.h */,
+				D0F10F2820C92B110095E68D /* WebViewVC.m */,
+			);
+			path = WebViewVC;
+			sourceTree = "<group>";
+		};
+		D0F10F1420C929950095E68D /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				D0F10F1520C929950095E68D /* SearchVC.h */,
+				D0F10F1620C929950095E68D /* SearchVC.m */,
+			);
+			path = SearchVC;
+			sourceTree = "<group>";
+		};
+		D0F10F1720C929950095E68D /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0F10F1820C929950095E68D /* BaseViewController.h */,
+				D0F10F1920C929950095E68D /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		D0F10F1A20C929950095E68D /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0F10F1B20C929950095E68D /* HomeViewController.h */,
+				D0F10F1C20C929950095E68D /* HomeViewController.m */,
+			);
+			path = HomeViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,21 +449,22 @@
 			files = (
 				D057CCC920BDCCAD00C1F9F2 /* LDA.xcdatamodeld in Sources */,
 				D0BE51B520C704020072EEA9 /* NSArray+Custom.m in Sources */,
-				D018C4B320C61D1800DD91C3 /* BaseViewController.m in Sources */,
 				D0BE51AA20C703350072EEA9 /* Reachability.m in Sources */,
 				D0BE51AD20C703350072EEA9 /* UrlGenerator.m in Sources */,
+				D0F10F1E20C929950095E68D /* SearchVC.m in Sources */,
+				D0F10F2020C929950095E68D /* HomeViewController.m in Sources */,
 				D0BE519320C6D8060072EEA9 /* OneWayRoundView.m in Sources */,
 				D0BE51B620C704020072EEA9 /* NSString+Extension.m in Sources */,
+				D0F10F1F20C929950095E68D /* BaseViewController.m in Sources */,
+				D0F10F1D20C929950095E68D /* PassengerDetailsVC.m in Sources */,
 				D057CCD120BDCCAF00C1F9F2 /* main.m in Sources */,
 				D00355A420C76B8400674FEB /* MultipleStopView.m in Sources */,
 				D0BE51AC20C703350072EEA9 /* ResponseHandler.m in Sources */,
-				D00355AE20C8384D00674FEB /* SearchVC.m in Sources */,
 				D0BE51B720C704020072EEA9 /* UIView+CLAdditions.m in Sources */,
-				D00355B120C842D200674FEB /* PassengerDetailsVC.m in Sources */,
 				D00355AA20C774C100674FEB /* MultipleStopTVC.m in Sources */,
+				D0F10F2920C92B110095E68D /* WebViewVC.m in Sources */,
 				D0BE51AB20C703350072EEA9 /* RequestBodyGenerator.m in Sources */,
 				D0BE51A920C703350072EEA9 /* NetworkHandler.m in Sources */,
-				D018C4B420C61D1800DD91C3 /* HomeViewController.m in Sources */,
 				D057CCC020BDCCAD00C1F9F2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

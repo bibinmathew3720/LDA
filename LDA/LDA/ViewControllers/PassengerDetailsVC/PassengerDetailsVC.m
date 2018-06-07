@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *preferredFlightTF;
 @property (weak, nonatomic) IBOutlet UIView *commentView;
 @property (weak, nonatomic) IBOutlet UITextView *commentTextView;
+@property (weak, nonatomic) IBOutlet UIButton *agreeButton;
 
 @end
 
@@ -34,6 +35,7 @@
 
 -(void)initialisation{
     self.title = @"Passenger Details";
+    [self showLeftBarButton];
     [self settingBorderToView:self.firstNameView];
     [self settingBorderToView:self.lastNameView];
     [self settingBorderToView:self.emailView];
@@ -90,6 +92,12 @@
         
     }
 }
+- (IBAction)agreeButtonAction:(UIButton *)sender {
+    sender.selected = !sender.isSelected;
+}
+- (IBAction)agreeTapGestureAction:(UITapGestureRecognizer *)sender {
+    [self performSegueWithIdentifier:@"passengerDetailsToWebView" sender:self];
+}
 
 #pragma mark - Validation
 
@@ -115,6 +123,10 @@
     else if([self.phoneTF.text empty]){
         isValid = NO;
         messageString = @"Please enter phone number";
+    }
+    else if(![self.agreeButton isSelected]){
+        isValid = NO;
+        messageString = @"Please accept user agreement";
     }
     if(!isValid){
         [self showAlertWithTitle:APPNAME Message:messageString WithCompletion:^{
