@@ -23,8 +23,8 @@
 @end
 @protocol OneWayRoundViewDelegate <NSObject>
 -(void)tripTypeButtonActionDelegateWithTF:(UITextField *)tf;
--(void)classButtonActionDelegate;
--(void)departButtonActionDelegate;
--(void)flexibiltyButtonActionDelegate;
--(void)passengsersButtonActionDelegate;
+-(void)classButtonActionDelegateWithTF:(UITextField *)textField;
+-(void)departButtonActionDelegateWithTF:(UITextField *)textField;
+-(void)flexibiltyButtonActionDelegateWithTF:(UITextField *)textField;
+-(void)passengsersButtonActionDelegateWithTF:(UITextField *)textField;
 @end

@@ -15,6 +15,12 @@ typedef enum {
     MultipleStop = 1,
 }ListType;
 
+typedef enum{
+    PickerTypeType = 0,
+    PickerClassType = 1,
+    PickerClassPassengers = 2,
+}PickerType;
+
 @interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 @property (nonatomic,strong) OneWayRoundView *onewayRoundView;
 @property (nonatomic,strong) MultipleStopView *multipleStopView;
@@ -24,7 +30,9 @@ typedef enum {
 @property (strong, nonatomic) IBOutlet UIToolbar *toolBar;
 @property (nonatomic, strong) NSArray *tripTypeArray;
 @property (nonatomic,assign) ListType listType;
-@property(nonatomic, assign) NSInteger selPickerTag;
+@property(nonatomic, assign) PickerType selPickerType;
+@property (nonatomic, strong) NSArray *classArray;
+@property (nonatomic, strong) NSArray *passengersArray;
 @end
 
 @implementation HomeViewController
@@ -39,9 +47,13 @@ typedef enum {
 }
 -(void)initialisation{
     self.title = @"Home";
+    //Type Initialisation
     self.tripTypeArray = [NSArray arrayWithObjects:@"One Way",@"Return", nil];
     self.tripTypePickerView.dataSource = self;
     self.tripTypePickerView.delegate = self;
+    //Class Initialisation
+    self.classArray = @[@"Economy",@"Business",@"First Class",@"Premium Economy"];
+    self.passengersArray = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
 }
 
 -(void)addingOneWayView{
@@ -66,8 +78,14 @@ typedef enum {
 
 - (IBAction)toolBarDoneButtonAction:(UIBarButtonItem *)sender {
     [self.view endEditing:YES];
-    if(self.selPickerTag == 1000){
+    if(self.selPickerType == PickerTypeType){
         self.onewayRoundView.tripTypeLabel.text = [self.tripTypeArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]];
+    }
+    else if(self.selPickerType == PickerClassType){
+        self.onewayRoundView.classLabel.text = [self.classArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]];
+    }
+    else if(self.selPickerType == PickerClassPassengers){
+        self.onewayRoundView.passengersLabel.text =  [NSString stringWithFormat:@"Total %@",[self.passengersArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]]];
     }
 }
 
@@ -95,11 +113,42 @@ typedef enum {
 #pragma mark - Oneway Round view Delegate
 
 -(void)tripTypeButtonActionDelegateWithTF:(UITextField *)tf{
+    self.selPickerType = PickerTypeType;
+    [self.tripTypePickerView reloadAllComponents];
     tf.inputAccessoryView = self.toolBar;
     tf.inputView = self.tripTypePickerView;
-    self.selPickerTag = self.tripTypePickerView.tag;
     [tf becomeFirstResponder];
+    NSInteger index = [self.tripTypeArray  indexOfObject:self.onewayRoundView.tripTypeLabel.text];
+    [self.tripTypePickerView selectRow:index inComponent:0 animated:YES];
     
+}
+
+-(void)classButtonActionDelegateWithTF:(UITextField *)textField{
+    self.selPickerType = PickerClassType;
+    [self.tripTypePickerView reloadAllComponents];
+    textField.inputAccessoryView = self.toolBar;
+    textField.inputView = self.tripTypePickerView;
+    [textField becomeFirstResponder];
+    NSInteger index = [self.classArray indexOfObject:self.onewayRoundView.classLabel.text];
+    [self.tripTypePickerView selectRow:index inComponent:0 animated:YES];
+}
+
+-(void)departButtonActionDelegateWithTF:(UITextField *)textField{
+    
+}
+
+-(void)flexibiltyButtonActionDelegateWithTF:(UITextField *)textField{
+    
+}
+
+-(void)passengsersButtonActionDelegateWithTF:(UITextField *)textField{
+    self.selPickerType = PickerClassPassengers;
+    [self.tripTypePickerView reloadAllComponents];
+    textField.inputAccessoryView = self.toolBar;
+    textField.inputView = self.tripTypePickerView;
+    [textField becomeFirstResponder];
+    NSInteger index = [self.passengersArray indexOfObject:[[self.onewayRoundView.passengersLabel.text  componentsSeparatedByString:@"Total "]lastObject]];
+    [self.tripTypePickerView selectRow:index inComponent:0 animated:YES];
 }
 
 #pragma mark -UIPickerView Delegate and DataSource
@@ -110,9 +159,15 @@ typedef enum {
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     int rowCount = 0 ;
-    switch (pickerView.tag) {
-        case 1000:
+    switch (self.selPickerType) {
+        case PickerTypeType:
             rowCount = (int)self.tripTypeArray.count;
+            break;
+        case PickerClassType:
+            rowCount = (int)self.classArray.count;
+            break;
+        case PickerClassPassengers:
+            rowCount = (int)self.passengersArray.count;
             break;
         default:
             break;
@@ -122,9 +177,15 @@ typedef enum {
 
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     NSString *title;
-    switch (pickerView.tag) {
-        case 1000:
+    switch (self.selPickerType) {
+        case PickerTypeType:
            title = [_tripTypeArray objectAtIndex:row];
+            break;
+        case PickerClassType:
+            title = [self.classArray objectAtIndex:row];
+            break;
+        case PickerClassPassengers:
+            title = [self.passengersArray objectAtIndex:row];
             break;
         default:
             break;

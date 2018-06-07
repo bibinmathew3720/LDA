@@ -23,12 +23,24 @@
     }
 }
 - (IBAction)classButtonAction:(UIButton *)sender {
+    if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(classButtonActionDelegateWithTF:)]){
+        [self.onewayViewDelegate classButtonActionDelegateWithTF:self.classTF];
+    }
 }
 - (IBAction)departButtonAction:(UIButton *)sender {
+    if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(departButtonActionDelegateWithTF:)]){
+        [self.onewayViewDelegate departButtonActionDelegateWithTF:self.departTF];
+    }
 }
 - (IBAction)flexibilityButtonAction:(UIButton *)sender {
+    if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(flexibiltyButtonActionDelegateWithTF:)]){
+        [self.onewayViewDelegate flexibiltyButtonActionDelegateWithTF:self.flexibilityTF];
+    }
 }
 - (IBAction)passengersButtonAction:(UIButton *)sender {
+    if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(passengsersButtonActionDelegateWithTF:)]){
+        [self.onewayViewDelegate passengsersButtonActionDelegateWithTF:self.passengersTF];
+    }
 }
 - (IBAction)bookButtonAction:(UIButton *)sender {
 }

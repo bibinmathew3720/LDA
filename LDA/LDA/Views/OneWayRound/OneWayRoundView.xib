@@ -559,7 +559,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="classLabel" destination="GBf-fI-eo5" id="zNA-pm-t7m"/>
+                <outlet property="classLabel" destination="3Qs-14-TJz" id="VOx-sh-N4W"/>
                 <outlet property="classTF" destination="X90-8a-3aG" id="JVP-Oy-pEb"/>
                 <outlet property="departDateLabel" destination="A7e-yV-y4j" id="xyL-R6-AfM"/>
                 <outlet property="departTF" destination="3Fk-m4-tT8" id="HCL-SO-gqP"/>
