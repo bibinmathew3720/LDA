@@ -95,9 +95,32 @@
                     <navigationItem key="navigationItem" id="mo9-oq-j7C"/>
                     <connections>
                         <outlet property="segmentControl" destination="A6e-sV-tkY" id="DLi-tP-6RH"/>
+                        <outlet property="toolBar" destination="1kD-Wk-5Tm" id="M2d-NF-1fQ"/>
+                        <outlet property="tripTypePickerView" destination="wcN-46-MaP" id="kh0-4z-iZ4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pickerView tag="1000" contentMode="scaleToFill" id="wcN-46-MaP">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                </pickerView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="1kD-Wk-5Tm">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Cancel" id="1Dv-ur-7Ck">
+                            <connections>
+                                <action selector="toolBArCanceButtonAction:" destination="BYZ-38-t0r" id="Axb-71-Msi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="wAp-Yk-bbv"/>
+                        <barButtonItem title="Done" id="feV-T9-Osa">
+                            <connections>
+                                <action selector="toolBarDoneButtonAction:" destination="BYZ-38-t0r" id="U7U-Xd-cuB"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="866" y="-553"/>
         </scene>

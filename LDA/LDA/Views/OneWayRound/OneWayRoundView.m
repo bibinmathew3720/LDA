@@ -17,5 +17,20 @@
     // Drawing code
 }
 */
+- (IBAction)tripTypeButtonAction:(UIButton *)sender {
+    if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(tripTypeButtonActionDelegateWithTF:)]){
+        [self.onewayViewDelegate tripTypeButtonActionDelegateWithTF:self.tripTypeTF];
+    }
+}
+- (IBAction)classButtonAction:(UIButton *)sender {
+}
+- (IBAction)departButtonAction:(UIButton *)sender {
+}
+- (IBAction)flexibilityButtonAction:(UIButton *)sender {
+}
+- (IBAction)passengersButtonAction:(UIButton *)sender {
+}
+- (IBAction)bookButtonAction:(UIButton *)sender {
+}
 
 @end
