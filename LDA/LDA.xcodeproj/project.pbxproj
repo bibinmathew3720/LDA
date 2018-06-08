@@ -12,6 +12,8 @@
 		D00355A420C76B8400674FEB /* MultipleStopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355A320C76B8400674FEB /* MultipleStopView.m */; };
 		D00355AA20C774C100674FEB /* MultipleStopTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355A820C774C100674FEB /* MultipleStopTVC.m */; };
 		D00355AB20C774C100674FEB /* MultipleStopTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00355A920C774C100674FEB /* MultipleStopTVC.xib */; };
+		D0052B0020CA3BED007332C8 /* FlexibilityView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0052AFF20CA3BED007332C8 /* FlexibilityView.m */; };
+		D0052B0220CA3BFD007332C8 /* FlexibilityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0052B0120CA3BFD007332C8 /* FlexibilityView.xib */; };
 		D018C4D920C61E1500DD91C3 /* roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4CD20C61E1100DD91C3 /* roboto_medium.ttf */; };
 		D018C4DA20C61E1500DD91C3 /* roboto_thinitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4CE20C61E1200DD91C3 /* roboto_thinitalic.ttf */; };
 		D018C4DB20C61E1500DD91C3 /* roboto_blackitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D018C4CF20C61E1200DD91C3 /* roboto_blackitalic.ttf */; };
@@ -57,6 +59,9 @@
 		D00355A720C774C100674FEB /* MultipleStopTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleStopTVC.h; sourceTree = "<group>"; };
 		D00355A820C774C100674FEB /* MultipleStopTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleStopTVC.m; sourceTree = "<group>"; };
 		D00355A920C774C100674FEB /* MultipleStopTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleStopTVC.xib; sourceTree = "<group>"; };
+		D0052AFE20CA3BED007332C8 /* FlexibilityView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexibilityView.h; sourceTree = "<group>"; };
+		D0052AFF20CA3BED007332C8 /* FlexibilityView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlexibilityView.m; sourceTree = "<group>"; };
+		D0052B0120CA3BFD007332C8 /* FlexibilityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlexibilityView.xib; sourceTree = "<group>"; };
 		D018C4AD20C61CD600DD91C3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		D018C4CD20C61E1100DD91C3 /* roboto_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_medium.ttf; sourceTree = "<group>"; };
 		D018C4CE20C61E1200DD91C3 /* roboto_thinitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_thinitalic.ttf; sourceTree = "<group>"; };
@@ -149,6 +154,16 @@
 			path = CustomCells;
 			sourceTree = "<group>";
 		};
+		D0052AFD20CA3BD0007332C8 /* FlexibilityView */ = {
+			isa = PBXGroup;
+			children = (
+				D0052AFE20CA3BED007332C8 /* FlexibilityView.h */,
+				D0052AFF20CA3BED007332C8 /* FlexibilityView.m */,
+				D0052B0120CA3BFD007332C8 /* FlexibilityView.xib */,
+			);
+			path = FlexibilityView;
+			sourceTree = "<group>";
+		};
 		D018C4AB20C61CD400DD91C3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +246,7 @@
 		D0BE518B20C6D7210072EEA9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D0052AFD20CA3BD0007332C8 /* FlexibilityView */,
 				D0BE519020C6D7EC0072EEA9 /* MultipleStop */,
 				D0BE518F20C6D7EC0072EEA9 /* OneWayRound */,
 			);
@@ -401,6 +417,7 @@
 				D018C4DD20C61E1500DD91C3 /* roboto_light.ttf in Resources */,
 				D018C4E020C61E1500DD91C3 /* roboto_regular.ttf in Resources */,
 				D018C4E320C61E1500DD91C3 /* roboto_thin.ttf in Resources */,
+				D0052B0220CA3BFD007332C8 /* FlexibilityView.xib in Resources */,
 				D00355AB20C774C100674FEB /* MultipleStopTVC.xib in Resources */,
 				D057CCCE20BDCCAF00C1F9F2 /* LaunchScreen.storyboard in Resources */,
 				D018C4E420C61E1500DD91C3 /* roboto_bold.ttf in Resources */,
@@ -451,6 +468,7 @@
 				D0BE51B520C704020072EEA9 /* NSArray+Custom.m in Sources */,
 				D0BE51AA20C703350072EEA9 /* Reachability.m in Sources */,
 				D0BE51AD20C703350072EEA9 /* UrlGenerator.m in Sources */,
+				D0052B0020CA3BED007332C8 /* FlexibilityView.m in Sources */,
 				D0F10F1E20C929950095E68D /* SearchVC.m in Sources */,
 				D0F10F2020C929950095E68D /* HomeViewController.m in Sources */,
 				D0BE519320C6D8060072EEA9 /* OneWayRoundView.m in Sources */,
