@@ -87,6 +87,7 @@
                         <outlet property="segmentControl" destination="A6e-sV-tkY" id="DLi-tP-6RH"/>
                         <outlet property="toolBar" destination="1kD-Wk-5Tm" id="M2d-NF-1fQ"/>
                         <outlet property="tripTypePickerView" destination="wcN-46-MaP" id="kh0-4z-iZ4"/>
+                        <segue destination="qCL-fP-uPK" kind="show" identifier="homeToPassengerDetails" id="gLB-tn-VuH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -122,7 +123,7 @@
                     </connections>
                 </datePicker>
             </objects>
-            <point key="canvasLocation" x="866" y="-553"/>
+            <point key="canvasLocation" x="908" y="-612"/>
         </scene>
         <!--SearchVC-->
         <scene sceneID="SR3-mb-eLg">
@@ -166,7 +167,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjG-Bv-Lht">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="XhW-vO-qK1" id="dSj-Wf-WzY"/>
@@ -199,7 +200,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4UX-al-9vE">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17g-Wm-4wp">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="674"/>
@@ -525,7 +526,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2520.8000000000002" y="-638.2308845577212"/>
+            <point key="canvasLocation" x="1761" y="-587"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="33X-ZN-U6y">

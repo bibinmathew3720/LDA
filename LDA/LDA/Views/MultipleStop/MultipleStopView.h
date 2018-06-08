@@ -20,4 +20,5 @@
 @protocol MultipleStopViewDelegate<NSObject>
 -(void)classButtonActionDelegateFromMultipleStopWithTF:(UITextField *)textField;
 -(void)passengsersButtonActionDelegateMultipleStopWithTF:(UITextField *)textField;
+-(void)bookButtonActionDelegate;
 @end

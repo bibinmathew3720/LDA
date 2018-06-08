@@ -43,6 +43,9 @@
     }
 }
 - (IBAction)bookButtonAction:(UIButton *)sender {
+    if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(bookButtonActionDelegate)]){
+        [self.onewayViewDelegate bookButtonActionDelegate];
+    }
 }
 
 @end

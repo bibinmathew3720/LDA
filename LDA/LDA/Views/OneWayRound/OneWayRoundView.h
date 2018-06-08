@@ -27,4 +27,5 @@
 -(void)departButtonActionDelegateWithTF:(UITextField *)textField;
 -(void)flexibiltyButtonActionDelegateWithTF:(UITextField *)textField;
 -(void)passengsersButtonActionDelegateWithTF:(UITextField *)textField;
+-(void)bookButtonActionDelegate;
 @end

@@ -248,6 +248,10 @@ typedef enum{
     [self.tripTypePickerView selectRow:index inComponent:0 animated:YES];
 }
 
+-(void)bookButtonActionDelegate{
+    [self performSegueWithIdentifier:@"homeToPassengerDetails" sender:nil];
+}
+
 /*
 #pragma mark - Navigation
 

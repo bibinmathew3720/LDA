@@ -461,7 +461,6 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyW-vz-h6F">
                                             <rect key="frame" x="0.0" y="0.0" width="354" height="70"/>
                                             <connections>
-                                                <action selector="bookButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="xmT-Bd-gkE"/>
                                                 <action selector="passengersButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="T6W-7r-J5p"/>
                                             </connections>
                                         </button>
@@ -506,6 +505,9 @@
                                             <integer key="value" value="18"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="bookButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="3Cc-Al-bT9"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

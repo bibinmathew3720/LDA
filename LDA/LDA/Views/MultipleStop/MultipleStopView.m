@@ -53,6 +53,9 @@
     }
 }
 - (IBAction)bookButtonAction:(UIButton *)sender {
+    if(self.multipleViewDelegate && [self.multipleViewDelegate respondsToSelector:@selector(bookButtonActionDelegate)]){
+        [self.multipleViewDelegate bookButtonActionDelegate];
+    }
 }
 /*
 // Only override drawRect: if you perform custom drawing.
