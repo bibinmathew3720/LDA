@@ -94,6 +94,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mo9-oq-j7C"/>
                     <connections>
+                        <outlet property="datePicker" destination="R6V-mC-uRF" id="kOX-9a-byt"/>
                         <outlet property="segmentControl" destination="A6e-sV-tkY" id="DLi-tP-6RH"/>
                         <outlet property="toolBar" destination="1kD-Wk-5Tm" id="M2d-NF-1fQ"/>
                         <outlet property="tripTypePickerView" destination="wcN-46-MaP" id="kh0-4z-iZ4"/>
@@ -121,6 +122,16 @@
                         </barButtonItem>
                     </items>
                 </toolbar>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="R6V-mC-uRF">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <date key="date" timeIntervalSinceReferenceDate="550107231.91043901">
+                        <!--2018-06-07 23:33:51 +0000-->
+                    </date>
+                    <connections>
+                        <action selector="datePickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="HIV-J2-GTX"/>
+                    </connections>
+                </datePicker>
             </objects>
             <point key="canvasLocation" x="866" y="-553"/>
         </scene>

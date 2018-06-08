@@ -58,6 +58,13 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (NSString *)convertDate:(NSDate *)currentDate toFormatedString:(NSString *)formateString withTimeZone:(NSTimeZone *)timezone {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeZone:timezone];
+    [dateFormatter setDateFormat:formateString];
+    return [dateFormatter stringFromDate:currentDate];
+}
+
 /*
 #pragma mark - Navigation
 

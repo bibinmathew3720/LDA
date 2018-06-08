@@ -19,6 +19,8 @@ typedef enum{
     PickerTypeType = 0,
     PickerClassType = 1,
     PickerClassPassengers = 2,
+    PickerTypeDepart = 3,
+    PickerTypeFlexibility = 4
 }PickerType;
 
 @interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
@@ -33,6 +35,7 @@ typedef enum{
 @property(nonatomic, assign) PickerType selPickerType;
 @property (nonatomic, strong) NSArray *classArray;
 @property (nonatomic, strong) NSArray *passengersArray;
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 @end
 
 @implementation HomeViewController
@@ -87,6 +90,14 @@ typedef enum{
     else if(self.selPickerType == PickerClassPassengers){
         self.onewayRoundView.passengersLabel.text =  [NSString stringWithFormat:@"Total %@",[self.passengersArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]]];
     }
+    else if (self.selPickerType == PickerTypeDepart){
+        NSLog(@"Date Picker Date:%@",self.datePicker.date);
+        self.onewayRoundView.departDateLabel.text = [self convertDate:self.datePicker.date toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
+    }
+    else if (self.selPickerType == PickerTypeFlexibility){
+         self.onewayRoundView.flexibilityDateLabel.text = [self convertDate:self.datePicker.date toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
+        
+    }
 }
 
 - (IBAction)toolBArCanceButtonAction:(UIBarButtonItem *)sender {
@@ -134,11 +145,17 @@ typedef enum{
 }
 
 -(void)departButtonActionDelegateWithTF:(UITextField *)textField{
-    
+    self.selPickerType = PickerTypeDepart;
+    textField.inputAccessoryView = self.toolBar;
+    textField.inputView = self.datePicker;
+    [textField becomeFirstResponder];
 }
 
 -(void)flexibiltyButtonActionDelegateWithTF:(UITextField *)textField{
-    
+    self.selPickerType = PickerTypeFlexibility;
+    textField.inputAccessoryView = self.toolBar;
+    textField.inputView = self.datePicker;
+    [textField becomeFirstResponder];
 }
 
 -(void)passengsersButtonActionDelegateWithTF:(UITextField *)textField{
@@ -191,6 +208,10 @@ typedef enum{
             break;
     }
     return title;
+}
+
+- (IBAction)datePickerAction:(UIDatePicker *)sender {
+    
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
