@@ -35,6 +35,25 @@
 {
     return 100;
 }
+
+#pragma mark - Button Actions
+
+- (IBAction)addButtonAction:(UIButton *)sender {
+}
+- (IBAction)removeButtonAction:(UIButton *)sender {
+}
+- (IBAction)classButtonAction:(UIButton *)sender {
+    if(self.multipleViewDelegate && [self.multipleViewDelegate respondsToSelector:@selector(classButtonActionDelegateFromMultipleStopWithTF:)]){
+        [self.multipleViewDelegate classButtonActionDelegateFromMultipleStopWithTF:self.classTF];
+    }
+}
+- (IBAction)passengersButtonAction:(UIButton *)sender {
+    if(self.multipleViewDelegate && [self.multipleViewDelegate respondsToSelector:@selector(passengsersButtonActionDelegateMultipleStopWithTF:)]){
+        [self.multipleViewDelegate passengsersButtonActionDelegateMultipleStopWithTF:self.passengersTF];
+    }
+}
+- (IBAction)bookButtonAction:(UIButton *)sender {
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

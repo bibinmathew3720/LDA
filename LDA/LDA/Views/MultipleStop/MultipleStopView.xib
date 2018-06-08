@@ -52,6 +52,9 @@
                                             <integer key="value" value="18"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="removeButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="QiB-wv-9nc"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLx-FG-bhJ">
                                     <rect key="frame" x="192" y="220" width="172" height="36"/>
@@ -65,6 +68,9 @@
                                             <integer key="value" value="18"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="addButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Dcj-g2-dni"/>
+                                    </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGH-pG-8Qb">
                                     <rect key="frame" x="10" y="266" width="354" height="70"/>
@@ -119,6 +125,9 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7Y-z7-naJ">
                                             <rect key="frame" x="0.0" y="0.0" width="354" height="70"/>
+                                            <connections>
+                                                <action selector="classButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="ZOM-qI-T0W"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -201,6 +210,9 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MW-rY-l04">
                                             <rect key="frame" x="0.0" y="0.0" width="354" height="70"/>
+                                            <connections>
+                                                <action selector="passengersButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="oPK-ab-Gq8"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -243,6 +255,9 @@
                                             <integer key="value" value="18"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="bookButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="eba-e9-knV"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -289,7 +304,12 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="classLabel" destination="FGL-XP-Gnr" id="VPd-Oo-YdC"/>
+                <outlet property="classTF" destination="jsS-WF-GZF" id="QQF-eZ-b7R"/>
                 <outlet property="multipleStopTableView" destination="RqD-Kj-j1K" id="Qe4-Sk-dMx"/>
+                <outlet property="passengersCountLabel" destination="NfA-8e-vhN" id="Sxe-GX-BLk"/>
+                <outlet property="passengersTF" destination="VOQ-Iy-vmA" id="PVt-n6-pny"/>
+                <outlet property="tableViewHeightConstraint" destination="45V-fW-INw" id="pPr-Dk-Z44"/>
             </connections>
             <point key="canvasLocation" x="62.5" y="58.5"/>
         </view>

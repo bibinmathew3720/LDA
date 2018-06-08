@@ -23,7 +23,7 @@ typedef enum{
     PickerTypeFlexibility = 4
 }PickerType;
 
-@interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+@interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,MultipleStopViewDelegate>
 @property (nonatomic,strong) OneWayRoundView *onewayRoundView;
 @property (nonatomic,strong) MultipleStopView *multipleStopView;
 @property (weak,nonatomic) IBOutlet UISegmentedControl *segmentControl;
@@ -68,6 +68,7 @@ typedef enum{
 -(void)addingMultipleStopView{
     self.multipleStopView = [[[NSBundle mainBundle] loadNibNamed:@"MultipleStopView" owner:self options:nil] objectAtIndex:0];
     self.multipleStopView.frame = CGRectMake(0, self.segmentControl.bottom+10, self.view.frame.size.width, self.view.frame.size.height-self.segmentControl.bottom-10);
+    self.multipleStopView.multipleViewDelegate = self;
     [self.view addSubview:self.multipleStopView];
 }
 
@@ -85,10 +86,17 @@ typedef enum{
         self.onewayRoundView.tripTypeLabel.text = [self.tripTypeArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]];
     }
     else if(self.selPickerType == PickerClassType){
-        self.onewayRoundView.classLabel.text = [self.classArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]];
+        if(self.listType == OneWayRound)
+            self.onewayRoundView.classLabel.text = [self.classArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]];
+        else
+            self.multipleStopView.classLabel.text = [self.classArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]];
+                
     }
     else if(self.selPickerType == PickerClassPassengers){
-        self.onewayRoundView.passengersLabel.text =  [NSString stringWithFormat:@"Total %@",[self.passengersArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]]];
+        if(self.listType == OneWayRound)
+            self.onewayRoundView.passengersLabel.text =  [NSString stringWithFormat:@"Total %@",[self.passengersArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]]];
+        else
+            self.multipleStopView.passengersCountLabel.text = [NSString stringWithFormat:@"Total %@",[self.passengersArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]]];
     }
     else if (self.selPickerType == PickerTypeDepart){
         NSLog(@"Date Picker Date:%@",self.datePicker.date);
@@ -216,6 +224,28 @@ typedef enum{
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
+}
+
+#pragma mark - Multiple Stop View Delegates
+
+-(void)classButtonActionDelegateFromMultipleStopWithTF:(UITextField *)textField{
+    self.selPickerType = PickerClassType;
+    [self.tripTypePickerView reloadAllComponents];
+    textField.inputAccessoryView = self.toolBar;
+    textField.inputView = self.tripTypePickerView;
+    [textField becomeFirstResponder];
+    NSInteger index = [self.classArray indexOfObject:self.multipleStopView.classLabel.text];
+    [self.tripTypePickerView selectRow:index inComponent:0 animated:YES];
+}
+
+-(void)passengsersButtonActionDelegateMultipleStopWithTF:(UITextField *)textField{
+    self.selPickerType = PickerClassPassengers;
+    [self.tripTypePickerView reloadAllComponents];
+    textField.inputAccessoryView = self.toolBar;
+    textField.inputView = self.tripTypePickerView;
+    [textField becomeFirstResponder];
+    NSInteger index = [self.passengersArray indexOfObject:[[self.multipleStopView.passengersCountLabel.text  componentsSeparatedByString:@"Total "]lastObject]];
+    [self.tripTypePickerView selectRow:index inComponent:0 animated:YES];
 }
 
 /*

@@ -49,27 +49,16 @@
                                                     <action selector="segmentControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fdd-ao-ksM"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbT-1L-apS">
-                                                <rect key="frame" x="10" y="10" width="354" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <segue destination="qCL-fP-uPK" kind="show" id="fQw-O5-6hb"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="oXQ-Tj-i2G" secondAttribute="bottom" id="2qm-Kg-yuh"/>
-                                            <constraint firstItem="JbT-1L-apS" firstAttribute="top" secondItem="A6e-sV-tkY" secondAttribute="top" id="5Pp-B6-cPp"/>
-                                            <constraint firstItem="JbT-1L-apS" firstAttribute="trailing" secondItem="A6e-sV-tkY" secondAttribute="trailing" id="69S-5W-C9h"/>
                                             <constraint firstAttribute="trailing" secondItem="oXQ-Tj-i2G" secondAttribute="trailing" id="LUz-Ro-SId"/>
-                                            <constraint firstItem="JbT-1L-apS" firstAttribute="bottom" secondItem="A6e-sV-tkY" secondAttribute="bottom" id="POf-qm-8Hc"/>
                                             <constraint firstItem="A6e-sV-tkY" firstAttribute="top" secondItem="3pc-ka-Fz0" secondAttribute="top" constant="10" id="TaO-Ib-uw6"/>
                                             <constraint firstAttribute="trailing" secondItem="A6e-sV-tkY" secondAttribute="trailing" constant="10" id="a9S-Ue-yKY"/>
                                             <constraint firstItem="oXQ-Tj-i2G" firstAttribute="leading" secondItem="3pc-ka-Fz0" secondAttribute="leading" id="bpN-qz-hBh"/>
                                             <constraint firstItem="oXQ-Tj-i2G" firstAttribute="top" secondItem="3pc-ka-Fz0" secondAttribute="top" id="coq-sx-2a8"/>
                                             <constraint firstItem="A6e-sV-tkY" firstAttribute="leading" secondItem="3pc-ka-Fz0" secondAttribute="leading" constant="10" id="hpr-Tg-a4J"/>
-                                            <constraint firstItem="JbT-1L-apS" firstAttribute="leading" secondItem="A6e-sV-tkY" secondAttribute="leading" id="mFh-55-Etj"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -177,7 +166,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjG-Bv-Lht">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="XhW-vO-qK1" id="dSj-Wf-WzY"/>
@@ -210,7 +199,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4UX-al-9vE">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17g-Wm-4wp">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="674"/>
