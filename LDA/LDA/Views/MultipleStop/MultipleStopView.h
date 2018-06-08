@@ -16,9 +16,14 @@
 @property (nonatomic, assign) id <MultipleStopViewDelegate>multipleViewDelegate;
 @property (weak, nonatomic) IBOutlet UITextField *classTF;
 @property (weak, nonatomic) IBOutlet UITextField *passengersTF;
+@property (weak, nonatomic) IBOutlet UIButton *removeButton;
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
+@property (nonatomic, strong) NSArray *tripArray;
 @end
 @protocol MultipleStopViewDelegate<NSObject>
 -(void)classButtonActionDelegateFromMultipleStopWithTF:(UITextField *)textField;
 -(void)passengsersButtonActionDelegateMultipleStopWithTF:(UITextField *)textField;
 -(void)bookButtonActionDelegate;
+-(void)addButtonActionDelegate;
+-(void)removeButtonActionDelegate;
 @end

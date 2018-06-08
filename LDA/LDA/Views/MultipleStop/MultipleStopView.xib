@@ -304,11 +304,13 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="addButton" destination="rLx-FG-bhJ" id="bHT-BT-NKM"/>
                 <outlet property="classLabel" destination="FGL-XP-Gnr" id="VPd-Oo-YdC"/>
                 <outlet property="classTF" destination="jsS-WF-GZF" id="QQF-eZ-b7R"/>
                 <outlet property="multipleStopTableView" destination="RqD-Kj-j1K" id="Qe4-Sk-dMx"/>
                 <outlet property="passengersCountLabel" destination="NfA-8e-vhN" id="Sxe-GX-BLk"/>
                 <outlet property="passengersTF" destination="VOQ-Iy-vmA" id="PVt-n6-pny"/>
+                <outlet property="removeButton" destination="SbS-1f-ixo" id="y8v-DU-cuc"/>
                 <outlet property="tableViewHeightConstraint" destination="45V-fW-INw" id="pPr-Dk-Z44"/>
             </connections>
             <point key="canvasLocation" x="62.5" y="58.5"/>

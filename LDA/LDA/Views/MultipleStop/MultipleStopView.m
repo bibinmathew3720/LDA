@@ -6,9 +6,13 @@
 //  Copyright © 2018 lda. All rights reserved.
 //
 
+#define CellHeight 100
+
 #import "MultipleStopView.h"
 #import "MultipleStopTVC.h"
-
+@interface MultipleStopView()
+@property (nonatomic, strong) NSArray *currentTripArray;
+@end
 @implementation MultipleStopView
 
 -(void)awakeFromNib{
@@ -19,7 +23,7 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 10;
+    return self.currentTripArray.count;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -33,14 +37,20 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    return CellHeight;
 }
 
 #pragma mark - Button Actions
 
 - (IBAction)addButtonAction:(UIButton *)sender {
+    if(self.multipleViewDelegate && [self.multipleViewDelegate respondsToSelector:@selector(addButtonActionDelegate)]){
+        [self.multipleViewDelegate addButtonActionDelegate];
+    }
 }
 - (IBAction)removeButtonAction:(UIButton *)sender {
+    if(self.multipleViewDelegate && [self.multipleViewDelegate respondsToSelector:@selector(removeButtonActionDelegate)]){
+        [self.multipleViewDelegate removeButtonActionDelegate];
+    }
 }
 - (IBAction)classButtonAction:(UIButton *)sender {
     if(self.multipleViewDelegate && [self.multipleViewDelegate respondsToSelector:@selector(classButtonActionDelegateFromMultipleStopWithTF:)]){
@@ -56,6 +66,20 @@
     if(self.multipleViewDelegate && [self.multipleViewDelegate respondsToSelector:@selector(bookButtonActionDelegate)]){
         [self.multipleViewDelegate bookButtonActionDelegate];
     }
+}
+
+-(void)setTripArray:(NSArray *)tripArray{
+    self.currentTripArray = tripArray;
+    self.tableViewHeightConstraint.constant = tripArray.count*CellHeight;
+    if(tripArray.count == 1){
+        [self.removeButton setBackgroundColor:[[UIColor lightGrayColor] colorWithAlphaComponent:0.4]];
+        self.removeButton.userInteractionEnabled = NO;
+    }
+    else{
+        [self.removeButton setBackgroundColor:[UIColor whiteColor]];
+        self.removeButton.userInteractionEnabled = YES;
+    }
+    [self.multipleStopTableView reloadData];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -5,6 +5,11 @@
 //  Created by Bibin Mathew on 5/29/18.
 //  Copyright © 2018 lda. All rights reserved.
 //
+#define FromKey @"fromKey"
+#define ToKey @"toKey"
+#define DepartKey @"depart"
+#define FlexibilityKey @"flexibility"
+
 #import "OneWayRoundView.h"
 #import "MultipleStopView.h"
 
@@ -36,6 +41,7 @@ typedef enum{
 @property (nonatomic, strong) NSArray *classArray;
 @property (nonatomic, strong) NSArray *passengersArray;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (nonatomic, strong) NSMutableArray *tripArray;
 @end
 
 @implementation HomeViewController
@@ -46,8 +52,10 @@ typedef enum{
     [self addingOneWayView];
     [self addingMultipleStopView];
     self.multipleStopView.hidden = YES;
-    
+    self.tripArray = [[NSMutableArray alloc] init];
+    [self initialisingTripDictionary];
 }
+
 -(void)initialisation{
     self.title = @"Home";
     //Type Initialisation
@@ -57,6 +65,16 @@ typedef enum{
     //Class Initialisation
     self.classArray = @[@"Economy",@"Business",@"First Class",@"Premium Economy"];
     self.passengersArray = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
+}
+
+-(void)initialisingTripDictionary{
+    NSMutableDictionary *tripDict = [[NSMutableDictionary alloc] init];
+    [tripDict setValue:@"" forKey:FromKey];
+     [tripDict setValue:@"" forKey:ToKey];
+    [tripDict setValue:[self convertDate:[NSDate date] toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]] forKey:DepartKey];
+    [tripDict setValue:@"Exact Day" forKey:FlexibilityKey];
+    [self.tripArray addObject:tripDict];
+    [self populateTripTableView];
 }
 
 -(void)addingOneWayView{
@@ -250,6 +268,20 @@ typedef enum{
 
 -(void)bookButtonActionDelegate{
     [self performSegueWithIdentifier:@"homeToPassengerDetails" sender:nil];
+}
+
+-(void)populateTripTableView{
+    self.multipleStopView.tripArray = self.tripArray;
+}
+
+-(void)addButtonActionDelegate{
+    [self.tripArray addObject:[self.tripArray lastObject]];
+    [self populateTripTableView];
+}
+
+-(void)removeButtonActionDelegate{
+    [self.tripArray removeLastObject];
+    [self populateTripTableView];
 }
 
 /*
