@@ -26,4 +26,9 @@
 -(void)bookButtonActionDelegate;
 -(void)addButtonActionDelegate;
 -(void)removeButtonActionDelegate;
+
+-(void)fromButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index;
+-(void)toButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index;
+-(void)dateButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index withTextField:(UITextField *)textField;
+-(void)flexibilityButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index;
 @end

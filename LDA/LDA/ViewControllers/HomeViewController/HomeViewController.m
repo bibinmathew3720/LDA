@@ -5,10 +5,6 @@
 //  Created by Bibin Mathew on 5/29/18.
 //  Copyright © 2018 lda. All rights reserved.
 //
-#define FromKey @"fromKey"
-#define ToKey @"toKey"
-#define DepartKey @"depart"
-#define FlexibilityKey @"flexibility"
 
 #import "OneWayRoundView.h"
 #import "MultipleStopView.h"
@@ -42,6 +38,7 @@ typedef enum{
 @property (nonatomic, strong) NSArray *passengersArray;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (nonatomic, strong) NSMutableArray *tripArray;
+@property (nonatomic, assign) NSUInteger multipleViewSelectedIndex;
 @end
 
 @implementation HomeViewController
@@ -65,6 +62,7 @@ typedef enum{
     //Class Initialisation
     self.classArray = @[@"Economy",@"Business",@"First Class",@"Premium Economy"];
     self.passengersArray = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
+    self.multipleViewSelectedIndex = -1;
 }
 
 -(void)initialisingTripDictionary{
@@ -118,7 +116,16 @@ typedef enum{
     }
     else if (self.selPickerType == PickerTypeDepart){
         NSLog(@"Date Picker Date:%@",self.datePicker.date);
-        self.onewayRoundView.departDateLabel.text = [self convertDate:self.datePicker.date toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
+        if(self.listType == OneWayRound){
+            self.onewayRoundView.departDateLabel.text = [self convertDate:self.datePicker.date toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
+        }
+        else{
+            NSString *dateString = [self convertDate:self.datePicker.date toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
+            NSMutableDictionary *selDictionary = [[self.tripArray objectAtIndex:self.multipleViewSelectedIndex] mutableCopy];
+            [selDictionary setValue:dateString forKey:DepartKey];
+            [self.tripArray replaceObjectAtIndex:self.multipleViewSelectedIndex withObject:selDictionary];
+            [self populateTripTableView];
+        }
     }
     else if (self.selPickerType == PickerTypeFlexibility){
          self.onewayRoundView.flexibilityDateLabel.text = [self convertDate:self.datePicker.date toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
@@ -276,12 +283,35 @@ typedef enum{
 
 -(void)addButtonActionDelegate{
     [self.tripArray addObject:[self.tripArray lastObject]];
-    [self populateTripTableView];
+    [self populateTripTableView]; 
 }
 
 -(void)removeButtonActionDelegate{
     [self.tripArray removeLastObject];
     [self populateTripTableView];
+}
+
+//Multiple Stop View Cell Delegates
+
+-(void)fromButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index{
+    self.multipleViewSelectedIndex = index;
+}
+
+-(void)toButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index{
+     self.multipleViewSelectedIndex = index;
+}
+
+-(void)dateButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index withTextField:(UITextField *)textField{
+    self.multipleViewSelectedIndex = index;
+    self.selPickerType = PickerTypeDepart;
+    textField.inputAccessoryView = self.toolBar;
+    textField.inputView = self.datePicker;
+    [textField becomeFirstResponder];
+}
+
+-(void)flexibilityButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index{
+     self.multipleViewSelectedIndex = index;
+   
 }
 
 /*

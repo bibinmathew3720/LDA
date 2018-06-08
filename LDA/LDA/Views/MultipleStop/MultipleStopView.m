@@ -10,7 +10,7 @@
 
 #import "MultipleStopView.h"
 #import "MultipleStopTVC.h"
-@interface MultipleStopView()
+@interface MultipleStopView()<MultipleStopTVCDelegate>
 @property (nonatomic, strong) NSArray *currentTripArray;
 @end
 @implementation MultipleStopView
@@ -32,6 +32,9 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MultipleStopTVC *multipleStopCell = [tableView dequeueReusableCellWithIdentifier:@"multipleStopTVC" forIndexPath:indexPath];
+    multipleStopCell.multipleStopCellDelegate = self;
+    multipleStopCell.dataDictionary = [self.currentTripArray objectAtIndex:indexPath.section];
+    multipleStopCell.tag = indexPath.section;
     return multipleStopCell;
 }
 
@@ -80,6 +83,32 @@
         self.removeButton.userInteractionEnabled = YES;
     }
     [self.multipleStopTableView reloadData];
+}
+
+#pragma mark - Table Cell Delegates
+
+-(void)fromButtonActionDelegateWithIndex:(NSInteger)index{
+    if(self.multipleViewDelegate && [self.multipleViewDelegate respondsToSelector:@selector(fromButtonActionDelegateFromMultipleViewAtIndex:)]){
+        [self.multipleViewDelegate fromButtonActionDelegateFromMultipleViewAtIndex:index];
+    }
+}
+
+-(void)toButtonActionDelegateWithIndex:(NSInteger)index{
+    if(self.multipleViewDelegate && [self.multipleViewDelegate respondsToSelector:@selector(toButtonActionDelegateFromMultipleViewAtIndex:)]){
+        [self.multipleViewDelegate toButtonActionDelegateFromMultipleViewAtIndex:index];
+    }
+}
+
+-(void)dateButtonActionDelegateWithIndex:(NSUInteger)index withtextField:(UITextField *)textField{
+    if(self.multipleViewDelegate && [self.multipleViewDelegate respondsToSelector:@selector(dateButtonActionDelegateFromMultipleViewAtIndex:withTextField:)]){
+        [self.multipleViewDelegate dateButtonActionDelegateFromMultipleViewAtIndex:index withTextField:textField];
+    }
+}
+
+-(void)flexibilityButtonActionDelegateWithIndex:(NSUInteger)index{
+    if(self.multipleViewDelegate && [self.multipleViewDelegate respondsToSelector:@selector(flexibilityButtonActionDelegateFromMultipleViewAtIndex:)]){
+        [self.multipleViewDelegate flexibilityButtonActionDelegateFromMultipleViewAtIndex:index];
+    }
 }
 /*
 // Only override drawRect: if you perform custom drawing.

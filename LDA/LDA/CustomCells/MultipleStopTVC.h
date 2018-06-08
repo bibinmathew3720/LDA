@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@protocol MultipleStopTVCDelegate;
 @interface MultipleStopTVC : UITableViewCell
-
+@property (weak, nonatomic) IBOutlet UIButton *fromButton;
+@property (weak, nonatomic) IBOutlet UIButton *toButton;
+@property (weak, nonatomic) IBOutlet UITextField *dateTextField;
+@property (weak, nonatomic) IBOutlet UITextField *dateLabel;
+@property (weak, nonatomic) IBOutlet UITextField *flexibilityLabel;
+@property (nonatomic, assign) id <MultipleStopTVCDelegate>multipleStopCellDelegate;
+@property (nonatomic, strong) id dataDictionary;
+@end
+@protocol MultipleStopTVCDelegate<NSObject>
+-(void)fromButtonActionDelegateWithIndex:(NSInteger)index;
+-(void)toButtonActionDelegateWithIndex:(NSInteger)index;
+-(void)dateButtonActionDelegateWithIndex:(NSUInteger)index withtextField:(UITextField *)textField;;
+-(void)flexibilityButtonActionDelegateWithIndex:(NSUInteger)index;
 @end
