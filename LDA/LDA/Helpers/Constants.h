@@ -15,3 +15,6 @@
 #define ToKey @"toKey"
 #define DepartKey @"depart"
 #define FlexibilityKey @"flexibility"
+
+#define NetworkUnavailableMessage @"Network not available"
+#define ConnectionTioServerFailedMessage @"There was a problem processing your request"

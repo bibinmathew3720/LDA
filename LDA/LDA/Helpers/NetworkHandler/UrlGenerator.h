@@ -14,12 +14,12 @@ static NSString *LDABaseUrl = @"http://app.luxurydiscountair.com/"; // Productio
 
 static NSString *LDASearchUrl = @"v1/airport";
 static NSString *LDASaveTripDetails = @"v1/trip";
-static NSString *LDATermsAndConditions = @"about/terms";
+static NSString *LDATermsAndConditions = @"https://luxurydiscountair.com/about/terms";
 
 typedef NS_ENUM(NSInteger, LDAURLType ){
     LDAURLTYPESearch = 1,
-    LDAOURLTYPESubmitTripDetails = 2,
-    LDAOURLTYPETermsAndConditions = 3,
+    LDAURLTYPESubmitTripDetails = 2,
+    LDAURLTYPETermsAndConditions = 3,
     
 };
 

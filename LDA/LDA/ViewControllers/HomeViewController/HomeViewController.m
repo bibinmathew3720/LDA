@@ -6,6 +6,8 @@
 //  Copyright © 2018 lda. All rights reserved.
 //
 
+#define HomeToSearchIdentifier @"homeToSearch"
+
 #import "OneWayRoundView.h"
 #import "MultipleStopView.h"
 
@@ -295,10 +297,12 @@ typedef enum{
 
 -(void)fromButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index{
     self.multipleViewSelectedIndex = index;
+    [self performSegueWithIdentifier:HomeToSearchIdentifier sender:[NSNumber numberWithUnsignedInteger:index]];
 }
 
 -(void)toButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index{
      self.multipleViewSelectedIndex = index;
+    [self performSegueWithIdentifier:HomeToSearchIdentifier sender:[NSNumber numberWithUnsignedInteger:index]];
 }
 
 -(void)dateButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index withTextField:(UITextField *)textField{
@@ -311,8 +315,9 @@ typedef enum{
 
 -(void)flexibilityButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index{
      self.multipleViewSelectedIndex = index;
-   
 }
+
+
 
 /*
 #pragma mark - Navigation

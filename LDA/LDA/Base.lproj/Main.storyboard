@@ -88,6 +88,7 @@
                         <outlet property="toolBar" destination="1kD-Wk-5Tm" id="M2d-NF-1fQ"/>
                         <outlet property="tripTypePickerView" destination="wcN-46-MaP" id="kh0-4z-iZ4"/>
                         <segue destination="qCL-fP-uPK" kind="show" identifier="homeToPassengerDetails" id="gLB-tn-VuH"/>
+                        <segue destination="LeI-Fo-zTH" kind="show" identifier="homeToSearch" id="RRO-ZB-Bx9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -123,7 +124,7 @@
                     </connections>
                 </datePicker>
             </objects>
-            <point key="canvasLocation" x="908" y="-612"/>
+            <point key="canvasLocation" x="943" y="-1612"/>
         </scene>
         <!--SearchVC-->
         <scene sceneID="SR3-mb-eLg">
@@ -156,7 +157,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
             </objects>
-            <point key="canvasLocation" x="3687" y="-501"/>
+            <point key="canvasLocation" x="2809" y="-1318"/>
         </scene>
         <!--Web ViewVC-->
         <scene sceneID="8OD-Gj-1XB">
@@ -526,7 +527,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1761" y="-587"/>
+            <point key="canvasLocation" x="2838" y="-456"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="33X-ZN-U6y">
@@ -568,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUy-s3-7iA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="-525"/>
+            <point key="canvasLocation" x="1070" y="-483"/>
         </scene>
     </scenes>
     <resources>

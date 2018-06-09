@@ -26,11 +26,11 @@
         case LDAURLTYPESearch:
             appendingUrl = LDASearchUrl;
             break;
-        case LDAOURLTYPESubmitTripDetails:
+        case LDAURLTYPESubmitTripDetails:
             appendingUrl = LDASaveTripDetails;
             break;
-        case LDAOURLTYPETermsAndConditions:
-            appendingUrl = LDATermsAndConditions;
+        case LDAURLTYPETermsAndConditions:
+            return [NSURL URLWithString:LDATermsAndConditions];
             break;
         default:
             break;

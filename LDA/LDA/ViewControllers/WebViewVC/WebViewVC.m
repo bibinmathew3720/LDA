@@ -21,9 +21,8 @@
 
 -(void)initialisation{
     self.title = @"Terms and Conditions";
-    NSString *termsAndConditionsString  = @"https://luxurydiscountair.com/about/terms";
-    NSURL *websiteUrl = [NSURL URLWithString:termsAndConditionsString];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:websiteUrl];
+    NSURL *termsAndConditionsUrl = [[UrlGenerator sharedHandler] urlForRequestType:LDAURLTYPETermsAndConditions withURLParameter:nil];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:termsAndConditionsUrl];
     [self.webView loadRequest:urlRequest];
     [self showLeftBarButton];
 }
