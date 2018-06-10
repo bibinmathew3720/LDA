@@ -24,6 +24,9 @@
 
 -(void)setDataDictionary:(id)dataDictionary{
     self.dateLabel.text = [dataDictionary valueForKey:DepartKey];
+    self.flexibilityLabel.text = [dataDictionary valueForKey:FlexibilityKey];
+    NSLog(@"From Code String:%@",[dataDictionary valueForKey:FromCodeKey]);
+     NSLog(@"To Code String:%@",[dataDictionary valueForKey:ToCodeKey]);
 }
 
 - (IBAction)fromButtonAction:(UIButton *)sender {

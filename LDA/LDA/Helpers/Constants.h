@@ -11,8 +11,10 @@
 #define LDAAPPCOMMONBLUECOLOR [UIColor colorWithRed:0.14 green:0.47 blue:0.93 alpha:1.0]
 #define APPNAME @"LDA"
 
-#define FromKey @"fromKey"
-#define ToKey @"toKey"
+#define FromCodeKey @"fromKey"
+#define FromPlaceKey @"fromPlace"
+#define ToCodeKey @"toKey"
+#define ToPlaceKey @"toKey"
 #define DepartKey @"depart"
 #define FlexibilityKey @"flexibility"
 

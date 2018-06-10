@@ -86,8 +86,10 @@ typedef enum{
 
 -(void)initialisingTripDictionary{
     NSMutableDictionary *tripDict = [[NSMutableDictionary alloc] init];
-    [tripDict setValue:@"" forKey:FromKey];
-     [tripDict setValue:@"" forKey:ToKey];
+    [tripDict setValue:@"" forKey:FromCodeKey];
+    [tripDict setValue:@"" forKey:FromPlaceKey];
+    [tripDict setValue:@"" forKey:ToCodeKey];
+    [tripDict setValue:@"" forKey:ToPlaceKey];
     [tripDict setValue:[self convertDate:[NSDate date] toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]] forKey:DepartKey];
     [tripDict setValue:@"Exact Day" forKey:FlexibilityKey];
     [self.tripArray addObject:tripDict];
@@ -378,12 +380,12 @@ typedef enum{
 
 -(void)fromButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index{
     self.multipleViewSelectedIndex = index;
-    [self performSegueWithIdentifier:HomeToSearchIdentifier sender:[NSNumber numberWithUnsignedInteger:index]];
+    [self performSegueWithIdentifier:HomeToSearchIdentifier sender:@"from"];
 }
 
 -(void)toButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index{
      self.multipleViewSelectedIndex = index;
-    [self performSegueWithIdentifier:HomeToSearchIdentifier sender:[NSNumber numberWithUnsignedInteger:index]];
+    [self performSegueWithIdentifier:HomeToSearchIdentifier sender:@"to"];
 }
 
 -(void)dateButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index withTextField:(UITextField *)textField{
@@ -433,7 +435,18 @@ typedef enum{
         }
     }
     else{
-        
+      
+        NSMutableDictionary *selDictionary = [[self.tripArray objectAtIndex:self.multipleViewSelectedIndex] mutableCopy];
+        if(searchType == searchTypeFrom){
+            [selDictionary setValue:[locationDetails valueForKey:@"code"] forKey:FromCodeKey];
+            [selDictionary setValue:[locationDetails valueForKey:@"airport"] forKey:FromPlaceKey];
+        }
+        else{
+            [selDictionary setValue:[locationDetails valueForKey:@"code"] forKey:ToCodeKey];
+            [selDictionary setValue:[locationDetails valueForKey:@"airport"] forKey:ToPlaceKey];
+        }
+        [self.tripArray replaceObjectAtIndex:self.multipleViewSelectedIndex withObject:selDictionary];
+        [self populateTripTableView];
     }
 }
 
