@@ -48,6 +48,12 @@
         [self.onewayViewDelegate flexibiltyButtonActionDelegateWithTF:self.flexibilityTF];
     }
 }
+- (IBAction)returnButtonAction:(UIButton *)sender {
+}
+- (IBAction)returnFlexibilityButtonAction:(UIButton *)sender {
+}
+
+
 - (IBAction)passengersButtonAction:(UIButton *)sender {
     if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(passengsersButtonActionDelegateWithTF:)]){
         [self.onewayViewDelegate passengsersButtonActionDelegateWithTF:self.passengersTF];

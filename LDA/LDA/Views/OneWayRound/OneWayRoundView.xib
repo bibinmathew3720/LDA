@@ -475,6 +475,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="172" height="70"/>
                                             <connections>
                                                 <action selector="departButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="CC4-ui-AXD"/>
+                                                <action selector="returnButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="7r7-h8-LLv"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -551,6 +552,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="172" height="70"/>
                                             <connections>
                                                 <action selector="flexibilityButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Onm-gt-GVu"/>
+                                                <action selector="returnFlexibilityButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="vK2-Bu-nTh"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -749,6 +751,14 @@
                 <outlet property="fromPlaceLabel" destination="R7e-8x-vqv" id="XrE-Yv-jw3"/>
                 <outlet property="passengersLabel" destination="TaM-ye-NCK" id="v64-fP-OfH"/>
                 <outlet property="passengersTF" destination="nqF-Io-weA" id="z9a-KN-X65"/>
+                <outlet property="returnDateLabel" destination="ddX-nM-D3w" id="ckf-F7-Ilh"/>
+                <outlet property="returnFlexibilityLabel" destination="FLw-dj-mrB" id="nQD-fB-zdE"/>
+                <outlet property="returnFlexibilityTF" destination="EA7-Gb-8Jh" id="YzC-M9-0E8"/>
+                <outlet property="returnFlexibilityView" destination="3cW-Cs-UEM" id="idx-pX-WaV"/>
+                <outlet property="returnTF" destination="ULK-7n-m0I" id="Hcr-l2-vVz"/>
+                <outlet property="returnTypeTopConstraint" destination="F2A-IC-jmu" id="57O-45-9Ib"/>
+                <outlet property="returnView" destination="uTc-II-lGP" id="lrG-sW-A3b"/>
+                <outlet property="returnViewheightConstarint" destination="aMM-y3-zEN" id="J4F-W7-dmx"/>
                 <outlet property="toCodeLabel" destination="Nf4-n9-xJZ" id="z0N-nu-96m"/>
                 <outlet property="toPlaceLabel" destination="QIm-0T-LTr" id="qs1-uQ-Xfk"/>
                 <outlet property="tripTypeLabel" destination="oFj-hI-27j" id="njM-qd-Hbj"/>
@@ -760,7 +770,7 @@
     <resources>
         <image name="class" width="65" height="65"/>
         <image name="depart" width="50" height="50"/>
-        <image name="flexibility" width="65" height="65"/>
+        <image name="flexibility" width="50" height="50"/>
         <image name="passengers" width="65" height="65"/>
         <image name="plusIcon" width="36" height="36"/>
         <image name="tripType" width="65" height="65"/>

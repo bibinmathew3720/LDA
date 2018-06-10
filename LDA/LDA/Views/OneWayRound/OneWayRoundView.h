@@ -21,6 +21,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *departDateLabel;
 @property (weak, nonatomic) IBOutlet UITextField *flexibilityTF;
 @property (weak, nonatomic) IBOutlet UILabel *flexibilityLabel;
+@property (weak, nonatomic) IBOutlet UITextField *returnTF;
+@property (weak, nonatomic) IBOutlet UILabel *returnDateLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *returnViewheightConstarint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *returnTypeTopConstraint;
+@property (weak, nonatomic) IBOutlet UIView *returnView;
+@property (weak, nonatomic) IBOutlet UIView *returnFlexibilityView;
+@property (weak, nonatomic) IBOutlet UITextField *returnFlexibilityTF;
+@property (weak, nonatomic) IBOutlet UILabel *returnFlexibilityLabel;
+
+
 @property (weak, nonatomic) IBOutlet UITextField *passengersTF;
 @property (weak, nonatomic) IBOutlet UILabel *passengersLabel;
 @property (nonatomic, assign) id <OneWayRoundViewDelegate>onewayViewDelegate;
