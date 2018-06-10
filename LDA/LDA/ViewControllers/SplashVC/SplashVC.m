@@ -7,6 +7,11 @@
 //
 
 #import "SplashVC.h"
+#import "FLAnimatedImage.h"
+
+#define SplashImageWidth 87
+#define SplashImageheight 70
+#define GifImageName @"splash"
 
 @interface SplashVC ()
 
@@ -16,13 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _splashImageView.animationImages = [NSArray arrayWithObjects:
-                                         [UIImage imageNamed:@"LargeSize_1.gif"],
-                                         [UIImage imageNamed:@"LargeSize_1.gif"], nil];
-    _splashImageView.animationDuration = 1.0f;
-    _splashImageView.animationRepeatCount = 0;
-    [_splashImageView startAnimating];
-    // Do any additional setup after loading the view.
+    NSString *filePath = [[NSBundle mainBundle] pathForResource: GifImageName ofType: @"gif"];
+    NSData *gifData = [NSData dataWithContentsOfFile: filePath];
+    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:gifData];
+    FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
+    imageView.animatedImage = image;
+    imageView.frame = CGRectMake(self.view.frame.size.width/2 - SplashImageWidth/2 , self.view.frame.size.height/2 - SplashImageheight/2, SplashImageWidth , SplashImageheight);
+    [self.view addSubview:imageView];
 }
 
 - (void)didReceiveMemoryWarning {

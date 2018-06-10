@@ -20,21 +20,25 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - FLAnimatedImage (1.0.12)
   - MBProgressHUD (0.9.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.3)
+  - FLAnimatedImage (~> 1.0)
   - MBProgressHUD (~> 0.9.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - FLAnimatedImage
     - MBProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
 
-PODFILE CHECKSUM: 847434c450d91eecdf9bd43f7bd797c4b3ed7c6c
+PODFILE CHECKSUM: 82a8867bb7b7ff3e6665ac2a41fa86040ffb705d
 
 COCOAPODS: 1.5.0

@@ -9,6 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface SplashVC : UIViewController
-
-@property (weak, nonatomic) IBOutlet UIImageView *splashImageView;
 @end
