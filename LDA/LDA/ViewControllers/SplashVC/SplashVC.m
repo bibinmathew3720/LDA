@@ -9,8 +9,8 @@
 #import "SplashVC.h"
 #import "FLAnimatedImage.h"
 
-#define SplashImageWidth 87
-#define SplashImageheight 70
+#define SplashImageWidth 217
+#define SplashImageheight 175
 #define GifImageName @"splash"
 
 @interface SplashVC ()
@@ -28,6 +28,17 @@
     imageView.animatedImage = image;
     imageView.frame = CGRectMake(self.view.frame.size.width/2 - SplashImageWidth/2 , self.view.frame.size.height/2 - SplashImageheight/2, SplashImageWidth , SplashImageheight);
     [self.view addSubview:imageView];
+    self.navigationController.navigationBar.hidden = YES;
+    [self addingSplashTimer];
+}
+
+-(void)addingSplashTimer{
+    NSTimer *splashTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(splashTimerAction:) userInfo:nil repeats:NO];
+}
+
+-(void)splashTimerAction:(NSTimer *)timer{
+    [timer invalidate];
+    [self performSegueWithIdentifier:@"splashToHome" sender:nil];
 }
 
 - (void)didReceiveMemoryWarning {

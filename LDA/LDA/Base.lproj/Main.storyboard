@@ -124,7 +124,7 @@
                     </connections>
                 </datePicker>
             </objects>
-            <point key="canvasLocation" x="943" y="-1612"/>
+            <point key="canvasLocation" x="1425" y="-580"/>
         </scene>
         <!--SearchVC-->
         <scene sceneID="SR3-mb-eLg">
@@ -590,23 +590,23 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GVZ-Ux-sJN"/>
+                        <segue destination="UpZ-bw-OZm" kind="relationship" relationship="rootViewController" id="dwf-yY-RcR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shW-uV-LBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-802" y="-466"/>
         </scene>
-        <!--View Controller-->
+        <!--SplashVC-->
         <scene sceneID="5cO-pt-PQf">
             <objects>
-                <viewController id="UpZ-bw-OZm" sceneMemberID="viewController">
+                <viewController id="UpZ-bw-OZm" customClass="SplashVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="djN-Qc-nlR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgView" translatesAutoresizingMaskIntoConstraints="NO" id="eBI-wR-ng5">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -618,10 +618,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KGZ-Lh-vPc"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hek-5E-JBe"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="splashToHome" id="xWr-2l-aCq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUy-s3-7iA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="-483"/>
+            <point key="canvasLocation" x="266" y="-466"/>
         </scene>
     </scenes>
     <resources>

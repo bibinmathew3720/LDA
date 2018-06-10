@@ -68,6 +68,8 @@ typedef enum{
     self.classArray = @[@"Economy",@"Business",@"First Class",@"Premium Economy"];
     self.passengersArray = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
     self.multipleViewSelectedIndex = -1;
+    self.navigationController.navigationBar.hidden = NO;
+    self.navigationItem.hidesBackButton = YES;
 }
 
 -(void)initialisingTripDictionary{
