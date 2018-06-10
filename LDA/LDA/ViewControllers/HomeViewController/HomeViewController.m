@@ -25,7 +25,13 @@ typedef enum{
     PickerClassType = 1,
     PickerClassPassengers = 2,
     PickerTypeDepart = 3,
+    PickerTypeReturn = 4,
 }PickerType;
+
+typedef enum{
+    TripTypeOneWay = 0,
+    TripTypeReturn = 1,
+}TripType;
 
 @interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,MultipleStopViewDelegate,FlexibiltyViewDelegate,SearchVCDelegate>
 @property (nonatomic,strong) OneWayRoundView *onewayRoundView;
@@ -37,6 +43,7 @@ typedef enum{
 @property (nonatomic, strong) NSArray *tripTypeArray;
 @property (nonatomic,assign) ListType listType;
 @property(nonatomic, assign) PickerType selPickerType;
+@property (nonatomic, assign) TripType tripType;
 @property (nonatomic, strong) NSArray *classArray;
 @property (nonatomic, strong) NSArray *passengersArray;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
@@ -57,6 +64,8 @@ typedef enum{
     self.multipleStopView.hidden = YES;
     self.tripArray = [[NSMutableArray alloc] init];
     [self initialisingTripDictionary];
+    self.tripType = TripTypeOneWay;
+    [self hideReturnView];
 }
 
 -(void)initialisation{
@@ -71,6 +80,7 @@ typedef enum{
     self.multipleViewSelectedIndex = -1;
     self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.hidesBackButton = YES;
+   
 }
 
 -(void)initialisingTripDictionary{
@@ -96,7 +106,12 @@ typedef enum{
 -(void)selectedFlexibilityItem:(id)flexibilityItem{
     self.flexibiliyView.hidden = YES;
     if(self.listType == OneWayRound){
-        self.onewayRoundView.flexibilityLabel.text = flexibilityItem;
+        if(self.selPickerType == PickerTypeDepart){
+            self.onewayRoundView.flexibilityLabel.text = flexibilityItem;
+        }
+        else if (self.selPickerType == PickerTypeReturn){
+            self.onewayRoundView.returnFlexibilityLabel.text = flexibilityItem;
+        }
     }
     else{
         
@@ -127,6 +142,14 @@ typedef enum{
 - (IBAction)toolBarDoneButtonAction:(UIBarButtonItem *)sender {
     [self.view endEditing:YES];
     if(self.selPickerType == PickerTypeType){
+        if([self.tripTypePickerView selectedRowInComponent:0] == 0){
+            self.tripType = TripTypeOneWay;
+            [self hideReturnView];
+        }
+        else{
+             self.tripType = TripTypeReturn;
+            [self showReturnView];
+        }
         self.onewayRoundView.tripTypeLabel.text = [self.tripTypeArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]];
     }
     else if(self.selPickerType == PickerClassType){
@@ -145,7 +168,7 @@ typedef enum{
     else if (self.selPickerType == PickerTypeDepart){
         NSLog(@"Date Picker Date:%@",self.datePicker.date);
         if(self.listType == OneWayRound){
-            self.onewayRoundView.departDateLabel.text = [self convertDate:self.datePicker.date toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
+                self.onewayRoundView.departDateLabel.text = [self convertDate:self.datePicker.date toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
         }
         else{
             NSString *dateString = [self convertDate:self.datePicker.date toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
@@ -155,6 +178,23 @@ typedef enum{
             [self populateTripTableView];
         }
     }
+    else if (self.selPickerType == PickerTypeReturn){
+        self.onewayRoundView.returnDateLabel.text = [self convertDate:self.datePicker.date toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
+    }
+}
+
+-(void)hideReturnView{
+    self.onewayRoundView.returnView.hidden = YES;
+    self.onewayRoundView.returnViewheightConstarint.constant = 0;
+    self.onewayRoundView.returnTypeTopConstraint.constant = 0;
+    self.onewayRoundView.returnFlexibilityView.hidden = YES;
+}
+
+-(void)showReturnView{
+    self.onewayRoundView.returnView.hidden = NO;
+    self.onewayRoundView.returnViewheightConstarint.constant = 70;
+    self.onewayRoundView.returnTypeTopConstraint.constant = 20;
+    self.onewayRoundView.returnFlexibilityView.hidden = NO;
 }
 
 - (IBAction)toolBArCanceButtonAction:(UIBarButtonItem *)sender {
@@ -217,6 +257,19 @@ typedef enum{
 }
 
 -(void)flexibiltyButtonActionDelegateWithTF:(UITextField *)textField{
+    self.selPickerType = PickerTypeDepart;
+    self.flexibiliyView.hidden = NO;
+}
+
+-(void)returnButtonActionDelagateWithTF:(UITextField *)textField{
+    self.selPickerType = PickerTypeReturn;
+    textField.inputAccessoryView = self.toolBar;
+    textField.inputView = self.datePicker;
+    [textField becomeFirstResponder];
+}
+
+-(void)returnFlexibilityButtonActionDelegateWithTF:(UITextField *)textField{
+    self.selPickerType = PickerTypeReturn;
     self.flexibiliyView.hidden = NO;
 }
 

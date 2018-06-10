@@ -49,8 +49,14 @@
     }
 }
 - (IBAction)returnButtonAction:(UIButton *)sender {
+    if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(returnButtonActionDelagateWithTF:)]){
+        [self.onewayViewDelegate returnButtonActionDelagateWithTF:self.returnTF];
+    }
 }
 - (IBAction)returnFlexibilityButtonAction:(UIButton *)sender {
+    if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(returnFlexibilityButtonActionDelegateWithTF:)]){
+        [self.onewayViewDelegate returnFlexibilityButtonActionDelegateWithTF:self.returnFlexibilityTF];
+    }
 }
 
 
