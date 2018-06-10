@@ -133,7 +133,62 @@
                     <view key="view" contentMode="scaleToFill" id="gOZ-ta-Jmt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hc5-sx-SiC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fOC-y3-QPM"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LeI-Fo-zTH" id="otd-ha-Uhx"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ymY-Ok-fGc">
+                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="searchCell" id="DKy-qr-EzA" customClass="SearchTVC">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DKy-qr-EzA" id="xFR-g4-eO6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp0-Zp-tNb">
+                                                    <rect key="frame" x="5" y="12.5" width="365" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="gp0-Zp-tNb" secondAttribute="trailing" constant="5" id="GDn-0S-RNw"/>
+                                            <constraint firstItem="gp0-Zp-tNb" firstAttribute="leading" secondItem="DKy-qr-EzA" secondAttribute="leading" constant="5" id="XpU-fO-QJC"/>
+                                            <constraint firstItem="gp0-Zp-tNb" firstAttribute="centerY" secondItem="DKy-qr-EzA" secondAttribute="centerY" id="YPy-Bb-lDi"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="locationLabel" destination="gp0-Zp-tNb" id="Z04-cQ-enf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LeI-Fo-zTH" id="9EZ-E7-jZX"/>
+                                    <outlet property="delegate" destination="LeI-Fo-zTH" id="ara-36-5l6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hc5-sx-SiC" firstAttribute="top" secondItem="BoR-P7-1f3" secondAttribute="top" id="3JY-s0-UFU"/>
+                            <constraint firstItem="ymY-Ok-fGc" firstAttribute="leading" secondItem="hc5-sx-SiC" secondAttribute="leading" id="Kzk-k1-RN9"/>
+                            <constraint firstItem="BoR-P7-1f3" firstAttribute="bottom" secondItem="ymY-Ok-fGc" secondAttribute="bottom" id="O3R-yq-lCe"/>
+                            <constraint firstItem="ymY-Ok-fGc" firstAttribute="trailing" secondItem="hc5-sx-SiC" secondAttribute="trailing" id="ThC-ue-hia"/>
+                            <constraint firstItem="hc5-sx-SiC" firstAttribute="trailing" secondItem="BoR-P7-1f3" secondAttribute="trailing" id="WJa-Sh-El4"/>
+                            <constraint firstItem="hc5-sx-SiC" firstAttribute="leading" secondItem="BoR-P7-1f3" secondAttribute="leading" id="e3d-65-hCj"/>
+                            <constraint firstItem="ymY-Ok-fGc" firstAttribute="top" secondItem="hc5-sx-SiC" secondAttribute="bottom" id="wvu-Bn-TIT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BoR-P7-1f3"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="wfq-tG-Opm">
@@ -145,17 +200,14 @@
                         </barButtonItem>
                         <connections>
                             <outlet property="leftBarButtonItem" destination="uWA-3f-hHc" id="BMm-8s-J4f"/>
-                            <outlet property="titleView" destination="vRD-G4-lp8" id="1Ra-uS-9ue"/>
                         </connections>
                     </navigationItem>
+                    <connections>
+                        <outlet property="airportTableView" destination="ymY-Ok-fGc" id="VaR-ZE-GOw"/>
+                        <outlet property="searchBar" destination="hc5-sx-SiC" id="8d8-Qq-85G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V0e-L9-drR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchBar contentMode="redraw" preservesSuperviewLayoutMargins="YES" searchBarStyle="prominent" placeholder="From where?" id="vRD-G4-lp8">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <viewLayoutGuide key="safeArea" id="aIO-6G-1Gz"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
             </objects>
             <point key="canvasLocation" x="2809" y="-1318"/>
         </scene>

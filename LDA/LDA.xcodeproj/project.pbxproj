@@ -42,6 +42,7 @@
 		D0BE51B520C704020072EEA9 /* NSArray+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BE51B020C704020072EEA9 /* NSArray+Custom.m */; };
 		D0BE51B620C704020072EEA9 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BE51B220C704020072EEA9 /* NSString+Extension.m */; };
 		D0BE51B720C704020072EEA9 /* UIView+CLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BE51B420C704020072EEA9 /* UIView+CLAdditions.m */; };
+		D0F0AF7920CC9745006D8BCA /* SearchTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F0AF7820CC9745006D8BCA /* SearchTVC.m */; };
 		D0F10F1D20C929950095E68D /* PassengerDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F10F1220C929940095E68D /* PassengerDetailsVC.m */; };
 		D0F10F1E20C929950095E68D /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F10F1620C929950095E68D /* SearchVC.m */; };
 		D0F10F1F20C929950095E68D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F10F1920C929950095E68D /* BaseViewController.m */; };
@@ -103,6 +104,8 @@
 		D0BE51B220C704020072EEA9 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		D0BE51B320C704020072EEA9 /* UIView+CLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CLAdditions.h"; sourceTree = "<group>"; };
 		D0BE51B420C704020072EEA9 /* UIView+CLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CLAdditions.m"; sourceTree = "<group>"; };
+		D0F0AF7720CC9745006D8BCA /* SearchTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTVC.h; sourceTree = "<group>"; };
+		D0F0AF7820CC9745006D8BCA /* SearchTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTVC.m; sourceTree = "<group>"; };
 		D0F10F1120C929940095E68D /* PassengerDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassengerDetailsVC.h; sourceTree = "<group>"; };
 		D0F10F1220C929940095E68D /* PassengerDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassengerDetailsVC.m; sourceTree = "<group>"; };
 		D0F10F1520C929950095E68D /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
@@ -311,6 +314,15 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		D0F0AF7620CC9732006D8BCA /* SearchCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0F0AF7720CC9745006D8BCA /* SearchTVC.h */,
+				D0F0AF7820CC9745006D8BCA /* SearchTVC.m */,
+			);
+			path = SearchCell;
+			sourceTree = "<group>";
+		};
 		D0F10F1020C929940095E68D /* PassengerDetailsVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +344,7 @@
 		D0F10F1420C929950095E68D /* SearchVC */ = {
 			isa = PBXGroup;
 			children = (
+				D0F0AF7620CC9732006D8BCA /* SearchCell */,
 				D0F10F1520C929950095E68D /* SearchVC.h */,
 				D0F10F1620C929950095E68D /* SearchVC.m */,
 			);
@@ -472,6 +485,7 @@
 				D0F10F1E20C929950095E68D /* SearchVC.m in Sources */,
 				D0F10F2020C929950095E68D /* HomeViewController.m in Sources */,
 				D0BE519320C6D8060072EEA9 /* OneWayRoundView.m in Sources */,
+				D0F0AF7920CC9745006D8BCA /* SearchTVC.m in Sources */,
 				D0BE51B620C704020072EEA9 /* NSString+Extension.m in Sources */,
 				D0F10F1F20C929950095E68D /* BaseViewController.m in Sources */,
 				D0F10F1D20C929950095E68D /* PassengerDetailsVC.m in Sources */,
