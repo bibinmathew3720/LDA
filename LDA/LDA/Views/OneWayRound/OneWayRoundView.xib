@@ -48,6 +48,12 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pek-zk-raj">
+                                            <rect key="frame" x="0.0" y="0.0" width="152" height="56"/>
+                                            <connections>
+                                                <action selector="fromButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="gjm-zb-ySS"/>
+                                            </connections>
+                                        </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twoWayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xml-dh-5YA">
                                             <rect key="frame" x="152" y="10" width="50" height="50"/>
                                             <constraints>
@@ -67,13 +73,23 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcA-mS-EVm">
+                                            <rect key="frame" x="202" y="0.0" width="152" height="56"/>
+                                            <connections>
+                                                <action selector="toButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Gtb-Fg-AAR"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstItem="WcA-mS-EVm" firstAttribute="top" secondItem="wB7-5p-hDO" secondAttribute="top" id="0jc-fR-HDv"/>
+                                        <constraint firstAttribute="bottom" secondItem="WcA-mS-EVm" secondAttribute="bottom" id="6uf-RF-7H2"/>
                                         <constraint firstItem="Xml-dh-5YA" firstAttribute="top" secondItem="n53-8e-PYk" secondAttribute="top" id="9Wz-7R-mgf"/>
                                         <constraint firstItem="QIm-0T-LTr" firstAttribute="leading" secondItem="Nf4-n9-xJZ" secondAttribute="leading" id="Fyn-fm-sfB"/>
                                         <constraint firstItem="QIm-0T-LTr" firstAttribute="trailing" secondItem="Nf4-n9-xJZ" secondAttribute="trailing" id="IY4-IS-ulT"/>
+                                        <constraint firstItem="WcA-mS-EVm" firstAttribute="leading" secondItem="Xml-dh-5YA" secondAttribute="trailing" id="M8d-Oy-3Y9"/>
                                         <constraint firstItem="R7e-8x-vqv" firstAttribute="trailing" secondItem="n53-8e-PYk" secondAttribute="trailing" id="MEy-El-jRm"/>
+                                        <constraint firstAttribute="trailing" secondItem="WcA-mS-EVm" secondAttribute="trailing" id="UPr-TY-MgF"/>
                                         <constraint firstItem="n53-8e-PYk" firstAttribute="top" secondItem="wB7-5p-hDO" secondAttribute="top" constant="10" id="WK0-KT-fCv"/>
                                         <constraint firstAttribute="trailing" secondItem="Nf4-n9-xJZ" secondAttribute="trailing" id="XI7-5D-pzQ"/>
                                         <constraint firstItem="R7e-8x-vqv" firstAttribute="leading" secondItem="n53-8e-PYk" secondAttribute="leading" id="XJK-Vq-sHW"/>
@@ -82,8 +98,12 @@
                                         <constraint firstItem="Nf4-n9-xJZ" firstAttribute="top" secondItem="n53-8e-PYk" secondAttribute="top" id="hbM-NR-5YG"/>
                                         <constraint firstAttribute="bottom" secondItem="R7e-8x-vqv" secondAttribute="bottom" constant="4" id="hsV-Ba-zKS"/>
                                         <constraint firstItem="Nf4-n9-xJZ" firstAttribute="leading" secondItem="Xml-dh-5YA" secondAttribute="trailing" constant="3" id="l7O-hc-ghj"/>
+                                        <constraint firstItem="pek-zk-raj" firstAttribute="top" secondItem="wB7-5p-hDO" secondAttribute="top" id="lcE-f7-ran"/>
+                                        <constraint firstItem="Xml-dh-5YA" firstAttribute="leading" secondItem="pek-zk-raj" secondAttribute="trailing" id="mMB-lZ-Ejy"/>
+                                        <constraint firstItem="pek-zk-raj" firstAttribute="leading" secondItem="wB7-5p-hDO" secondAttribute="leading" id="mtD-Tl-hBN"/>
                                         <constraint firstItem="QIm-0T-LTr" firstAttribute="top" secondItem="Nf4-n9-xJZ" secondAttribute="bottom" constant="2" id="nxN-iB-WuO"/>
                                         <constraint firstItem="Xml-dh-5YA" firstAttribute="leading" secondItem="n53-8e-PYk" secondAttribute="trailing" constant="3" id="oXj-zk-YRN"/>
+                                        <constraint firstAttribute="bottom" secondItem="pek-zk-raj" secondAttribute="bottom" id="sfC-UN-fUs"/>
                                         <constraint firstItem="n53-8e-PYk" firstAttribute="leading" secondItem="wB7-5p-hDO" secondAttribute="leading" id="tmf-qq-8eK"/>
                                         <constraint firstItem="Nf4-n9-xJZ" firstAttribute="bottom" secondItem="n53-8e-PYk" secondAttribute="bottom" id="yu9-Gj-YsB"/>
                                     </constraints>
@@ -567,8 +587,12 @@
                 <outlet property="departTF" destination="3Fk-m4-tT8" id="HCL-SO-gqP"/>
                 <outlet property="flexibilityLabel" destination="3Ef-jI-jpp" id="dbg-nz-mho"/>
                 <outlet property="flexibilityTF" destination="YtD-qc-Wep" id="bs6-og-pmv"/>
+                <outlet property="fromCodeLabel" destination="n53-8e-PYk" id="M8t-g4-BeY"/>
+                <outlet property="fromPlaceLabel" destination="R7e-8x-vqv" id="XrE-Yv-jw3"/>
                 <outlet property="passengersLabel" destination="TaM-ye-NCK" id="v64-fP-OfH"/>
                 <outlet property="passengersTF" destination="nqF-Io-weA" id="z9a-KN-X65"/>
+                <outlet property="toCodeLabel" destination="Nf4-n9-xJZ" id="z0N-nu-96m"/>
+                <outlet property="toPlaceLabel" destination="QIm-0T-LTr" id="qs1-uQ-Xfk"/>
                 <outlet property="tripTypeLabel" destination="oFj-hI-27j" id="njM-qd-Hbj"/>
                 <outlet property="tripTypeTF" destination="k15-GK-LHV" id="afs-XV-a3q"/>
             </connections>

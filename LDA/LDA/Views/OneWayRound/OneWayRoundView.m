@@ -17,6 +17,17 @@
     // Drawing code
 }
 */
+- (IBAction)fromButtonAction:(UIButton *)sender {
+    if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(fromButtonActionDelegate)]){
+        [self.onewayViewDelegate fromButtonActionDelegate];
+    }
+}
+- (IBAction)toButtonAction:(UIButton *)sender {
+    if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(toButtonActionDelegate)]){
+        [self.onewayViewDelegate toButtonActionDelegate];
+    }
+}
+
 - (IBAction)tripTypeButtonAction:(UIButton *)sender {
     if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(tripTypeButtonActionDelegateWithTF:)]){
         [self.onewayViewDelegate tripTypeButtonActionDelegateWithTF:self.tripTypeTF];

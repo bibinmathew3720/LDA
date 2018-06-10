@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 @protocol OneWayRoundViewDelegate;
 @interface OneWayRoundView : UIView
+@property (weak, nonatomic) IBOutlet UILabel *fromCodeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fromPlaceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *toCodeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *toPlaceLabel;
 @property (weak, nonatomic) IBOutlet UITextField *tripTypeTF;
 @property (weak, nonatomic) IBOutlet UILabel *tripTypeLabel;
 @property (weak, nonatomic) IBOutlet UITextField *classTF;
@@ -22,6 +26,8 @@
 @property (nonatomic, assign) id <OneWayRoundViewDelegate>onewayViewDelegate;
 @end
 @protocol OneWayRoundViewDelegate <NSObject>
+-(void)fromButtonActionDelegate;
+-(void)toButtonActionDelegate;
 -(void)tripTypeButtonActionDelegateWithTF:(UITextField *)tf;
 -(void)classButtonActionDelegateWithTF:(UITextField *)textField;
 -(void)departButtonActionDelegateWithTF:(UITextField *)textField;

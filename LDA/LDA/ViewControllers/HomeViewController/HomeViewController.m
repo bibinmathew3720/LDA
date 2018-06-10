@@ -8,6 +8,7 @@
 
 #define HomeToSearchIdentifier @"homeToSearch"
 
+#import "SearchVC.h"
 #import "OneWayRoundView.h"
 #import "FlexibilityView.h"
 #import "MultipleStopView.h"
@@ -26,7 +27,7 @@ typedef enum{
     PickerTypeDepart = 3,
 }PickerType;
 
-@interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,MultipleStopViewDelegate,FlexibiltyViewDelegate>
+@interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,MultipleStopViewDelegate,FlexibiltyViewDelegate,SearchVCDelegate>
 @property (nonatomic,strong) OneWayRoundView *onewayRoundView;
 @property (nonatomic,strong) MultipleStopView *multipleStopView;
 @property (weak,nonatomic) IBOutlet UISegmentedControl *segmentControl;
@@ -178,6 +179,14 @@ typedef enum{
 }
 
 #pragma mark - Oneway Round view Delegate
+
+-(void)fromButtonActionDelegate{
+    [self performSegueWithIdentifier:HomeToSearchIdentifier sender:@"from"];
+}
+
+-(void)toButtonActionDelegate{
+     [self performSegueWithIdentifier:HomeToSearchIdentifier sender:@"to"];
+}
 
 -(void)tripTypeButtonActionDelegateWithTF:(UITextField *)tf{
     self.selPickerType = PickerTypeType;
@@ -335,6 +344,69 @@ typedef enum{
      self.multipleViewSelectedIndex = index;
     self.flexibiliyView.hidden = NO;
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"homeToSearch"]){
+        SearchVC *searchVC = (SearchVC *)segue.destinationViewController;
+        searchVC.searchDelegate = self;
+        if([sender isEqualToString:@"from"]){
+            searchVC.searchType = searchTypeFrom;
+        }
+        else{
+            searchVC.searchType = searchTypeTo;
+        }
+    }
+}
+
+#pragma mark - Search VC Dlegates
+
+-(void)selectedLocationWithDetails:(id)locationDetails withSearchType:(SearchType)searchType{
+    if(self.listType == OneWayRound){
+        if(searchType == searchTypeFrom){
+            self.onewayRoundView.fromCodeLabel.text = [NSString stringWithFormat:@"%@",[locationDetails valueForKey:@"code"]];
+            self.onewayRoundView.fromPlaceLabel.text = [NSString stringWithFormat:@"%@",[locationDetails valueForKey:@"airport"]];
+        }
+        else{
+            self.onewayRoundView.toCodeLabel.text = [NSString stringWithFormat:@"%@",[locationDetails valueForKey:@"code"]];
+            self.onewayRoundView.toPlaceLabel.text = [NSString stringWithFormat:@"%@",[locationDetails valueForKey:@"airport"]];
+        }
+    }
+    else{
+        
+    }
+}
+
+-(void)creatingJsonOfOneWayTriip{
+    
+//    'class' => 'Economy',
+//    'outbound_from' => 'Las Vegas Airport',
+//    'fromCode' => 'LCF',
+//    'outbound_date' => '2018-05-11',
+//    'outbound_flexibility' => 'Exact Date',
+//    'people' => '1',
+//    'returnFlag' => false,
+//    'outbound_to' => 'Wewak International Airport',
+//    'toCode' => 'WWK',
+//    'return_date' => '2018-05-12',
+//    'return_flexibility' => 'Exact Date',
+//    'type' => 'One Way',
+    
+    NSMutableDictionary *mutDictionary = [[NSMutableDictionary alloc] init];
+    [mutDictionary setValue:self.onewayRoundView.classLabel.text forKey:@"class"];
+    [mutDictionary setValue:self.onewayRoundView.fromPlaceLabel.text forKey:@"outbound_from"];
+    [mutDictionary setValue:self.onewayRoundView.fromCodeLabel.text forKey:@"fromCode"];
+    [mutDictionary setValue:self.onewayRoundView.departDateLabel.text forKey:@"outbound_date"];
+    [mutDictionary setValue:self.onewayRoundView.flexibilityLabel.text forKey:@"outbound_flexibility"];
+    //[mutDictionary setValue:self.onewayRoundView.flexibilityLabel.text forKey:@"people"];
+   // [mutDictionary setValue:self.onewayRoundView.flexibilityLabel.text forKey:@"returnFlag"];
+     [mutDictionary setValue:self.onewayRoundView.toPlaceLabel.text forKey:@"outbound_to"];
+    [mutDictionary setValue:self.onewayRoundView.toCodeLabel.text forKey:@"toCode"];
+   // [mutDictionary setValue:self.onewayRoundView.toCodeLabel.text forKey:@"return_date"];
+    // [mutDictionary setValue:self.onewayRoundView.toCodeLabel.text forKey:@"return_flexibility"];
+    //[mutDictionary setValue:self.onewayRoundView.toCodeLabel.text forKey:@"type"];
+}
+
+
 
 
 
