@@ -14,6 +14,7 @@
 #import "MultipleStopView.h"
 
 #import "HomeViewController.h"
+#import "PassengerDetailsVC.h"
 
 typedef enum {
     OneWayRound = 0,
@@ -356,7 +357,7 @@ typedef enum{
 }
 
 -(void)bookButtonActionDelegate{
-    [self performSegueWithIdentifier:@"homeToPassengerDetails" sender:nil];
+    [self performSegueWithIdentifier:@"homeToPassengerDetails" sender:[self creatingJsonOfOneWayTrip]];
 }
 
 -(void)populateTripTableView{
@@ -409,6 +410,13 @@ typedef enum{
             searchVC.searchType = searchTypeTo;
         }
     }
+    else if ([segue.identifier isEqualToString:@"homeToPassengerDetails"]){
+        PassengerDetailsVC *passengerDetails = (PassengerDetailsVC *)segue.destinationViewController;
+        if(self.listType == OneWayRound){
+            passengerDetails.tripDetails = [self creatingJsonOfOneWayTrip];
+            passengerDetails.tripType = TripTypeOneWayRound;
+        }
+    }
 }
 
 #pragma mark - Search VC Dlegates
@@ -429,8 +437,7 @@ typedef enum{
     }
 }
 
--(void)creatingJsonOfOneWayTriip{
-    
+-(id)creatingJsonOfOneWayTrip{
 //    'class' => 'Economy',
 //    'outbound_from' => 'Las Vegas Airport',
 //    'fromCode' => 'LCF',
@@ -450,13 +457,25 @@ typedef enum{
     [mutDictionary setValue:self.onewayRoundView.fromCodeLabel.text forKey:@"fromCode"];
     [mutDictionary setValue:self.onewayRoundView.departDateLabel.text forKey:@"outbound_date"];
     [mutDictionary setValue:self.onewayRoundView.flexibilityLabel.text forKey:@"outbound_flexibility"];
-    //[mutDictionary setValue:self.onewayRoundView.flexibilityLabel.text forKey:@"people"];
-   // [mutDictionary setValue:self.onewayRoundView.flexibilityLabel.text forKey:@"returnFlag"];
+    NSString *peopleSountString = [[self.onewayRoundView.passengersLabel.text componentsSeparatedByString:@"Total "] lastObject];
+    [mutDictionary setValue:peopleSountString forKey:@"people"];
+    if(self.tripType == TripTypeReturn){
+       [mutDictionary setValue:[NSNumber numberWithBool:YES] forKey:@"returnFlag"];
+    }
+    else{
+         [mutDictionary setValue:[NSNumber numberWithBool:NO] forKey:@"returnFlag"];
+    }
      [mutDictionary setValue:self.onewayRoundView.toPlaceLabel.text forKey:@"outbound_to"];
     [mutDictionary setValue:self.onewayRoundView.toCodeLabel.text forKey:@"toCode"];
-   // [mutDictionary setValue:self.onewayRoundView.toCodeLabel.text forKey:@"return_date"];
-    // [mutDictionary setValue:self.onewayRoundView.toCodeLabel.text forKey:@"return_flexibility"];
-    //[mutDictionary setValue:self.onewayRoundView.toCodeLabel.text forKey:@"type"];
+    [mutDictionary setValue:self.onewayRoundView.returnDateLabel.text forKey:@"return_date"];
+    [mutDictionary setValue:self.onewayRoundView.returnFlexibilityLabel.text forKey:@"return_flexibility"];
+    if(self.listType == OneWayRound){
+        [mutDictionary setValue:@"One Way" forKey:@"type"];
+    }
+    else{
+        
+    }
+    return mutDictionary;
 }
 
 

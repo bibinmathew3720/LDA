@@ -89,7 +89,7 @@
 }
 - (IBAction)submitButtonAction:(UIButton *)sender {
     if([self isValidInputs]){
-        
+        [self callingSubmitTripDetailsApi];
     }
 }
 - (IBAction)agreeButtonAction:(UIButton *)sender {
@@ -134,6 +134,60 @@
         }];
     }
     return isValid;
+}
+
+-(id)creatingJsonForPassengerDetails{
+    NSMutableDictionary *passengerDetails = [[NSMutableDictionary alloc] init];
+//    'phone2' => '9876543210',
+//    'comments' => 'nyjgjgjgj',
+//    'email' => 'Kk@gmail.com',
+//    'first_name' => 'fhfjfh',
+//    'last_name' => 'tjtuu',
+//    'phone1' => '9567763727',
+//    'terms' => true,
+    [passengerDetails setValue:self.alternativePhoneTF.text forKey:@"phone2"];
+    [passengerDetails setValue:self.commentTextView.text forKey:@"comments"];
+    [passengerDetails setValue:self.emailTF.text forKey:@"email"];
+    [passengerDetails setValue:self.firstNameTF.text forKey:@"first_name"];
+    [passengerDetails setValue:self.lastNameTF.text forKey:@"last_name"];
+    [passengerDetails setValue:self.phoneTF.text forKey:@"phone1"];
+    [passengerDetails setValue:[NSNumber numberWithBool:YES] forKey:@"terms"];
+    return passengerDetails;
+}
+
+#pragma mark - Calling Submit TripDetails Api
+
+-(void)callingSubmitTripDetailsApi{
+    id passengerDetails =  [self creatingJsonForPassengerDetails];
+    NSMutableDictionary *mutDictionary = [[NSMutableDictionary alloc] init];
+    [mutDictionary setValue:passengerDetails forKey:@"user"];
+     [mutDictionary setValue:self.tripDetails forKey:@"trip"];
+    NSURL *submitTripDetailsUrl = [[UrlGenerator sharedHandler] urlForRequestType:LDAURLTYPESubmitTripDetails withURLParameter:nil];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:submitTripDetailsUrl withBody:mutDictionary withMethodType:HTTPMethodPOST withHeaderFeild:nil];
+    [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode) {
+        NSLog(@"Response Object:%@",responseObject);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        });
+        if([responseObject isKindOfClass:[NSDictionary class]]){
+            if([[responseObject valueForKey:@"status_code"] isEqualToNumber:[NSNumber numberWithInt:200]]){
+               
+            }
+        }
+        
+    } FailureBlock:^(NSError *error, int statusCode, id errorResponseObject) {
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        NSInteger errorCode = (long)error.code;
+        NSString *errorMessage = @"";
+        if(errorCode == 1024){
+            [self showAlertWithTitle:APPNAME Message:NetworkUnavailableMessage WithCompletion:nil];
+        }
+        else{
+            [self showAlertWithTitle:APPNAME Message:ConnectionTioServerFailedMessage WithCompletion:nil];
+        }
+    }];
+    
 }
 
 /*
