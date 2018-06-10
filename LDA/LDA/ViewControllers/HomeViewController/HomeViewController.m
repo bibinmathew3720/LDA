@@ -9,6 +9,7 @@
 #define HomeToSearchIdentifier @"homeToSearch"
 
 #import "OneWayRoundView.h"
+#import "FlexibilityView.h"
 #import "MultipleStopView.h"
 
 #import "HomeViewController.h"
@@ -23,10 +24,9 @@ typedef enum{
     PickerClassType = 1,
     PickerClassPassengers = 2,
     PickerTypeDepart = 3,
-    PickerTypeFlexibility = 4
 }PickerType;
 
-@interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,MultipleStopViewDelegate>
+@interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,MultipleStopViewDelegate,FlexibiltyViewDelegate>
 @property (nonatomic,strong) OneWayRoundView *onewayRoundView;
 @property (nonatomic,strong) MultipleStopView *multipleStopView;
 @property (weak,nonatomic) IBOutlet UISegmentedControl *segmentControl;
@@ -41,6 +41,8 @@ typedef enum{
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (nonatomic, strong) NSMutableArray *tripArray;
 @property (nonatomic, assign) NSUInteger multipleViewSelectedIndex;
+
+@property (nonatomic, strong) FlexibilityView *flexibiliyView;
 @end
 
 @implementation HomeViewController
@@ -50,6 +52,7 @@ typedef enum{
     [self initialisation];
     [self addingOneWayView];
     [self addingMultipleStopView];
+    [self loadingFlexibilityView];
     self.multipleStopView.hidden = YES;
     self.tripArray = [[NSMutableArray alloc] init];
     [self initialisingTripDictionary];
@@ -75,6 +78,26 @@ typedef enum{
     [tripDict setValue:@"Exact Day" forKey:FlexibilityKey];
     [self.tripArray addObject:tripDict];
     [self populateTripTableView];
+}
+
+-(void)loadingFlexibilityView{
+    self.flexibiliyView = [[[NSBundle mainBundle] loadNibNamed:@"FlexibilityView" owner:self options:nil] objectAtIndex:0];
+    self.flexibiliyView.frame = CGRectMake(0, 0, self.view.frame.size.width,self.view.frame.size.height);
+    self.flexibiliyView.flexibilityDelegate = self;
+    self.flexibiliyView.hidden = YES;
+    [self.view addSubview:self.flexibiliyView];
+}
+
+#pragma mark - Flexibility View Delegate
+
+-(void)selectedFlexibilityItem:(id)flexibilityItem{
+    self.flexibiliyView.hidden = YES;
+    if(self.listType == OneWayRound){
+        self.onewayRoundView.flexibilityLabel.text = flexibilityItem;
+    }
+    else{
+        
+    }
 }
 
 -(void)addingOneWayView{
@@ -128,10 +151,6 @@ typedef enum{
             [self.tripArray replaceObjectAtIndex:self.multipleViewSelectedIndex withObject:selDictionary];
             [self populateTripTableView];
         }
-    }
-    else if (self.selPickerType == PickerTypeFlexibility){
-         self.onewayRoundView.flexibilityDateLabel.text = [self convertDate:self.datePicker.date toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
-        
     }
 }
 
@@ -187,10 +206,7 @@ typedef enum{
 }
 
 -(void)flexibiltyButtonActionDelegateWithTF:(UITextField *)textField{
-    self.selPickerType = PickerTypeFlexibility;
-    textField.inputAccessoryView = self.toolBar;
-    textField.inputView = self.datePicker;
-    [textField becomeFirstResponder];
+    self.flexibiliyView.hidden = NO;
 }
 
 -(void)passengsersButtonActionDelegateWithTF:(UITextField *)textField{
@@ -315,6 +331,7 @@ typedef enum{
 
 -(void)flexibilityButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index{
      self.multipleViewSelectedIndex = index;
+    self.flexibiliyView.hidden = NO;
 }
 
 

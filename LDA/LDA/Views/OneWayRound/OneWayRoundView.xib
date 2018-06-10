@@ -370,8 +370,8 @@
                                                 <constraint firstAttribute="height" constant="1" id="ulh-2d-MTO"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018-06-06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ef-jI-jpp">
-                                            <rect key="frame" x="61" y="37" width="71" height="16.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exact Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ef-jI-jpp">
+                                            <rect key="frame" x="61" y="37" width="67" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -565,7 +565,7 @@
                 <outlet property="classTF" destination="X90-8a-3aG" id="JVP-Oy-pEb"/>
                 <outlet property="departDateLabel" destination="A7e-yV-y4j" id="xyL-R6-AfM"/>
                 <outlet property="departTF" destination="3Fk-m4-tT8" id="HCL-SO-gqP"/>
-                <outlet property="flexibilityDateLabel" destination="3Ef-jI-jpp" id="dVC-XO-kNF"/>
+                <outlet property="flexibilityLabel" destination="3Ef-jI-jpp" id="dbg-nz-mho"/>
                 <outlet property="flexibilityTF" destination="YtD-qc-Wep" id="bs6-og-pmv"/>
                 <outlet property="passengersLabel" destination="TaM-ye-NCK" id="v64-fP-OfH"/>
                 <outlet property="passengersTF" destination="nqF-Io-weA" id="z9a-KN-X65"/>

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@protocol FlexibiltyViewDelegate;
 @interface FlexibilityView : UIView
-
+@property (nonatomic, assign) id <FlexibiltyViewDelegate>flexibilityDelegate;
+@end
+@protocol FlexibiltyViewDelegate <NSObject>
+-(void)selectedFlexibilityItem:(id)flexibilityItem;
 @end

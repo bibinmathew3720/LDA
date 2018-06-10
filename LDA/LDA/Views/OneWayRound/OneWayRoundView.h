@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *departTF;
 @property (weak, nonatomic) IBOutlet UILabel *departDateLabel;
 @property (weak, nonatomic) IBOutlet UITextField *flexibilityTF;
-@property (weak, nonatomic) IBOutlet UILabel *flexibilityDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *flexibilityLabel;
 @property (weak, nonatomic) IBOutlet UITextField *passengersTF;
 @property (weak, nonatomic) IBOutlet UILabel *passengersLabel;
 @property (nonatomic, assign) id <OneWayRoundViewDelegate>onewayViewDelegate;
