@@ -45,6 +45,8 @@
 		D0F0AF7920CC9745006D8BCA /* SearchTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F0AF7820CC9745006D8BCA /* SearchTVC.m */; };
 		D0F0AF8020CCA344006D8BCA /* FlexiblityCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F0AF7E20CCA344006D8BCA /* FlexiblityCVC.m */; };
 		D0F0AF8120CCA344006D8BCA /* FlexiblityCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F0AF7F20CCA344006D8BCA /* FlexiblityCVC.xib */; };
+		D0F0AF8320CCB0F1006D8BCA /* LargeSize_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0F0AF8220CCB0F0006D8BCA /* LargeSize_1.gif */; };
+		D0F0AF8720CCB1B4006D8BCA /* SplashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F0AF8620CCB1B4006D8BCA /* SplashVC.m */; };
 		D0F10F1D20C929950095E68D /* PassengerDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F10F1220C929940095E68D /* PassengerDetailsVC.m */; };
 		D0F10F1E20C929950095E68D /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F10F1620C929950095E68D /* SearchVC.m */; };
 		D0F10F1F20C929950095E68D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F10F1920C929950095E68D /* BaseViewController.m */; };
@@ -111,6 +113,9 @@
 		D0F0AF7D20CCA344006D8BCA /* FlexiblityCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexiblityCVC.h; sourceTree = "<group>"; };
 		D0F0AF7E20CCA344006D8BCA /* FlexiblityCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlexiblityCVC.m; sourceTree = "<group>"; };
 		D0F0AF7F20CCA344006D8BCA /* FlexiblityCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlexiblityCVC.xib; sourceTree = "<group>"; };
+		D0F0AF8220CCB0F0006D8BCA /* LargeSize_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = LargeSize_1.gif; path = "../../../../../../Downloads/Splash Screen/LargeSize_1.gif"; sourceTree = "<group>"; };
+		D0F0AF8520CCB1B4006D8BCA /* SplashVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashVC.h; sourceTree = "<group>"; };
+		D0F0AF8620CCB1B4006D8BCA /* SplashVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashVC.m; sourceTree = "<group>"; };
 		D0F10F1120C929940095E68D /* PassengerDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassengerDetailsVC.h; sourceTree = "<group>"; };
 		D0F10F1220C929940095E68D /* PassengerDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassengerDetailsVC.m; sourceTree = "<group>"; };
 		D0F10F1520C929950095E68D /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
@@ -195,6 +200,7 @@
 		D018C4AC20C61CD600DD91C3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D0F0AF8220CCB0F0006D8BCA /* LargeSize_1.gif */,
 				D0BE51AE20C704020072EEA9 /* Categories */,
 				D0BE519D20C703340072EEA9 /* NetworkHandler */,
 				D018C4AD20C61CD600DD91C3 /* Constants.h */,
@@ -205,6 +211,7 @@
 		D018C4AE20C61D1700DD91C3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D0F0AF8420CCB19A006D8BCA /* SplashVC */,
 				D0F10F1720C929950095E68D /* BaseViewController */,
 				D0F10F1A20C929950095E68D /* HomeViewController */,
 				D0F10F1020C929940095E68D /* PassengerDetailsVC */,
@@ -339,6 +346,15 @@
 			path = FlexibilityCell;
 			sourceTree = "<group>";
 		};
+		D0F0AF8420CCB19A006D8BCA /* SplashVC */ = {
+			isa = PBXGroup;
+			children = (
+				D0F0AF8520CCB1B4006D8BCA /* SplashVC.h */,
+				D0F0AF8620CCB1B4006D8BCA /* SplashVC.m */,
+			);
+			path = SplashVC;
+			sourceTree = "<group>";
+		};
 		D0F10F1020C929940095E68D /* PassengerDetailsVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +476,7 @@
 				D0F0AF8120CCA344006D8BCA /* FlexiblityCVC.xib in Resources */,
 				D018C4DA20C61E1500DD91C3 /* roboto_thinitalic.ttf in Resources */,
 				D018C4DC20C61E1500DD91C3 /* roboto_black.ttf in Resources */,
+				D0F0AF8320CCB0F1006D8BCA /* LargeSize_1.gif in Resources */,
 				D018C4E220C61E1500DD91C3 /* roboto_lightitalic.ttf in Resources */,
 				D018C4D920C61E1500DD91C3 /* roboto_medium.ttf in Resources */,
 				D057CCC620BDCCAD00C1F9F2 /* Main.storyboard in Resources */,
@@ -508,6 +525,7 @@
 				D0F10F1D20C929950095E68D /* PassengerDetailsVC.m in Sources */,
 				D057CCD120BDCCAF00C1F9F2 /* main.m in Sources */,
 				D00355A420C76B8400674FEB /* MultipleStopView.m in Sources */,
+				D0F0AF8720CCB1B4006D8BCA /* SplashVC.m in Sources */,
 				D0BE51AC20C703350072EEA9 /* ResponseHandler.m in Sources */,
 				D0BE51B720C704020072EEA9 /* UIView+CLAdditions.m in Sources */,
 				D0F0AF8020CCA344006D8BCA /* FlexiblityCVC.m in Sources */,
