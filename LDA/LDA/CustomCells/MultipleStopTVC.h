@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 @protocol MultipleStopTVCDelegate;
 @interface MultipleStopTVC : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *fromCodeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fromLabel;
 @property (weak, nonatomic) IBOutlet UIButton *fromButton;
+@property (weak, nonatomic) IBOutlet UILabel *toCodeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *toLabel;
 @property (weak, nonatomic) IBOutlet UIButton *toButton;
 @property (weak, nonatomic) IBOutlet UITextField *dateTextField;
 @property (weak, nonatomic) IBOutlet UITextField *dateLabel;
