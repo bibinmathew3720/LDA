@@ -126,10 +126,10 @@
     }
     else if(![self.agreeButton isSelected]){
         isValid = NO;
-        messageString = @"Please accept user agreement";
+        messageString = @"Please accept Terms and Conditions";
     }
     if(!isValid){
-        [self showAlertWithTitle:APPNAME Message:messageString WithCompletion:^{
+        [self showAlertWithTitle:@"Warning" Message:messageString WithCompletion:^{
             
         }];
     }
@@ -138,13 +138,6 @@
 
 -(id)creatingJsonForPassengerDetails{
     NSMutableDictionary *passengerDetails = [[NSMutableDictionary alloc] init];
-//    'phone2' => '9876543210',
-//    'comments' => 'nyjgjgjgj',
-//    'email' => 'Kk@gmail.com',
-//    'first_name' => 'fhfjfh',
-//    'last_name' => 'tjtuu',
-//    'phone1' => '9567763727',
-//    'terms' => true,
     [passengerDetails setValue:self.alternativePhoneTF.text forKey:@"phone2"];
     [passengerDetails setValue:self.commentTextView.text forKey:@"comments"];
     [passengerDetails setValue:self.emailTF.text forKey:@"email"];
@@ -173,7 +166,9 @@
         });
         if([responseObject isKindOfClass:[NSDictionary class]]){
             if([[responseObject valueForKey:@"status_code"] isEqualToNumber:[NSNumber numberWithInt:200]]){
-               
+                [self showAlertWithTitle:@"Success" Message:@"Your request successfully submitted. We'll contact soon." WithCompletion:^{
+                    [self.navigationController popViewControllerAnimated:YES];
+                }];
             }
         }
         
