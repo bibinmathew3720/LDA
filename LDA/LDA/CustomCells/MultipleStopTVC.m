@@ -25,8 +25,28 @@
 -(void)setDataDictionary:(id)dataDictionary{
     self.dateLabel.text = [dataDictionary valueForKey:DepartKey];
     self.flexibilityLabel.text = [dataDictionary valueForKey:FlexibilityKey];
-    NSLog(@"From Code String:%@",[dataDictionary valueForKey:FromCodeKey]);
-     NSLog(@"To Code String:%@",[dataDictionary valueForKey:ToCodeKey]);
+    NSString *fromCodeString = [dataDictionary valueForKey:FromCodeKey];
+    if(fromCodeString.length != 0){
+        [self.fromButton setTitle:@"" forState:UIControlStateNormal];
+        self.fromCodeLabel.text = [dataDictionary valueForKey:FromCodeKey];
+        self.fromLabel.text = [dataDictionary valueForKey:FromPlaceKey];
+    }
+    else{
+        [self.fromButton setTitle:@"FROM" forState:UIControlStateNormal];
+        self.fromCodeLabel.text = @"";
+        self.fromLabel.text = @"";
+    }
+    NSString *toCodeString = [dataDictionary valueForKey:ToCodeKey];
+    if(toCodeString.length != 0){
+        [self.toButton setTitle:@"" forState:UIControlStateNormal];
+        self.toCodeLabel.text = [dataDictionary valueForKey:ToCodeKey];
+        self.toLabel.text = [dataDictionary valueForKey:ToPlaceKey];
+    }
+    else{
+        [self.toButton setTitle:@"TO" forState:UIControlStateNormal];
+        self.toCodeLabel.text = @"";
+        self.toLabel.text = @"";
+    }
 }
 
 - (IBAction)fromButtonAction:(UIButton *)sender {

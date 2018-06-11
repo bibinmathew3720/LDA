@@ -14,7 +14,7 @@
 #define FromCodeKey @"fromKey"
 #define FromPlaceKey @"fromPlace"
 #define ToCodeKey @"toKey"
-#define ToPlaceKey @"toKey"
+#define ToPlaceKey @"toPlace"
 #define DepartKey @"depart"
 #define FlexibilityKey @"flexibility"
 
