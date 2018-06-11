@@ -180,7 +180,6 @@
     } FailureBlock:^(NSError *error, int statusCode, id errorResponseObject) {
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         NSInteger errorCode = (long)error.code;
-        NSString *errorMessage = @"";
         if(errorCode == 1024){
             [self showAlertWithTitle:APPNAME Message:NetworkUnavailableMessage WithCompletion:nil];
         }

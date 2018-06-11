@@ -362,7 +362,11 @@ typedef enum{
 }
 
 -(void)bookButtonActionDelegate{
-    [self performSegueWithIdentifier:@"homeToPassengerDetails" sender:[self creatingJsonOfOneWayTrip]];
+    if(self.listType == OneWayRound)
+        [self performSegueWithIdentifier:@"homeToPassengerDetails" sender:[self creatingJsonOfOneWayTrip]];
+    else if(self.listType == MultipleStop){
+         [self performSegueWithIdentifier:@"homeToPassengerDetails" sender:[self creatingJsonForMultipleStopView]];
+    }
 }
 
 -(void)populateTripTableView{
@@ -420,6 +424,10 @@ typedef enum{
         if(self.listType == OneWayRound){
             passengerDetails.tripDetails = [self creatingJsonOfOneWayTrip];
             passengerDetails.tripType = TripTypeOneWayRound;
+        }
+        else{
+            passengerDetails.tripDetails = [self creatingJsonForMultipleStopView];
+            passengerDetails.tripType = TripTypeMultipleStop;
         }
     }
 }
@@ -485,14 +493,21 @@ typedef enum{
     [mutDictionary setValue:self.onewayRoundView.toCodeLabel.text forKey:@"toCode"];
     [mutDictionary setValue:self.onewayRoundView.returnDateLabel.text forKey:@"return_date"];
     [mutDictionary setValue:self.onewayRoundView.returnFlexibilityLabel.text forKey:@"return_flexibility"];
-    if(self.listType == OneWayRound){
-        [mutDictionary setValue:@"One Way" forKey:@"type"];
-    }
-    else{
-        
-    }
+    [mutDictionary setValue:@"One Way" forKey:@"type"];
     return mutDictionary;
 }
+
+-(id)creatingJsonForMultipleStopView{
+    NSMutableDictionary *mutDictionary = [[NSMutableDictionary alloc] init];
+    [mutDictionary setValue:self.multipleStopView.classLabel.text forKey:@"class"];
+    NSString *peopleCountString = [[self.multipleStopView.passengersCountLabel.text componentsSeparatedByString:@"Total "] lastObject];
+    [mutDictionary setValue:peopleCountString forKey:@"people"];
+    [mutDictionary setValue:[NSNumber numberWithBool:NO] forKey:@"returnFlag"];
+    [mutDictionary setValue:@"Multi Stop" forKey:@"type"];
+    [mutDictionary setValue:self.tripArray forKey:@"info"];
+    return mutDictionary;
+}
+
 
 
 
