@@ -166,6 +166,9 @@
         });
         if([responseObject isKindOfClass:[NSDictionary class]]){
             if([[responseObject valueForKey:@"status_code"] isEqualToNumber:[NSNumber numberWithInt:200]]){
+                if(self.passengerDetailsDelegate && [self.passengerDetailsDelegate respondsToSelector:@selector(tripDetailsSubmittedDelegate)]){
+                    [self.passengerDetailsDelegate tripDetailsSubmittedDelegate];
+                }
                 [self showAlertWithTitle:@"Success" Message:@"Your request successfully submitted. We'll contact soon." WithCompletion:^{
                     [self.navigationController popViewControllerAnimated:YES];
                 }];

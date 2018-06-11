@@ -34,7 +34,7 @@ typedef enum{
     TripTypeReturn = 1,
 }TripType;
 
-@interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,MultipleStopViewDelegate,FlexibiltyViewDelegate,SearchVCDelegate>
+@interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,MultipleStopViewDelegate,FlexibiltyViewDelegate,SearchVCDelegate,PassengerDetailsVCDelegate>
 @property (nonatomic,strong) OneWayRoundView *onewayRoundView;
 @property (nonatomic,strong) MultipleStopView *multipleStopView;
 @property (weak,nonatomic) IBOutlet UISegmentedControl *segmentControl;
@@ -64,9 +64,9 @@ typedef enum{
     [self loadingFlexibilityView];
     self.multipleStopView.hidden = YES;
     self.tripArray = [[NSMutableArray alloc] init];
-    [self initialisingTripDictionary];
-    self.tripType = TripTypeOneWay;
     [self hideReturnView];
+    [self initialiseOneWayViewFields];
+    [self initialiseMutiStopViewFields];
 }
 
 -(void)initialisation{
@@ -85,6 +85,7 @@ typedef enum{
 }
 
 -(void)initialisingTripDictionary{
+    [self.tripArray removeAllObjects];
     NSMutableDictionary *tripDict = [[NSMutableDictionary alloc] init];
     [tripDict setValue:@"" forKey:FromCodeKey];
     [tripDict setValue:@"" forKey:FromPlaceKey];
@@ -421,6 +422,7 @@ typedef enum{
     }
     else if ([segue.identifier isEqualToString:@"homeToPassengerDetails"]){
         PassengerDetailsVC *passengerDetails = (PassengerDetailsVC *)segue.destinationViewController;
+        passengerDetails.passengerDetailsDelegate = self;
         if(self.listType == OneWayRound){
             passengerDetails.tripDetails = [self creatingJsonOfOneWayTrip];
             passengerDetails.tripType = TripTypeOneWayRound;
@@ -506,6 +508,39 @@ typedef enum{
     [mutDictionary setValue:@"Multi Stop" forKey:@"type"];
     [mutDictionary setValue:self.tripArray forKey:@"info"];
     return mutDictionary;
+}
+
+#pragma mark - Passenger Details Delegate
+
+-(void)tripDetailsSubmittedDelegate{
+    if(self.tripType == TripTypeOneWay){
+        [self initialiseOneWayViewFields];
+    }
+    else{
+        [self initialiseMutiStopViewFields];
+    }
+}
+
+-(void)initialiseOneWayViewFields{
+    self.onewayRoundView.fromCodeLabel.text = @"LCF";
+    self.onewayRoundView.fromPlaceLabel.text = @"Las VEgas Airport";
+    self.onewayRoundView.toCodeLabel.text = @"WWK";
+    self.onewayRoundView.toPlaceLabel.text = @"Wewak International";
+    self.onewayRoundView.tripTypeLabel.text = [self.tripTypeArray firstObject];
+     self.onewayRoundView.classLabel.text = [self.classArray firstObject];
+    self.onewayRoundView.departDateLabel.text = [self convertDate:[NSDate date] toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
+    self.onewayRoundView.flexibilityLabel.text = @"Exact Date";
+    self.onewayRoundView.passengersLabel.text = @"Total 1";
+    self.tripType = TripTypeOneWay;
+    [self hideReturnView];
+    
+    
+}
+
+-(void)initialiseMutiStopViewFields{
+    [self initialisingTripDictionary];
+    self.multipleStopView.classLabel.text = [self.classArray firstObject];
+    self.multipleStopView.passengersCountLabel.text = @"Total 1";
 }
 
 
