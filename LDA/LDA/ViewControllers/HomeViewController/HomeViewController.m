@@ -116,8 +116,11 @@ typedef enum{
             self.onewayRoundView.returnFlexibilityLabel.text = flexibilityItem;
         }
     }
-    else{
-        
+    else if(self.listType == MultipleStop){
+        NSMutableDictionary *selDictionary = [[self.tripArray objectAtIndex:self.multipleViewSelectedIndex] mutableCopy];
+        [selDictionary setValue:flexibilityItem forKey:FlexibilityKey];
+        [self.tripArray replaceObjectAtIndex:self.multipleViewSelectedIndex withObject:selDictionary];
+        [self populateTripTableView];
     }
 }
 
