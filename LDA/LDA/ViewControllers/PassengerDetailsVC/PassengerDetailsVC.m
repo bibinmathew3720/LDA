@@ -162,9 +162,10 @@
     NSMutableDictionary *mutDictionary = [[NSMutableDictionary alloc] init];
     [mutDictionary setValue:passengerDetails forKey:@"user"];
      [mutDictionary setValue:self.tripDetails forKey:@"trip"];
+    NSMutableDictionary * headerDictionary =  [self headerBody];
     NSURL *submitTripDetailsUrl = [[UrlGenerator sharedHandler] urlForRequestType:LDAURLTYPESubmitTripDetails withURLParameter:nil];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:submitTripDetailsUrl withBody:mutDictionary withMethodType:HTTPMethodPOST withHeaderFeild:nil];
+    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:submitTripDetailsUrl withBody:mutDictionary withMethodType:HTTPMethodPOST withHeaderFeild:headerDictionary];
     [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode) {
         NSLog(@"Response Object:%@",responseObject);
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -188,6 +189,12 @@
         }
     }];
     
+}
+
+- (NSMutableDictionary *)headerBody {
+    NSMutableDictionary * headerDictionary = [[NSMutableDictionary alloc]init];
+    [headerDictionary setValue:@"application/json" forKey:@"Content-Type"];
+    return headerDictionary;
 }
 
 /*
