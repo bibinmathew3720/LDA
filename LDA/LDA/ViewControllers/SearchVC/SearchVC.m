@@ -42,11 +42,11 @@
 }
 
 -(void)callingSearchApiWithKeyword:(NSString *)searchKeyword{
-    NSMutableDictionary *searchDictionary = [[NSMutableDictionary alloc] init];
-    NSString *tempString = [NSString stringWithFormat:@"search_key=%@",searchKeyword];
-    [searchDictionary setValue:searchKeyword forKey:@"search_key"];
-    NSURL *searchUrl = [[UrlGenerator sharedHandler] urlForRequestType:LDAURLTYPESearch withURLParameter:nil];
-    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:searchUrl withBody:searchDictionary withMethodType:HTTPMethodGET withHeaderFeild:nil];
+    //NSMutableDictionary *searchDictionary = [[NSMutableDictionary alloc] init];
+   // NSString *tempString = [NSString stringWithFormat:@"search_key=%@",searchKeyword];
+    //[searchDictionary setValue:searchKeyword forKey:@"search_key"];
+    NSURL *searchUrl = [[UrlGenerator sharedHandler] urlForRequestType:LDAURLTYPESearch withURLParameter:searchKeyword];
+    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:searchUrl withBody:nil withMethodType:HTTPMethodGET withHeaderFeild:nil];
     [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode) {
         NSLog(@"Response Object:%@",responseObject);
         dispatch_async(dispatch_get_main_queue(), ^{

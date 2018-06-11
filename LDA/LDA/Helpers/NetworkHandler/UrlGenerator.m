@@ -24,7 +24,7 @@
     NSString *appendingUrl;
     switch (type) {
         case LDAURLTYPESearch:
-            appendingUrl = LDASearchUrl;
+            appendingUrl = [LDASearchUrl stringByAppendingString:urlParameter];
             break;
         case LDAURLTYPESubmitTripDetails:
             appendingUrl = LDASaveTripDetails;
