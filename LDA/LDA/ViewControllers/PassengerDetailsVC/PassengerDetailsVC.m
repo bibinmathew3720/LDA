@@ -5,9 +5,11 @@
 //  Created by Bibin Mathew on 6/6/18.
 //  Copyright © 2018 lda. All rights reserved.
 //
+
+#define CommentTVPlaceholder @"Comments / Special Instructions"
 #import "PassengerDetailsVC.h"
 
-@interface PassengerDetailsVC ()<UITextFieldDelegate>
+@interface PassengerDetailsVC ()<UITextFieldDelegate,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *firstNameView;
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTF;
 @property (weak, nonatomic) IBOutlet UIView *lastNameView;
@@ -31,6 +33,7 @@
 -(void)initView{
     [super initView];
     [self initialisation];
+    [self settingTextViewPlaceholder];
 }
 
 -(void)initialisation{
@@ -80,6 +83,39 @@
         [self.commentTextView becomeFirstResponder];
     }
     return YES;
+}
+
+#pragma mark - Text View Delegates
+
+- (BOOL) textViewShouldBeginEditing:(UITextView *)textView
+{
+    self.commentTextView.text = @"";
+    [self settingTVTextColor];
+    return YES;
+}
+
+-(void) textViewDidChange:(UITextView *)textView
+{
+    
+    if(self.commentTextView.text.length == 0){
+        [self settingTextViewPlaceholder];
+        [self.commentTextView resignFirstResponder];
+    }
+}
+-(void)textViewDidEndEditing:(UITextView *)textView{
+    if(self.commentTextView.text.length == 0){
+        [self settingTextViewPlaceholder];
+        [self.commentTextView resignFirstResponder];
+    }
+}
+
+-(void)settingTextViewPlaceholder{
+    self.commentTextView.text = CommentTVPlaceholder;
+    self.commentTextView.textColor = [UIColor lightGrayColor];
+}
+
+-(void)settingTVTextColor{
+    self.commentTextView.textColor = [UIColor blackColor];
 }
 
 #pragma mark - Actions
@@ -139,7 +175,8 @@
 -(id)creatingJsonForPassengerDetails{
     NSMutableDictionary *passengerDetails = [[NSMutableDictionary alloc] init];
     [passengerDetails setValue:self.alternativePhoneTF.text forKey:@"phone2"];
-    [passengerDetails setValue:self.commentTextView.text forKey:@"comments"];
+    if(![self.commentTextView.text isEqualToString:CommentTVPlaceholder])
+        [passengerDetails setValue:self.commentTextView.text forKey:@"comments"];
     [passengerDetails setValue:self.emailTF.text forKey:@"email"];
     [passengerDetails setValue:self.firstNameTF.text forKey:@"first_name"];
     [passengerDetails setValue:self.lastNameTF.text forKey:@"last_name"];
