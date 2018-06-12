@@ -257,6 +257,7 @@ typedef enum{
 }
 
 -(void)departButtonActionDelegateWithTF:(UITextField *)textField{
+    self.datePicker.minimumDate = [NSDate date];
     self.selPickerType = PickerTypeDepart;
     textField.inputAccessoryView = self.toolBar;
     textField.inputView = self.datePicker;
@@ -269,6 +270,7 @@ typedef enum{
 }
 
 -(void)returnButtonActionDelagateWithTF:(UITextField *)textField{
+    self.datePicker.minimumDate = [self convertStringToDate:self.onewayRoundView.departDateLabel.text];
     self.selPickerType = PickerTypeReturn;
     textField.inputAccessoryView = self.toolBar;
     textField.inputView = self.datePicker;
@@ -397,6 +399,7 @@ typedef enum{
 }
 
 -(void)dateButtonActionDelegateFromMultipleViewAtIndex:(NSUInteger)index withTextField:(UITextField *)textField{
+    self.datePicker.minimumDate = [NSDate date];
     self.multipleViewSelectedIndex = index;
     self.selPickerType = PickerTypeDepart;
     textField.inputAccessoryView = self.toolBar;
@@ -529,6 +532,14 @@ typedef enum{
     self.onewayRoundView.tripTypeLabel.text = [self.tripTypeArray firstObject];
      self.onewayRoundView.classLabel.text = [self.classArray firstObject];
     self.onewayRoundView.departDateLabel.text = [self convertDate:[NSDate date] toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDate *today = [NSDate date];
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    [comps setDay:1];
+    NSDate *currentDate = [calendar dateByAddingComponents:comps toDate:today options:0];
+     self.onewayRoundView.returnDateLabel.text = [self convertDate:currentDate toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
+    
     self.onewayRoundView.flexibilityLabel.text = @"Exact Date";
     self.onewayRoundView.passengersLabel.text = @"Total 1";
     self.tripType = TripTypeOneWay;

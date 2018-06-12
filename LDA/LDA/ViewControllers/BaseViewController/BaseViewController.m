@@ -66,6 +66,13 @@
     return [dateFormatter stringFromDate:currentDate];
 }
 
+-(NSDate *)convertStringToDate:(NSString *)dateString{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    NSDate *date = [dateFormat dateFromString:dateString];
+    return date;
+}
+
 /*
 #pragma mark - Navigation
 
