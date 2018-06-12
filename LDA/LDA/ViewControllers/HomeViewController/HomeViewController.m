@@ -431,8 +431,15 @@ typedef enum{
             passengerDetails.tripType = TripTypeOneWayRound;
         }
         else{
-            passengerDetails.tripDetails = [self creatingJsonForMultipleStopView];
-            passengerDetails.tripType = TripTypeMultipleStop;
+            if([self isValidMultipleViewInput]){
+                passengerDetails.tripDetails = [self creatingJsonForMultipleStopView];
+                passengerDetails.tripType = TripTypeMultipleStop;
+            }
+            else{
+                [self showAlertWithTitle:@"Warning" Message:@"Please enter valid Source and Destination" WithCompletion:^{
+                    
+                }];
+            }
         }
     }
 }
@@ -467,19 +474,6 @@ typedef enum{
 }
 
 -(id)creatingJsonOfOneWayTrip{
-//    'class' => 'Economy',
-//    'outbound_from' => 'Las Vegas Airport',
-//    'fromCode' => 'LCF',
-//    'outbound_date' => '2018-05-11',
-//    'outbound_flexibility' => 'Exact Date',
-//    'people' => '1',
-//    'returnFlag' => false,
-//    'outbound_to' => 'Wewak International Airport',
-//    'toCode' => 'WWK',
-//    'return_date' => '2018-05-12',
-//    'return_flexibility' => 'Exact Date',
-//    'type' => 'One Way',
-    
     NSMutableDictionary *mutDictionary = [[NSMutableDictionary alloc] init];
     [mutDictionary setValue:self.onewayRoundView.classLabel.text forKey:@"class"];
     [mutDictionary setValue:self.onewayRoundView.fromPlaceLabel.text forKey:@"outbound_from"];
@@ -511,6 +505,15 @@ typedef enum{
     [mutDictionary setValue:@"Multi Stop" forKey:@"type"];
     [mutDictionary setValue:self.tripArray forKey:@"info"];
     return mutDictionary;
+}
+
+-(BOOL)isValidMultipleViewInput{
+    for (id trip in self.tripArray){
+        if(([[trip valueForKey:FromCodeKey] length] == 0) || ([[trip valueForKey:ToCodeKey] length] == 0)){
+            return NO;
+        }
+    }
+    return YES;
 }
 
 #pragma mark - Passenger Details Delegate
