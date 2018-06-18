@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		94C757EAB6C77A2B52FC7E70 /* libPods-LDA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D69D6543F714AD3B61EF4D /* libPods-LDA.a */; };
+		D0002E2C20D802A800460168 /* LanguageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0002E2B20D802A800460168 /* LanguageCell.m */; };
 		D00355A120C76B6900674FEB /* MultipleStopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00355A020C76B6900674FEB /* MultipleStopView.xib */; };
 		D00355A420C76B8400674FEB /* MultipleStopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355A320C76B8400674FEB /* MultipleStopView.m */; };
 		D00355AA20C774C100674FEB /* MultipleStopTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D00355A820C774C100674FEB /* MultipleStopTVC.m */; };
@@ -58,6 +59,10 @@
 		50BF2D547272FFE6B19D7068 /* Pods-LDA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LDA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LDA/Pods-LDA.debug.xcconfig"; sourceTree = "<group>"; };
 		71D69D6543F714AD3B61EF4D /* libPods-LDA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LDA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D2A3CE6B7A5E91E0B3E502 /* Pods-LDA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LDA.release.xcconfig"; path = "Pods/Target Support Files/Pods-LDA/Pods-LDA.release.xcconfig"; sourceTree = "<group>"; };
+		D0002E2720D78E5A00460168 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		D0002E2820D78E5A00460168 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D0002E2A20D802A800460168 /* LanguageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageCell.h; sourceTree = "<group>"; };
+		D0002E2B20D802A800460168 /* LanguageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanguageCell.m; sourceTree = "<group>"; };
 		D00355A020C76B6900674FEB /* MultipleStopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleStopView.xib; sourceTree = "<group>"; };
 		D00355A220C76B8400674FEB /* MultipleStopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleStopView.h; sourceTree = "<group>"; };
 		D00355A320C76B8400674FEB /* MultipleStopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleStopView.m; sourceTree = "<group>"; };
@@ -155,6 +160,15 @@
 				84D2A3CE6B7A5E91E0B3E502 /* Pods-LDA.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D0002E2920D8028E00460168 /* LanguageCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0002E2A20D802A800460168 /* LanguageCell.h */,
+				D0002E2B20D802A800460168 /* LanguageCell.m */,
+			);
+			path = LanguageCell;
 			sourceTree = "<group>";
 		};
 		D00355A620C774A300674FEB /* CustomCells */ = {
@@ -395,6 +409,7 @@
 		D0F10F1A20C929950095E68D /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D0002E2920D8028E00460168 /* LanguageCell */,
 				D0F10F1B20C929950095E68D /* HomeViewController.h */,
 				D0F10F1C20C929950095E68D /* HomeViewController.m */,
 			);
@@ -535,6 +550,7 @@
 				D0BE51AA20C703350072EEA9 /* Reachability.m in Sources */,
 				D0BE51AD20C703350072EEA9 /* UrlGenerator.m in Sources */,
 				D0052B0020CA3BED007332C8 /* FlexibilityView.m in Sources */,
+				D0002E2C20D802A800460168 /* LanguageCell.m in Sources */,
 				D0F10F1E20C929950095E68D /* SearchVC.m in Sources */,
 				D0F10F2020C929950095E68D /* HomeViewController.m in Sources */,
 				D0BE519320C6D8060072EEA9 /* OneWayRoundView.m in Sources */,
@@ -563,6 +579,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D057CCC520BDCCAD00C1F9F2 /* Base */,
+				D0002E2720D78E5A00460168 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -571,6 +588,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D057CCCD20BDCCAF00C1F9F2 /* Base */,
+				D0002E2820D78E5A00460168 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -582,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -640,6 +659,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -694,8 +714,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 594YKYRZ37;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WVYK59KXPF;
 				INFOPLIST_FILE = LDA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -704,8 +724,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lda.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fb844b66-8c45-42fa-ae91-98c35f0d48a7";
-				PROVISIONING_PROFILE_SPECIFIER = dev_prov_lda;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -715,9 +735,9 @@
 			baseConfigurationReference = 84D2A3CE6B7A5E91E0B3E502 /* Pods-LDA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 594YKYRZ37;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WVYK59KXPF;
 				INFOPLIST_FILE = LDA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -726,8 +746,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lda.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7d45246c-8510-47d3-92b4-52dc4c663123";
-				PROVISIONING_PROFILE_SPECIFIER = dis_prov_lda;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

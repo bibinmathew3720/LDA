@@ -16,6 +16,8 @@
 #import "HomeViewController.h"
 #import "PassengerDetailsVC.h"
 
+#import "LanguageCell.h"
+
 typedef enum {
     OneWayRound = 0,
     MultipleStop = 1,
@@ -34,7 +36,7 @@ typedef enum{
     TripTypeReturn = 1,
 }TripType;
 
-@interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,MultipleStopViewDelegate,FlexibiltyViewDelegate,SearchVCDelegate,PassengerDetailsVCDelegate>
+@interface HomeViewController ()<OneWayRoundViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,MultipleStopViewDelegate,FlexibiltyViewDelegate,SearchVCDelegate,PassengerDetailsVCDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) OneWayRoundView *onewayRoundView;
 @property (nonatomic,strong) MultipleStopView *multipleStopView;
 @property (weak,nonatomic) IBOutlet UISegmentedControl *segmentControl;
@@ -52,6 +54,10 @@ typedef enum{
 @property (nonatomic, assign) NSUInteger multipleViewSelectedIndex;
 
 @property (nonatomic, strong) FlexibilityView *flexibiliyView;
+
+@property (weak, nonatomic) IBOutlet UIView *languageGradientView;
+@property (nonatomic, strong) NSArray *languagesArray;
+@property (weak, nonatomic) IBOutlet UIView *languageView;
 @end
 
 @implementation HomeViewController
@@ -67,6 +73,8 @@ typedef enum{
     [self hideReturnView];
     [self initialiseOneWayViewFields];
     [self initialiseMutiStopViewFields];
+    [self.view bringSubviewToFront:self.languageGradientView];
+    [self.view bringSubviewToFront:self.languageView];
 }
 
 -(void)initialisation{
@@ -81,6 +89,7 @@ typedef enum{
     self.multipleViewSelectedIndex = -1;
     self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.hidesBackButton = YES;
+    self.languagesArray = @[@"Arabic",@"Chinese",@"English",@"French",@"German",@"Russsian",@"Spanish"];
    
 }
 
@@ -555,6 +564,65 @@ typedef enum{
     [self initialisingTripDictionary];
     self.multipleStopView.classLabel.text = [self.classArray firstObject];
     self.multipleStopView.passengersCountLabel.text = @"Total 1";
+}
+
+//For Localization List View
+
+- (IBAction)languageButtonAction:(UIBarButtonItem *)sender {
+    self.languageGradientView.hidden = !self.languageGradientView.isHidden;
+    self.languageView.hidden = !self.languageView.isHidden;
+}
+
+#pragma mark - UITable View Datasources
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.languagesArray.count;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    LanguageCell *languageCell = [tableView dequeueReusableCellWithIdentifier:@"languageCell"];
+    languageCell.languageLabel.text = [self.languagesArray objectAtIndex:indexPath.row];
+    return languageCell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *languseString = @"en";
+    switch (indexPath.row) {
+        case 0:
+            languseString = @"ar";//Arabic
+            break;
+        case 1:
+           languseString = @"zh-Hans"; //Chinese
+            break;
+        case 2:
+             languseString = @"en"; //English
+            break;
+        case 3:
+           languseString = @"fr"; //French
+            break;
+        case 4:
+            languseString = @"de"; //German
+            break;
+        case 5:
+           languseString = @"ru"; //Russian
+            break;
+        case 6:
+            languseString = @"es"; //Spanish
+            break;
+        default:
+            break;
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:languseString, nil] forKey:@"AppleLanguages"];
+    [self showAlertWithTitle:APPNAME Message:@"Language changes will take effect after restarting the application" WithCompletion:^{
+        exit(0);
+    }];
 }
 
 
