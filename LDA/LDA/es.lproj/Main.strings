@@ -1,39 +1,45 @@
 
 /* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "1Dv-ur-7Ck"; */
-"1Dv-ur-7Ck.title" = "Annuler";
+"1Dv-ur-7Ck.title" = "Cancelar";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "4q0-VV-G1z"; */
-"4q0-VV-G1z.placeholder" = "Email";
+"4q0-VV-G1z.placeholder" = "correo electrónico";
 
 /* Class = "UISegmentedControl"; A6e-sV-tkY.segmentTitles[0] = "One-way/Round"; ObjectID = "A6e-sV-tkY"; */
-"A6e-sV-tkY.segmentTitles[0]" = "Unidirectionnel / Rond";
+"A6e-sV-tkY.segmentTitles[0]" = "De una sola mano / Redondo";
 
 /* Class = "UISegmentedControl"; A6e-sV-tkY.segmentTitles[1] = "MultipleStop"; ObjectID = "A6e-sV-tkY"; */
-"A6e-sV-tkY.segmentTitles[1]" = "Arrêt multiple";
+"A6e-sV-tkY.segmentTitles[1]" = "Parada múltiple";
 
 /* Class = "UITextField"; placeholder = "Alternative Phone"; ObjectID = "Bd3-Yz-8XA"; */
-"Bd3-Yz-8XA.placeholder" = "Téléphone alternatif";
+"Bd3-Yz-8XA.placeholder" = "Telefono alternativo";
 
 /* Class = "UITextField"; placeholder = "Phone"; ObjectID = "HuY-G1-Vwr"; */
-"HuY-G1-Vwr.placeholder" = "Téléphone";
+"HuY-G1-Vwr.placeholder" = "Teléfono";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WOf-XM-9Mh"; */
+"WOf-XM-9Mh.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "LANGUAGE"; ObjectID = "bV3-ER-dxb"; */
+"bV3-ER-dxb.title" = "LANGUAGE";
 
 /* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "feV-T9-Osa"; */
-"feV-T9-Osa.title" = "Terminé";
+"feV-T9-Osa.title" = "Hecho";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "gp0-Zp-tNb"; */
 "gp0-Zp-tNb.text" = "Label";
 
 /* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "hmV-FZ-M4o"; */
-"hmV-FZ-M4o.placeholder" = "Nom de famille";
+"hmV-FZ-M4o.placeholder" = "Apellido";
 
 /* Class = "UITextField"; placeholder = "First Name"; ObjectID = "iGL-OJ-ytm"; */
-"iGL-OJ-ytm.placeholder" = "Prénom";
+"iGL-OJ-ytm.placeholder" = "Nombre de pila";
 
 /* Class = "UITextField"; placeholder = "Preferred Flight"; ObjectID = "qnS-u3-r0F"; */
-"qnS-u3-r0F.placeholder" = "Vol préféré";
+"qnS-u3-r0F.placeholder" = "Vuelo preferido";
 
 /* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "s4q-ND-VdO"; */
-"s4q-ND-VdO.normalTitle" = "SOUMETTRE";
+"s4q-ND-VdO.normalTitle" = "ENVIAR";
 
 /* Class = "UILabel"; text = "I AGREE TO THE USER AGREEMENT TERMS."; ObjectID = "tTY-7z-Bn5"; */
-"tTY-7z-Bn5.text" = "I AGREE TO THE USER AGREEMENT TERMS.";
+"tTY-7z-Bn5.text" = "ACEPTO LOS TÉRMINOS DEL ACUERDO DE USUARIO.";
