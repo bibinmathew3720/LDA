@@ -7,7 +7,9 @@
 //
 
 #import "OneWayRoundView.h"
-
+@interface OneWayRoundView()
+@property (weak, nonatomic) IBOutlet UILabel *tripTypeHeadingLabel;
+@end
 @implementation OneWayRoundView
 
 /*
@@ -17,6 +19,16 @@
     // Drawing code
 }
 */
+
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    [self initialisation];
+}
+
+-(void)initialisation{
+    self.tripTypeHeadingLabel.text = NSLocalizedString(@"TRIPTYPEHEADING", @"TRIP TYPE");
+}
+
 - (IBAction)fromButtonAction:(UIButton *)sender {
     if(self.onewayViewDelegate && [self.onewayViewDelegate respondsToSelector:@selector(fromButtonActionDelegate)]){
         [self.onewayViewDelegate fromButtonActionDelegate];

@@ -761,6 +761,7 @@
                 <outlet property="returnViewheightConstarint" destination="aMM-y3-zEN" id="J4F-W7-dmx"/>
                 <outlet property="toCodeLabel" destination="Nf4-n9-xJZ" id="z0N-nu-96m"/>
                 <outlet property="toPlaceLabel" destination="QIm-0T-LTr" id="qs1-uQ-Xfk"/>
+                <outlet property="tripTypeHeadingLabel" destination="8Vr-ey-Bta" id="cZj-2J-W1r"/>
                 <outlet property="tripTypeLabel" destination="oFj-hI-27j" id="njM-qd-Hbj"/>
                 <outlet property="tripTypeTF" destination="k15-GK-LHV" id="afs-XV-a3q"/>
             </connections>
