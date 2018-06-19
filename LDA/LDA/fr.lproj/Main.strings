@@ -26,6 +26,9 @@
 /* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "hmV-FZ-M4o"; */
 "hmV-FZ-M4o.placeholder" = "Nom de famille";
 
+/* Class = "UIBarButtonItem"; title = "LANGUAGE"; ObjectID = "bV3-ER-dxb"; */
+"bV3-ER-dxb.title" = "LA LANGUE";
+
 /* Class = "UITextField"; placeholder = "First Name"; ObjectID = "iGL-OJ-ytm"; */
 "iGL-OJ-ytm.placeholder" = "Prénom";
 

@@ -31,3 +31,5 @@
 "Please enter phone number" = "请输入电话号码";
 "Please accept Terms and Conditions" = "请接受条款和条件";
 "Please enter valid Source and Destination" = "请输入有效的来源和目的地";
+
+"Language changes will take effect after restarting the application" = "语言更改将在重新启动应用程序后生效";

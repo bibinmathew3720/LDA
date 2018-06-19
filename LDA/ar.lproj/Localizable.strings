@@ -31,3 +31,5 @@
 "Please enter phone number" = "يرجى إدخال رقم الهاتف";
 "Please accept Terms and Conditions" = "يرجى قبول الشروط والأحكام";
 "Please enter valid Source and Destination" = "الرجاء إدخال المصدر والوجهة الصحيحة";
+
+"Language changes will take effect after restarting the application" = "ستدخل تغييرات اللغة حيز التنفيذ بعد إعادة تشغيل التطبيق";

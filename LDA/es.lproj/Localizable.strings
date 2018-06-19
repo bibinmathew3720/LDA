@@ -32,3 +32,5 @@
 "Please enter phone number" = "Por favor ingrese el número de teléfono";
 "Please accept Terms and Conditions" = "Por favor, acepte los Términos y Condiciones";
 "Please enter valid Source and Destination" = "Ingrese una fuente y un destino válidos";
+
+"Language changes will take effect after restarting the application" = "Los cambios de idioma tendrán efecto después de reiniciar la aplicación";

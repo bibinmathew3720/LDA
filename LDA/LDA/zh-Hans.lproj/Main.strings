@@ -21,7 +21,7 @@
 "WOf-XM-9Mh.text" = "Label";
 
 /* Class = "UIBarButtonItem"; title = "LANGUAGE"; ObjectID = "bV3-ER-dxb"; */
-"bV3-ER-dxb.title" = "LANGUAGE";
+"bV3-ER-dxb.title" = "语言";
 
 /* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "feV-T9-Osa"; */
 "feV-T9-Osa.title" = "完成";

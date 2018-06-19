@@ -89,7 +89,7 @@ typedef enum{
     self.multipleViewSelectedIndex = -1;
     self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.hidesBackButton = YES;
-    self.languagesArray = @[@"Arabic",@"Chinese",@"English",@"French",@"German",@"Russsian",@"Spanish"];
+    self.languagesArray = @[@"عربى",@"中文",@"English",@"français",@"Deutsche",@"русский",@"Español"];
    
 }
 
@@ -620,7 +620,7 @@ typedef enum{
             break;
     }
     [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:languseString, nil] forKey:@"AppleLanguages"];
-    [self showAlertWithTitle:APPNAME Message:@"Language changes will take effect after restarting the application" WithCompletion:^{
+    [self showAlertWithTitle:APPNAME Message:NSLocalizedString(@"Language changes will take effect after restarting the application", @"Language changes will take effect after restarting the application") WithCompletion:^{
         exit(0);
     }];
 }
