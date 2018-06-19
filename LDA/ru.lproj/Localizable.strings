@@ -22,8 +22,12 @@
 
 /*Validation Messages*/
 
+"OK" = "ОК";
+"Warning" = "Предупреждение";
 "Please enter first name" = "Введите имя";
 "Please enter last name" = "Введите фамилию";
 "Please enter email id" = "Введите идентификатор электронной почты";
 "Please enter valid email id" = "Введите действительный идентификатор электронной почты";
 "Please enter phone number" = "Введите номер телефона";
+"Please accept Terms and Conditions" = "Примите условия";
+"Please enter valid Source and Destination" = "Укажите действительный источник и местонахождение";

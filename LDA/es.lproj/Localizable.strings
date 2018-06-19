@@ -23,8 +23,12 @@
 
 /*Validation Messages*/
 
+"OK" = "DE ACUERDO";
+"Warning" = "Advertencia";
 "Please enter first name" = "Por favor ingrese su nombre";
 "Please enter last name" = "Por favor ingrese el apellido";
 "Please enter email id" = "Por favor ingrese la identificación del correo";
 "Please enter valid email id" = "Por favor ingrese una identificación válida de correo electrónico";
 "Please enter phone number" = "Por favor ingrese el número de teléfono";
+"Please accept Terms and Conditions" = "Por favor, acepte los Términos y Condiciones";
+"Please enter valid Source and Destination" = "Ingrese una fuente y un destino válidos";

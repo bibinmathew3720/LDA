@@ -32,7 +32,7 @@
         self.fromLabel.text = [dataDictionary valueForKey:FromPlaceKey];
     }
     else{
-        [self.fromButton setTitle:@"FROM" forState:UIControlStateNormal];
+        [self.fromButton setTitle:NSLocalizedString(@"FROM", @"FROM") forState:UIControlStateNormal];
         self.fromCodeLabel.text = @"";
         self.fromLabel.text = @"";
     }
@@ -43,7 +43,7 @@
         self.toLabel.text = [dataDictionary valueForKey:ToPlaceKey];
     }
     else{
-        [self.toButton setTitle:@"TO" forState:UIControlStateNormal];
+        [self.toButton setTitle:NSLocalizedString(@"TO", @"TO") forState:UIControlStateNormal];
         self.toCodeLabel.text = @"";
         self.toLabel.text = @"";
     }

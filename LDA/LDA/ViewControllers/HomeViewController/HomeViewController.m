@@ -377,7 +377,14 @@ typedef enum{
     if(self.listType == OneWayRound)
         [self performSegueWithIdentifier:@"homeToPassengerDetails" sender:[self creatingJsonOfOneWayTrip]];
     else if(self.listType == MultipleStop){
-         [self performSegueWithIdentifier:@"homeToPassengerDetails" sender:[self creatingJsonForMultipleStopView]];
+        if([self isValidMultipleViewInput]){
+            [self performSegueWithIdentifier:@"homeToPassengerDetails" sender:[self creatingJsonForMultipleStopView]];
+        }
+        else{
+                [self showAlertWithTitle:NSLocalizedString(@"Warning", @"Warning") Message:NSLocalizedString(@"Please enter valid Source and Destination", @"Please enter valid Source and Destination") WithCompletion:^{
+                    
+                }];
+        }
     }
 }
 
@@ -440,17 +447,10 @@ typedef enum{
             passengerDetails.tripType = TripTypeOneWayRound;
         }
         else{
-            if([self isValidMultipleViewInput]){
                 passengerDetails.tripDetails = [self creatingJsonForMultipleStopView];
                 passengerDetails.tripType = TripTypeMultipleStop;
             }
-            else{
-                [self showAlertWithTitle:@"Warning" Message:@"Please enter valid Source and Destination" WithCompletion:^{
-                    
-                }];
-            }
         }
-    }
 }
 
 #pragma mark - Search VC Dlegates

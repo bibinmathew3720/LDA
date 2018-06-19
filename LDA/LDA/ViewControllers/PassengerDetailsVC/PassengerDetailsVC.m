@@ -168,10 +168,10 @@
     }
     else if(![self.agreeButton isSelected]){
         isValid = NO;
-        messageString = @"Please accept Terms and Conditions";
+        messageString = NSLocalizedString(@"Please accept Terms and Conditions", @"Please accept Terms and Conditions");
     }
     if(!isValid){
-        [self showAlertWithTitle:@"Warning" Message:messageString WithCompletion:^{
+        [self showAlertWithTitle:NSLocalizedString(@"Warning", @"Warning") Message:messageString WithCompletion:^{
             
         }];
     }

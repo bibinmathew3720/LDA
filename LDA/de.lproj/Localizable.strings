@@ -22,8 +22,12 @@
 
 /*Validation Messages*/
 
+"OK" = "OK";
+"Warning" = "Warnung";
 "Please enter first name" = "Bitte geben Sie den Vornamen ein";
 "Please enter last name" = "Bitte geben Sie den Nachnamen ein";
 "Please enter email id" = "Bitte geben Sie die E-Mail-ID ein";
 "Please enter valid email id" = "Bitte geben Sie eine gültige E-Mail-ID ein";
 "Please enter phone number" = "Bitte geben Sie die Telefonnummer ein";
+"Please accept Terms and Conditions" = "Bitte akzeptieren Sie die Allgemeinen Geschäftsbedingungen";
+"Please enter valid Source and Destination" = "Bitte geben Sie gültige Quelle und Ziel ein";

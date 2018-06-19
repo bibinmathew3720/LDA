@@ -40,12 +40,15 @@
 
 -(void)showAlertWithTitle:(NSString *)titleString Message:(NSString *)alertMessage WithCompletion:(void(^)(void))okCompletion{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:titleString message:alertMessage preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    NSString *okString = NSLocalizedString(@"OK", @"OK");
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:okString style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         if(okCompletion !=nil)
             okCompletion();
     }];
     [alert addAction:okAction];
-    [self presentViewController:alert animated:YES completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+         [self presentViewController:alert animated:YES completion:nil];
+    });
 }
 
 #pragma mark - Show Left Bar Button

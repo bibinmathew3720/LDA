@@ -23,8 +23,12 @@
 
 /*Validation Messages*/
 
+"OK" = "OK";
+"Warning" = "Warning";
 "Please enter first name" = "Please enter first name";
 "Please enter last name" = "Please enter last name";
 "Please enter email id" = "Please enter email id";
 "Please enter valid email id" = "Please enter valid email id";
 "Please enter phone number" = "Please enter phone number";
+"Please accept Terms and Conditions" = "Please accept Terms and Conditions";
+"Please enter valid Source and Destination" = "Please enter valid Source and Destination";
