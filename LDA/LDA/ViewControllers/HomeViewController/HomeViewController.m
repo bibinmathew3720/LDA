@@ -58,6 +58,10 @@ typedef enum{
 @property (weak, nonatomic) IBOutlet UIView *languageGradientView;
 @property (nonatomic, strong) NSArray *languagesArray;
 @property (weak, nonatomic) IBOutlet UIView *languageView;
+
+@property (nonatomic, strong) NSString *onewayClassSelectedString;
+@property (nonatomic, strong) NSArray *multipleWayClassSelectedString;
+@property (nonatomic, strong) NSArray *englishClassArray;
 @end
 
 @implementation HomeViewController
@@ -84,7 +88,8 @@ typedef enum{
     self.tripTypePickerView.dataSource = self;
     self.tripTypePickerView.delegate = self;
     //Class Initialisation
-    self.classArray = @[@"Economy",@"Business",@"First Class",@"Premium Economy"];
+    self.classArray = @[NSLocalizedString(@"Economy", @"Economy"),NSLocalizedString(@"Business", @"Business"),NSLocalizedString(@"First Class", @"First Class"),NSLocalizedString(@"Premium Economy", @"Premium Economy")];
+    self.englishClassArray = [NSArray arrayWithObjects:@"Economy",@"Business",@"First Class",@"Premium Economy", nil];
     self.passengersArray = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
     self.multipleViewSelectedIndex = -1;
     self.navigationController.navigationBar.hidden = NO;
@@ -169,10 +174,16 @@ typedef enum{
         self.onewayRoundView.tripTypeLabel.text = [self.tripTypeArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]];
     }
     else if(self.selPickerType == PickerClassType){
-        if(self.listType == OneWayRound)
-            self.onewayRoundView.classLabel.text = [self.classArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]];
-        else
-            self.multipleStopView.classLabel.text = [self.classArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]];
+        if(self.listType == OneWayRound){
+            NSInteger selRow = [self.tripTypePickerView selectedRowInComponent:0];
+            self.onewayClassSelectedString = [self.englishClassArray objectAtIndex:selRow];
+            self.onewayRoundView.classLabel.text = [self.classArray objectAtIndex:selRow];
+        }
+        else{
+            NSInteger selRow = [self.tripTypePickerView selectedRowInComponent:0];
+            self.multipleWayClassSelectedString = [self.englishClassArray objectAtIndex:selRow];
+            self.multipleStopView.classLabel.text = [self.classArray objectAtIndex:selRow];
+        }
                 
     }
     else if(self.selPickerType == PickerClassPassengers){
@@ -484,7 +495,7 @@ typedef enum{
 
 -(id)creatingJsonOfOneWayTrip{
     NSMutableDictionary *mutDictionary = [[NSMutableDictionary alloc] init];
-    [mutDictionary setValue:self.onewayRoundView.classLabel.text forKey:@"class"];
+    [mutDictionary setValue:self.onewayClassSelectedString forKey:@"class"];
     [mutDictionary setValue:self.onewayRoundView.fromPlaceLabel.text forKey:@"outbound_from"];
     [mutDictionary setValue:self.onewayRoundView.fromCodeLabel.text forKey:@"fromCode"];
     [mutDictionary setValue:self.onewayRoundView.departDateLabel.text forKey:@"outbound_date"];
@@ -507,7 +518,7 @@ typedef enum{
 
 -(id)creatingJsonForMultipleStopView{
     NSMutableDictionary *mutDictionary = [[NSMutableDictionary alloc] init];
-    [mutDictionary setValue:self.multipleStopView.classLabel.text forKey:@"class"];
+    [mutDictionary setValue:self.multipleWayClassSelectedString forKey:@"class"];
     NSString *peopleCountString = [[self.multipleStopView.passengersCountLabel.text componentsSeparatedByString:@"Total "] lastObject];
     [mutDictionary setValue:peopleCountString forKey:@"people"];
     [mutDictionary setValue:[NSNumber numberWithBool:NO] forKey:@"returnFlag"];
@@ -543,6 +554,7 @@ typedef enum{
     self.onewayRoundView.toPlaceLabel.text = @"Wewak International";
     self.onewayRoundView.tripTypeLabel.text = [self.tripTypeArray firstObject];
      self.onewayRoundView.classLabel.text = [self.classArray firstObject];
+    self.onewayClassSelectedString = [self.englishClassArray firstObject];
     self.onewayRoundView.departDateLabel.text = [self convertDate:[NSDate date] toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];
     
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
@@ -563,6 +575,7 @@ typedef enum{
 -(void)initialiseMutiStopViewFields{
     [self initialisingTripDictionary];
     self.multipleStopView.classLabel.text = [self.classArray firstObject];
+    self.multipleWayClassSelectedString = [self.englishClassArray firstObject];
     self.multipleStopView.passengersCountLabel.text = @"Total 1";
 }
 

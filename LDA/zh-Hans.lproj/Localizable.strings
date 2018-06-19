@@ -5,6 +5,14 @@
   Created by Bibin Mathew on 6/18/18.
   Copyright © 2018 lda. All rights reserved.
 */
+
+//Trip Classes
+
+"Economy" = "经济";
+"Business" = "商业";
+"First Class" = "头等舱";
+"Premium Economy" = "豪华经济舱";
+
 "TRIPTYPEHEADING" = "旅行类型";
 "CLASSHEADING" = "类";
 "DEPARTHEADING" = "离开";

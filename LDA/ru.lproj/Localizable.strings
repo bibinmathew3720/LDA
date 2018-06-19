@@ -5,6 +5,14 @@
   Created by Bibin Mathew on 6/18/18.
   Copyright © 2018 lda. All rights reserved.
 */
+
+//Trip Classes
+
+"Economy" = "экономика";
+"Business" = "Бизнес";
+"First Class" = "Первый класс";
+"Premium Economy" = "Премиум экономика";
+
 "TRIPTYPEHEADING" = "ТИП ТИПА";
 "CLASSHEADING" = "КЛАСС";
 "DEPARTHEADING" = "отходить";

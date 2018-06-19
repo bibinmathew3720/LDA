@@ -6,6 +6,13 @@
   Copyright © 2018 lda. All rights reserved.
 */
 
+//Trip Classes
+
+"Economy" = "Economía";
+"Business" = "Negocio";
+"First Class" = "Primera clase";
+"Premium Economy" = "Economia Premium";
+
 "TRIPTYPEHEADING" = "TRIP TYPE";
 "CLASSHEADING" = "CLASE";
 "DEPARTHEADING" = "SALIR";

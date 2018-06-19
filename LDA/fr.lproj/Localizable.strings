@@ -5,6 +5,13 @@
   Created by Bibin Mathew on 6/18/18.
   Copyright © 2018 lda. All rights reserved.
 */
+
+//Trip Classes
+"Economy" = "Économie";
+"Business" = "Entreprise";
+"First Class" = "Première classe";
+"Premium Economy" = "Economie de la meilleure qualité";
+
 "TRIPTYPEHEADING" = "TYPE DE VOYAGE";
 "CLASSHEADING" = "CLASSE";
 "DEPARTHEADING" = "PARTIR";

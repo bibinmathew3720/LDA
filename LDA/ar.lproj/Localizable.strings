@@ -5,6 +5,14 @@
   Created by Bibin Mathew on 6/18/18.
   Copyright © 2018 lda. All rights reserved.
 */
+
+//Trip Classes
+
+"Economy" = "اقتصاد";
+"Business" = "اعمال";
+"First Class" = "الصف الأول";
+"Premium Economy" = "اقتصاد مميز";
+
 "TRIPTYPEHEADING" = "نوع الرحلة";
 "CLASSHEADING" = "صف دراسي";
 "DEPARTHEADING" = "تغادر";
