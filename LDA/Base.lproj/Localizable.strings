@@ -6,6 +6,11 @@
   Copyright © 2018 lda. All rights reserved.
 */
 
+//Trip Type
+
+"One Way" = "One Way";
+"Return" = "Return";
+
 //Trip Classes
 
 "Economy" = "Economy";

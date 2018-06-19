@@ -60,8 +60,10 @@ typedef enum{
 @property (weak, nonatomic) IBOutlet UIView *languageView;
 
 @property (nonatomic, strong) NSString *onewayClassSelectedString;
+@property (nonatomic, strong) NSString *selTripTypeString;
 @property (nonatomic, strong) NSArray *multipleWayClassSelectedString;
 @property (nonatomic, strong) NSArray *englishClassArray;
+@property (nonatomic, strong) NSArray *englishTripTypeArray;
 @end
 
 @implementation HomeViewController
@@ -84,7 +86,8 @@ typedef enum{
 -(void)initialisation{
     self.title = @"Home";
     //Type Initialisation
-    self.tripTypeArray = [NSArray arrayWithObjects:@"One Way",@"Return", nil];
+    self.tripTypeArray = [NSArray arrayWithObjects:NSLocalizedString(@"One Way", @"One Way"),NSLocalizedString(@"Return", @"Return"), nil];
+    self.englishTripTypeArray = [NSArray arrayWithObjects:@"One Way",@"Return", nil];
     self.tripTypePickerView.dataSource = self;
     self.tripTypePickerView.delegate = self;
     //Class Initialisation
@@ -171,7 +174,9 @@ typedef enum{
              self.tripType = TripTypeReturn;
             [self showReturnView];
         }
-        self.onewayRoundView.tripTypeLabel.text = [self.tripTypeArray objectAtIndex:[self.tripTypePickerView selectedRowInComponent:0]];
+        NSInteger selRow = [self.tripTypePickerView selectedRowInComponent:0];
+        self.onewayRoundView.tripTypeLabel.text = [self.tripTypeArray objectAtIndex:selRow];
+        self.selTripTypeString = [self.englishTripTypeArray objectAtIndex:selRow];
     }
     else if(self.selPickerType == PickerClassType){
         if(self.listType == OneWayRound){
@@ -553,6 +558,7 @@ typedef enum{
     self.onewayRoundView.toCodeLabel.text = @"WWK";
     self.onewayRoundView.toPlaceLabel.text = @"Wewak International";
     self.onewayRoundView.tripTypeLabel.text = [self.tripTypeArray firstObject];
+    self.selTripTypeString = [self.englishTripTypeArray firstObject];
      self.onewayRoundView.classLabel.text = [self.classArray firstObject];
     self.onewayClassSelectedString = [self.englishClassArray firstObject];
     self.onewayRoundView.departDateLabel.text = [self convertDate:[NSDate date] toFormatedString:@"yyyy-MM-dd" withTimeZone:[NSTimeZone systemTimeZone]];

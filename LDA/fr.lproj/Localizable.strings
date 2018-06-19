@@ -6,6 +6,11 @@
   Copyright © 2018 lda. All rights reserved.
 */
 
+//Trip Type
+
+"One Way" = "Sens Unique";
+"Return" = "Revenir";
+
 //Trip Classes
 "Economy" = "Économie";
 "Business" = "Entreprise";
