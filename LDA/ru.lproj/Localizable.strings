@@ -6,3 +6,24 @@
   Copyright © 2018 lda. All rights reserved.
 */
 "TRIPTYPEHEADING" = "ТИП ТИПА";
+"CLASSHEADING" = "КЛАСС";
+"DEPARTHEADING" = "отходить";
+"FLEXIBILITYHEADING" = "ГИБКОСТЬ";
+"RETURNHEADING" = "ВЕРНУТЬ";
+"PASSENGERSHEADING" = "ПАССАЖИРОВ";
+"BOOK" = "КНИГА";
+
+"ADD" = "ДОБАВИТЬ";
+"REMOVE" = "УДАЛИТЬ";
+"FROM" = "ИЗ";
+"TO" = "К";
+
+"COMMENTSPLACE" = "Комментарии / Специальные инструкции";
+
+/*Validation Messages*/
+
+"Please enter first name" = "Введите имя";
+"Please enter last name" = "Введите фамилию";
+"Please enter email id" = "Введите идентификатор электронной почты";
+"Please enter valid email id" = "Введите действительный идентификатор электронной почты";
+"Please enter phone number" = "Введите номер телефона";

@@ -6,7 +6,6 @@
 //  Copyright © 2018 lda. All rights reserved.
 //
 
-#define CommentTVPlaceholder @"Comments / Special Instructions"
 #import "PassengerDetailsVC.h"
 
 @interface PassengerDetailsVC ()<UITextFieldDelegate,UITextViewDelegate>
@@ -26,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *commentTextView;
 @property (weak, nonatomic) IBOutlet UIButton *agreeButton;
 
+@property (nonatomic,assign) NSString *commentsTVPlaceholder;
+
 @end
 
 @implementation PassengerDetailsVC
@@ -33,7 +34,12 @@
 -(void)initView{
     [super initView];
     [self initialisation];
+    [self localization];
     [self settingTextViewPlaceholder];
+}
+
+-(void)localization{
+    self.commentsTVPlaceholder = NSLocalizedString(@"COMMENTSPLACE", @"Comments / Special Instructions");
 }
 
 -(void)initialisation{
@@ -110,7 +116,7 @@
 }
 
 -(void)settingTextViewPlaceholder{
-    self.commentTextView.text = CommentTVPlaceholder;
+    self.commentTextView.text = self.commentsTVPlaceholder;
     self.commentTextView.textColor = [UIColor lightGrayColor];
 }
 
@@ -142,23 +148,23 @@
     NSString *messageString = @"";
     if([self.firstNameTF.text empty]){
         isValid = NO;
-        messageString = @"Please enter first name";
+        messageString = NSLocalizedString(@"Please enter first name", @"Please enter first name");
     }
     else if([self.lastNameTF.text empty]){
         isValid = NO;
-        messageString = @"Please enter last name";
+        messageString = NSLocalizedString(@"Please enter last name", @"Please enter last name");
     }
     else if([self.emailTF.text empty]){
         isValid = NO;
-        messageString = @"Please enter email id";
+        messageString = NSLocalizedString(@"Please enter email id", @"Please enter email id");
     }
     else if(![self.emailTF.text validEmail]){
         isValid = NO;
-        messageString = @"Please enter valid email id";
+        messageString = NSLocalizedString(@"Please enter valid email id", @"Please enter valid email id");
     }
     else if([self.phoneTF.text empty]){
         isValid = NO;
-        messageString = @"Please enter phone number";
+        messageString = NSLocalizedString(@"Please enter phone number", @"Please enter phone number");
     }
     else if(![self.agreeButton isSelected]){
         isValid = NO;
@@ -175,7 +181,7 @@
 -(id)creatingJsonForPassengerDetails{
     NSMutableDictionary *passengerDetails = [[NSMutableDictionary alloc] init];
     [passengerDetails setValue:self.alternativePhoneTF.text forKey:@"phone2"];
-    if(![self.commentTextView.text isEqualToString:CommentTVPlaceholder])
+    if(![self.commentTextView.text isEqualToString:self.commentsTVPlaceholder])
         [passengerDetails setValue:self.commentTextView.text forKey:@"comments"];
     [passengerDetails setValue:self.emailTF.text forKey:@"email"];
     [passengerDetails setValue:self.firstNameTF.text forKey:@"first_name"];

@@ -6,3 +6,24 @@
   Copyright © 2018 lda. All rights reserved.
 */
 "TRIPTYPEHEADING" = "نوع الرحلة";
+"CLASSHEADING" = "صف دراسي";
+"DEPARTHEADING" = "تغادر";
+"FLEXIBILITYHEADING" = "المرونة";
+"RETURNHEADING" = "إرجاع";
+"PASSENGERSHEADING" = "ركاب";
+"BOOK" = "كتاب";
+
+"ADD" = "أضف";
+"REMOVE" = "إزالة";
+"FROM" = "من عند";
+"TO" = "إلى";
+
+"COMMENTSPLACE" = "تعليقات / تعليمات خاصة";
+
+/*Validation Messages*/
+
+"Please enter first name" = "يرجى إدخال الاسم الأول";
+"Please enter last name" = "يرجى إدخال الاسم الأخير";
+"Please enter email id" = "الرجاء إدخال معرف البريد الإلكتروني";
+"Please enter valid email id" = "الرجاء إدخال معرف البريد الإلكتروني الصحيح";
+"Please enter phone number" = "يرجى إدخال رقم الهاتف";

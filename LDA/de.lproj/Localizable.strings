@@ -6,3 +6,24 @@
   Copyright © 2018 lda. All rights reserved.
 */
 "TRIPTYPEHEADING" = "Reiseart";
+"CLASSHEADING" = "KLASSE";
+"DEPARTHEADING" = "ABFAHREN";
+"FLEXIBILITYHEADING" = "FLEXIBILITÄT";
+"RETURNHEADING" = "RÜCKKEHR";
+"PASSENGERSHEADING" = "PASSAGIERE";
+"BOOK" = "BUCH";
+
+"ADD" = "HINZUFÜGEN";
+"REMOVE" = "LÖSCHEN";
+"FROM" = "VON";
+"TO" = "ZU";
+
+"COMMENTSPLACE" = "Kommentare / Besondere Anweisungen";
+
+/*Validation Messages*/
+
+"Please enter first name" = "Bitte geben Sie den Vornamen ein";
+"Please enter last name" = "Bitte geben Sie den Nachnamen ein";
+"Please enter email id" = "Bitte geben Sie die E-Mail-ID ein";
+"Please enter valid email id" = "Bitte geben Sie eine gültige E-Mail-ID ein";
+"Please enter phone number" = "Bitte geben Sie die Telefonnummer ein";

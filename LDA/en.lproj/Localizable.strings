@@ -7,3 +7,24 @@
 */
 
 "TRIPTYPEHEADING" = "TRIP TYPE";
+"CLASSHEADING" = "CLASS";
+"DEPARTHEADING" = "DEPART";
+"FLEXIBILITYHEADING" = "FLEXIBILITY";
+"RETURNHEADING" = "RETURN";
+"PASSENGERSHEADING" = "PASSENGERS";
+"BOOK" = "BOOK";
+
+"ADD" = "ADD";
+"REMOVE" = "REMOVE";
+"FROM" = "FROM";
+"TO" = "TO";
+
+"COMMENTSPLACE" = "Comments / Special Instructions";
+
+/*Validation Messages*/
+
+"Please enter first name" = "Please enter first name";
+"Please enter last name" = "Please enter last name";
+"Please enter email id" = "Please enter email id";
+"Please enter valid email id" = "Please enter valid email id";
+"Please enter phone number" = "Please enter phone number";

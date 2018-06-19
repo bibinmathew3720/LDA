@@ -6,3 +6,24 @@
   Copyright © 2018 lda. All rights reserved.
 */
 "TRIPTYPEHEADING" = "旅行类型";
+"CLASSHEADING" = "类";
+"DEPARTHEADING" = "离开";
+"FLEXIBILITYHEADING" = "灵活性";
+"RETURNHEADING" = "返回";
+"PASSENGERSHEADING" = "乘客";
+"BOOK" = "书";
+
+"ADD" = "加";
+"REMOVE" = "去掉";
+"FROM" = "从";
+"TO" = "至";
+
+"COMMENTSPLACE" = "评论/特别说明";
+
+/*Validation Messages*/
+
+"Please enter first name" = "请输入名字";
+"Please enter last name" = "请输入姓氏";
+"Please enter email id" = "请输入电子邮件ID";
+"Please enter valid email id" = "请输入有效的电子邮件ID";
+"Please enter phone number" = "请输入电话号码";

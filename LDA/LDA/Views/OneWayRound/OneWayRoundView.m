@@ -9,6 +9,13 @@
 #import "OneWayRoundView.h"
 @interface OneWayRoundView()
 @property (weak, nonatomic) IBOutlet UILabel *tripTypeHeadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *classHeadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *departHeadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *flexibilityHeadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *returnHeadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *returnFlexibilityHeadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *passengersHeadingLabel;
+@property (weak, nonatomic) IBOutlet UIButton *bookButton;
 @end
 @implementation OneWayRoundView
 
@@ -22,11 +29,18 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
-    [self initialisation];
+    [self localization];
 }
 
--(void)initialisation{
-    self.tripTypeHeadingLabel.text = NSLocalizedString(@"TRIPTYPEHEADING", @"TRIP TYPE");
+-(void)localization{
+   self.tripTypeHeadingLabel.text = NSLocalizedString(@"TRIPTYPEHEADING", @"TRIP TYPE");
+    self.classHeadingLabel.text = NSLocalizedString(@"CLASSHEADING", @"CLASS");
+    self.departHeadingLabel.text = NSLocalizedString(@"DEPARTHEADING", @"DEPART");
+    self.flexibilityHeadingLabel.text = NSLocalizedString(@"FLEXIBILITYHEADING", @"FLEXIBILITY");
+    self.returnHeadingLabel.text = NSLocalizedString(@"RETURNHEADING", @"RETURN");
+     self.returnFlexibilityLabel.text = NSLocalizedString(@"FLEXIBILITYHEADING", @"FLEXIBILITY");
+    self.passengersHeadingLabel.text = NSLocalizedString(@"PASSENGERSHEADING", @"PASSENGERS");
+    [self.bookButton setTitle:NSLocalizedString(@"BOOK", @"BOOK") forState:UIControlStateNormal];
 }
 
 - (IBAction)fromButtonAction:(UIButton *)sender {

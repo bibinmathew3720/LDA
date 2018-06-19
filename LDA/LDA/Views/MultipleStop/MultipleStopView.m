@@ -12,14 +12,28 @@
 #import "MultipleStopTVC.h"
 @interface MultipleStopView()<MultipleStopTVCDelegate>
 @property (nonatomic, strong) NSArray *currentTripArray;
+
+@property (weak, nonatomic) IBOutlet UILabel *classheadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *passengersHeadingLabel;
+@property (weak, nonatomic) IBOutlet UIButton *bookButton;
+
 @end
 @implementation MultipleStopView
 
 -(void)awakeFromNib{
     [super awakeFromNib];
+    [self localization];
     self.multipleStopTableView.dataSource = self;
     self.multipleStopTableView.delegate = self;
      [self.multipleStopTableView registerNib:[UINib nibWithNibName:@"MultipleStopTVC" bundle:nil] forCellReuseIdentifier:@"multipleStopTVC"];
+}
+
+-(void)localization{
+   self.classheadingLabel.text = NSLocalizedString(@"CLASSHEADING", @"CLASS");
+    self.passengersHeadingLabel.text = NSLocalizedString(@"PASSENGERSHEADING", @"PASSENGERS");
+    [self.bookButton setTitle:NSLocalizedString(@"BOOK", @"BOOK") forState:UIControlStateNormal];
+    [self.addButton setTitle:NSLocalizedString(@"ADD", @"ADD") forState:UIControlStateNormal];
+     [self.removeButton setTitle:NSLocalizedString(@"REMOVE", @"REMOVE") forState:UIControlStateNormal];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

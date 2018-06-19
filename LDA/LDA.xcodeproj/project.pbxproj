@@ -80,15 +80,8 @@
 		D0002E3E20D82D0600460168 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D0002E3F20D82D0700460168 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = ../de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0002E4020D82D0800460168 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ../ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D0002E4220D8307A00460168 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OneWayRoundView.xib; sourceTree = "<group>"; };
 		D0002E5020D8318900460168 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = ../es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0002E5120D831E300460168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = ../Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D0002E5320D8331700460168 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/OneWayRoundView.xib; sourceTree = "<group>"; };
-		D0002E5420D8331800460168 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ar; path = ar.lproj/OneWayRoundView.xib; sourceTree = "<group>"; };
-		D0002E5520D8331800460168 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/OneWayRoundView.xib"; sourceTree = "<group>"; };
-		D0002E5620D8331800460168 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/OneWayRoundView.xib; sourceTree = "<group>"; };
-		D0002E5720D8331800460168 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/OneWayRoundView.xib; sourceTree = "<group>"; };
-		D0002E5820D8331900460168 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/OneWayRoundView.xib; sourceTree = "<group>"; };
 		D00355A020C76B6900674FEB /* MultipleStopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleStopView.xib; sourceTree = "<group>"; };
 		D00355A220C76B8400674FEB /* MultipleStopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleStopView.h; sourceTree = "<group>"; };
 		D00355A320C76B8400674FEB /* MultipleStopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleStopView.m; sourceTree = "<group>"; };
@@ -156,6 +149,7 @@
 		D0F10F1C20C929950095E68D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		D0F10F2720C92B110095E68D /* WebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewVC.h; sourceTree = "<group>"; };
 		D0F10F2820C92B110095E68D /* WebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewVC.m; sourceTree = "<group>"; };
+		D0FCD31D20D8B3E700AA0D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OneWayRoundView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -626,13 +620,7 @@
 		D0002E4320D8307A00460168 /* OneWayRoundView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D0002E4220D8307A00460168 /* en */,
-				D0002E5320D8331700460168 /* fr */,
-				D0002E5420D8331800460168 /* ar */,
-				D0002E5520D8331800460168 /* zh-Hans */,
-				D0002E5620D8331800460168 /* de */,
-				D0002E5720D8331800460168 /* ru */,
-				D0002E5820D8331900460168 /* es */,
+				D0FCD31D20D8B3E700AA0D90 /* Base */,
 			);
 			name = OneWayRoundView.xib;
 			sourceTree = "<group>";

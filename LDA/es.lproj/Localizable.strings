@@ -7,3 +7,24 @@
 */
 
 "TRIPTYPEHEADING" = "TRIP TYPE";
+"CLASSHEADING" = "CLASE";
+"DEPARTHEADING" = "SALIR";
+"FLEXIBILITYHEADING" = "FLEXIBILIDAD";
+"RETURNHEADING" = "REGRESO";
+"PASSENGERSHEADING" = "PASAJEROS";
+"BOOK" = "LIBRO";
+
+"ADD" = "AÑADIR";
+"REMOVE" = "RETIRAR";
+"FROM" = "DE";
+"TO" = "A";
+
+"COMMENTSPLACE" = "Comentarios / Instrucciones especiales";
+
+/*Validation Messages*/
+
+"Please enter first name" = "Por favor ingrese su nombre";
+"Please enter last name" = "Por favor ingrese el apellido";
+"Please enter email id" = "Por favor ingrese la identificación del correo";
+"Please enter valid email id" = "Por favor ingrese una identificación válida de correo electrónico";
+"Please enter phone number" = "Por favor ingrese el número de teléfono";

@@ -6,3 +6,24 @@
   Copyright © 2018 lda. All rights reserved.
 */
 "TRIPTYPEHEADING" = "TYPE DE VOYAGE";
+"CLASSHEADING" = "CLASSE";
+"DEPARTHEADING" = "PARTIR";
+"FLEXIBILITYHEADING" = "LA FLEXIBILITÉ";
+"RETURNHEADING" = "REVENIR";
+"PASSENGERSHEADING" = "PASSAGERS";
+"BOOK" = "LIVRE";
+
+"ADD" = "AJOUTER";
+"REMOVE" = "RETIRER";
+"FROM" = "DE";
+"TO" = "À";
+
+"COMMENTSPLACE" = "Commentaires / Instructions spéciales";
+
+/*Validation Messages*/
+
+"Please enter first name" = "S'il vous plaît entrer le prénom";
+"Please enter last name" = "Veuillez entrer le nom de famille";
+"Please enter email id" = "Veuillez entrer votre identifiant email";
+"Please enter valid email id" = "Veuillez entrer un identifiant email valide";
+"Please enter phone number" = "S'il vous plaît entrer le numéro de téléphone";

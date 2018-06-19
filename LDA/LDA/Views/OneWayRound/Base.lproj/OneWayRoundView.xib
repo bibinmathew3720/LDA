@@ -741,20 +741,27 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="bookButton" destination="aKK-TK-cqK" id="S1d-ik-Eii"/>
+                <outlet property="classHeadingLabel" destination="GBf-fI-eo5" id="yhS-Ks-VeS"/>
                 <outlet property="classLabel" destination="3Qs-14-TJz" id="VOx-sh-N4W"/>
                 <outlet property="classTF" destination="X90-8a-3aG" id="JVP-Oy-pEb"/>
                 <outlet property="departDateLabel" destination="A7e-yV-y4j" id="xyL-R6-AfM"/>
+                <outlet property="departHeadingLabel" destination="uGL-VL-TkY" id="1Oe-vh-SVa"/>
                 <outlet property="departTF" destination="3Fk-m4-tT8" id="HCL-SO-gqP"/>
+                <outlet property="flexibilityHeadingLabel" destination="Yxe-CI-e5O" id="arn-c5-eRu"/>
                 <outlet property="flexibilityLabel" destination="3Ef-jI-jpp" id="dbg-nz-mho"/>
                 <outlet property="flexibilityTF" destination="YtD-qc-Wep" id="bs6-og-pmv"/>
                 <outlet property="fromCodeLabel" destination="n53-8e-PYk" id="M8t-g4-BeY"/>
                 <outlet property="fromPlaceLabel" destination="R7e-8x-vqv" id="XrE-Yv-jw3"/>
+                <outlet property="passengersHeadingLabel" destination="eyi-tz-A1m" id="fw5-w5-uZL"/>
                 <outlet property="passengersLabel" destination="TaM-ye-NCK" id="v64-fP-OfH"/>
                 <outlet property="passengersTF" destination="nqF-Io-weA" id="z9a-KN-X65"/>
                 <outlet property="returnDateLabel" destination="ddX-nM-D3w" id="ckf-F7-Ilh"/>
+                <outlet property="returnFlexibilityHeadingLabel" destination="DtR-oM-3ln" id="sXj-9N-ZAD"/>
                 <outlet property="returnFlexibilityLabel" destination="FLw-dj-mrB" id="nQD-fB-zdE"/>
                 <outlet property="returnFlexibilityTF" destination="EA7-Gb-8Jh" id="YzC-M9-0E8"/>
                 <outlet property="returnFlexibilityView" destination="3cW-Cs-UEM" id="idx-pX-WaV"/>
+                <outlet property="returnHeadingLabel" destination="Gn8-Xy-8Eh" id="q67-gQ-KH8"/>
                 <outlet property="returnTF" destination="ULK-7n-m0I" id="Hcr-l2-vVz"/>
                 <outlet property="returnTypeTopConstraint" destination="F2A-IC-jmu" id="57O-45-9Ib"/>
                 <outlet property="returnView" destination="uTc-II-lGP" id="lrG-sW-A3b"/>
