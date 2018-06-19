@@ -8,12 +8,21 @@
 
 #import "Constants.h"
 #import "MultipleStopTVC.h"
-
+@interface MultipleStopTVC()
+@property (weak, nonatomic) IBOutlet UILabel *dateHeadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *flexibilityHeadingLabel;
+@end
 @implementation MultipleStopTVC
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    [self localization];
+}
+
+-(void)localization{
+    self.dateHeadingLabel.text = NSLocalizedString(@"DEPARTHEADING", @"DEPART");
+    self.flexibilityHeadingLabel.text = NSLocalizedString(@"FLEXIBILITYHEADING", @"FLEXIBILITY");
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

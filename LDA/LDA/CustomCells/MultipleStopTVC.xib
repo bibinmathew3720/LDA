@@ -248,8 +248,9 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
-                <outlet property="dateLabel" destination="eTD-wn-Qt8" id="LT3-5h-KaC"/>
+                <outlet property="dateHeadingLabel" destination="hfR-u1-9Zc" id="Hlt-I6-jhm"/>
                 <outlet property="dateTextField" destination="bNk-N0-SFj" id="ChV-X1-lO1"/>
+                <outlet property="flexibilityHeadingLabel" destination="eOn-uk-f8i" id="fhp-eI-cs8"/>
                 <outlet property="flexibilityLabel" destination="agY-Jb-fS8" id="03W-cM-wUM"/>
                 <outlet property="fromButton" destination="won-fp-PWE" id="ROI-rC-HYT"/>
                 <outlet property="fromCodeLabel" destination="hwC-dR-G0A" id="Rey-Y7-Hhn"/>
