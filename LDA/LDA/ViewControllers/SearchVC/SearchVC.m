@@ -28,10 +28,10 @@
 -(void)initilisation{
      self.title = @"Search";
     if(self.searchType == searchTypeFrom){
-        self.searchBar.placeholder = @"From where?";
+        self.searchBar.placeholder = NSLocalizedString(@"From where?", @"From where?");
     }
     else{
-        self.searchBar.placeholder = @"To where?";
+        self.searchBar.placeholder = NSLocalizedString(@"To where?", @"To where?");
     }
 }
 

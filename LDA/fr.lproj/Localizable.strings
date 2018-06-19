@@ -46,3 +46,8 @@
 "Please enter valid Source and Destination" = "Veuillez entrer une source et une destination valides";
 
 "Language changes will take effect after restarting the application" = "Les changements de langue prendront effet après le redémarrage de l'application";
+
+/*Search*/
+
+"From where?" = "D'où?";
+"To where?" = "Jusqu'où?";

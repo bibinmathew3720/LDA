@@ -47,3 +47,8 @@
 "Please enter valid Source and Destination" = "请输入有效的来源和目的地";
 
 "Language changes will take effect after restarting the application" = "语言更改将在重新启动应用程序后生效";
+
+/*Search*/
+
+"From where?" = "来自哪里？";
+"To where?" = "去哪里？";

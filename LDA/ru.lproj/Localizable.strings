@@ -47,3 +47,8 @@
 "Please enter valid Source and Destination" = "Укажите действительный источник и местонахождение";
 
 "Language changes will take effect after restarting the application" = "Изменения языка вступят в силу после перезапуска приложения";
+
+/*Search*/
+
+"From where?" = "Откуда?";
+"To where?" = "Куда?";
