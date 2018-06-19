@@ -73,7 +73,11 @@
                             </scrollView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ar7-uc-ngM">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.2956271701388889" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.3983425564236111" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DXU-kw-KHa" appends="YES" id="5ys-0f-ny6"/>
+                                </connections>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tm6-Q7-cK7">
                                 <rect key="frame" x="175" y="64" width="200" height="350"/>
@@ -191,6 +195,11 @@
                         <action selector="datePickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="HIV-J2-GTX"/>
                     </connections>
                 </datePicker>
+                <tapGestureRecognizer id="DXU-kw-KHa">
+                    <connections>
+                        <action selector="languageTapGestureAction:" destination="BYZ-38-t0r" id="Q8F-me-R2A"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1424.8" y="-580.65967016491754"/>
         </scene>

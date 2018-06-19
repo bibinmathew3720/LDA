@@ -588,8 +588,27 @@ typedef enum{
 //For Localization List View
 
 - (IBAction)languageButtonAction:(UIBarButtonItem *)sender {
-    self.languageGradientView.hidden = !self.languageGradientView.isHidden;
-    self.languageView.hidden = !self.languageView.isHidden;
+    [self closingOrOpeningLanguageView];
+}
+- (IBAction)languageTapGestureAction:(UITapGestureRecognizer *)sender {
+     [self closingOrOpeningLanguageView];
+}
+
+-(void)closingOrOpeningLanguageView{
+    [UIView transitionWithView:self.languageView
+                      duration:0.3
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{
+                        self.languageView.hidden = !self.languageView.isHidden;
+                    }
+                    completion:NULL];
+    [UIView transitionWithView:self.languageGradientView
+                      duration:0.3
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{
+                        self.languageGradientView.hidden = !self.languageGradientView.isHidden;
+                    }
+                    completion:NULL];
 }
 
 #pragma mark - UITable View Datasources
