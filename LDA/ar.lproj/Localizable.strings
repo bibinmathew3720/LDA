@@ -6,31 +6,33 @@
   Copyright © 2018 lda. All rights reserved.
 */
 
+"Home" = "الرئيسية";
+
 //Trip Type
 
-"One Way" = "اتجاه واحد";
+"One Way" = "أحادي الاتجاه";
 "Return" = "إرجاع";
 
 //Trip Classes
 
-"Economy" = "اقتصاد";
-"Business" = "اعمال";
-"First Class" = "الصف الأول";
-"Premium Economy" = "اقتصاد مميز";
+"Economy" = "درجة سياحية";
+"Business" = "درجة رجال الاعمال";
+"First Class" = "درجة أولي";
+"Premium Economy" = "درجة سياحية معززة";
 
 "Total" = "مجموع";
 "TRIPTYPEHEADING" = "نوع الرحلة";
-"CLASSHEADING" = "صف دراسي";
+"CLASSHEADING" = "الدرجة";
 "DEPARTHEADING" = "تغادر";
 "FLEXIBILITYHEADING" = "المرونة";
-"RETURNHEADING" = "إرجاع";
+"RETURNHEADING" = "عودة";
 "PASSENGERSHEADING" = "ركاب";
 "BOOK" = "كتاب";
 
 "ADD" = "أضف";
 "REMOVE" = "إزالة";
-"FROM" = "من عند";
-"TO" = "إلى";
+"FROM" = "من";
+"TO" = "إلي";
 
 "COMMENTSPLACE" = "تعليقات / تعليمات خاصة";
 

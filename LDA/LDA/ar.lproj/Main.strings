@@ -6,10 +6,10 @@
 "4q0-VV-G1z.placeholder" = "البريد الإلكتروني";
 
 /* Class = "UISegmentedControl"; A6e-sV-tkY.segmentTitles[0] = "One-way/Round"; ObjectID = "A6e-sV-tkY"; */
-"A6e-sV-tkY.segmentTitles[0]" = "في اتجاه واحد / جولة";
+"A6e-sV-tkY.segmentTitles[0]" = "في اتجاه واحد/أحادي الاتجاه";
 
 /* Class = "UISegmentedControl"; A6e-sV-tkY.segmentTitles[1] = "MultipleStop"; ObjectID = "A6e-sV-tkY"; */
-"A6e-sV-tkY.segmentTitles[1]" = "توقف متعددة";
+"A6e-sV-tkY.segmentTitles[1]" = "توقف متعدد";
 
 /* Class = "UITextField"; placeholder = "Alternative Phone"; ObjectID = "Bd3-Yz-8XA"; */
 "Bd3-Yz-8XA.placeholder" = "هاتف بديل";

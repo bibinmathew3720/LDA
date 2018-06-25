@@ -84,7 +84,7 @@ typedef enum{
 }
 
 -(void)initialisation{
-    self.title = @"Home";
+    self.title = NSLocalizedString(@"Home", @"Home");
     //Type Initialisation
     self.tripTypeArray = [NSArray arrayWithObjects:NSLocalizedString(@"One Way", @"One Way"),NSLocalizedString(@"Return", @"Return"), nil];
     self.englishTripTypeArray = [NSArray arrayWithObjects:@"One Way",@"Return", nil];
