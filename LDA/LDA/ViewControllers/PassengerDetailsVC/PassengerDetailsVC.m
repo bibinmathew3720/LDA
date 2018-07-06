@@ -187,6 +187,7 @@
     [passengerDetails setValue:self.firstNameTF.text forKey:@"first_name"];
     [passengerDetails setValue:self.lastNameTF.text forKey:@"last_name"];
     [passengerDetails setValue:self.phoneTF.text forKey:@"phone1"];
+    [passengerDetails setValue:self.preferredFlightTF.text forKey:@"pref"];
     [passengerDetails setValue:[NSNumber numberWithBool:YES] forKey:@"terms"];
     return passengerDetails;
 }
