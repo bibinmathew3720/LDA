@@ -58,3 +58,6 @@
 
 "Success" = "Erfolg";
 "SubmissionSuccessMessage" = "Ihre Fluganfrage wurde erfolgreich übermittelt. Der Agent wird sich mit Ihnen in Verbindung setzen, um die Optionen mit Ihnen zu besprechen. Dankbar.";
+"Failed" = "Gescheitert";
+"SubmissionFailedMessage" = "Fehler beim Senden der Anfrage";
+"NetworkNotAvail" = "Netzwerk nicht verfügbar";

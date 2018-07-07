@@ -59,3 +59,6 @@
 
 "Success" = "Éxito";
 "SubmissionSuccessMessage" = "Su solicitud de vuelo se ha enviado correctamente. El agente se comunicará con usted para analizar las opciones con usted. Con agradecimiento.";
+"Failed" = "Ha fallado";
+"SubmissionFailedMessage" = "Error al enviar la solicitud";
+"NetworkNotAvail" = "Red no disponible";

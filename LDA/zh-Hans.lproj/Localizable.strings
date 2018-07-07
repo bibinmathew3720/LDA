@@ -59,3 +59,6 @@
 
 "Success" = "成功";
 "SubmissionSuccessMessage" = "您的航班请求已成功提交。代理商将与您联系，与您讨论选项。感激。";
+"Failed" = "失败";
+"SubmissionFailedMessage" = "无法发送请求";
+"NetworkNotAvail" = "网络不可用";

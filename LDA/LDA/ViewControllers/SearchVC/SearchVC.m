@@ -64,10 +64,10 @@
         NSInteger errorCode = (long)error.code;
         NSString *errorMessage = @"";
         if(errorCode == 1024){
-            [self showAlertWithTitle:APPNAME Message:NetworkUnavailableMessage WithCompletion:nil];
+            [self showAlertWithTitle:NSLocalizedString(@"Failed", @"Failed") Message:NSLocalizedString(@"NetworkNotAvail", @"Network not available") WithCompletion:nil];
         }
         else{
-             [self showAlertWithTitle:APPNAME Message:ConnectionTioServerFailedMessage WithCompletion:nil];
+             [self showAlertWithTitle:NSLocalizedString(@"Failed", @"Failed") Message:NSLocalizedString(@"SubmissionFailedMessage", @"SubmissionFailedMessage") WithCompletion:nil];
         }
     }];
 }

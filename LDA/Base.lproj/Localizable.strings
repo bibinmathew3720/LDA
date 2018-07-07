@@ -60,3 +60,6 @@
 
 "Success" = "Success";
 "SubmissionSuccessMessage" = "Your flight request has been successfully submitted. The agent will contact you to discuss the options with you. Gratefully.";
+"Failed" = "Failed";
+"SubmissionFailedMessage" = "Failed to send request";
+"NetworkNotAvail" = "Network not available";

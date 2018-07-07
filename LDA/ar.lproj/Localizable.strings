@@ -81,3 +81,6 @@
 
 "Success" = "نجاح";
 "SubmissionSuccessMessage" = "تم تقديم طلب رحلتك بنجاح . سيتواصل معك الوكيل لمناقشة الخيارات معك. مع جزيل الشكر.";
+"Failed" = "فشل";
+"SubmissionFailedMessage" = "فشآسف!!! فشل إرسال طلبكل";
+"NetworkNotAvail" = "الشبكة غير متاحة";
