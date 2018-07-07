@@ -53,3 +53,8 @@
 "To where?" = "Wohin?";
 "Search" = "Suche";
 "SourceAndDestSame" = "Die Quelle und das Ziel können nicht identisch sein";
+
+/*Passenger Details*/
+
+"Success" = "Erfolg";
+"SubmissionSuccessMessage" = "Ihre Fluganfrage wurde erfolgreich übermittelt. Der Agent wird sich mit Ihnen in Verbindung setzen, um die Optionen mit Ihnen zu besprechen. Dankbar.";

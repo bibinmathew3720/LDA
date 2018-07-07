@@ -54,3 +54,8 @@
 "To where?" = "¿A donde?";
 "Search" = "Buscar";
 "SourceAndDestSame" = "La fuente y el destino no pueden ser iguales";
+
+/*Passenger Details*/
+
+"Success" = "Éxito";
+"SubmissionSuccessMessage" = "Su solicitud de vuelo se ha enviado correctamente. El agente se comunicará con usted para analizar las opciones con usted. Con agradecimiento.";

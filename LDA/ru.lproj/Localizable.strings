@@ -54,3 +54,8 @@
 "To where?" = "Куда?";
 "Search" = "Поиск";
 "SourceAndDestSame" = "Источник и назначение не могут быть alikerch";
+
+/*Passenger Details*/
+
+"Success" = "успех";
+"SubmissionSuccessMessage" = "Ваш запрос на рейс был успешно отправлен. Агент свяжется с вами, чтобы обсудить варианты с вами. Благодарно.";

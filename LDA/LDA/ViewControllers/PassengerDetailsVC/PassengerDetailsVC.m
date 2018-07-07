@@ -225,7 +225,7 @@
                 if(self.passengerDetailsDelegate && [self.passengerDetailsDelegate respondsToSelector:@selector(tripDetailsSubmittedDelegate)]){
                     [self.passengerDetailsDelegate tripDetailsSubmittedDelegate];
                 }
-                [self showAlertWithTitle:@"Success" Message:@"Your request successfully submitted. We'll contact soon." WithCompletion:^{
+                [self showAlertWithTitle:NSLocalizedString(@"Success", @"Success") Message:NSLocalizedString(@"SubmissionSuccessMessage", @"SubmissionSuccessMessage") WithCompletion:^{
                     [self.navigationController popViewControllerAnimated:YES];
                 }];
             }

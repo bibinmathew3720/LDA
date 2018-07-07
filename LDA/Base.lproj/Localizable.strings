@@ -55,3 +55,8 @@
 "To where?" = "To where?";
 "Search" = "Search";
 "SourceAndDestSame" = "The source and destination can not be alike";
+
+/*Passenger Details*/
+
+"Success" = "Success";
+"SubmissionSuccessMessage" = "Your flight request has been successfully submitted. The agent will contact you to discuss the options with you. Gratefully.";
