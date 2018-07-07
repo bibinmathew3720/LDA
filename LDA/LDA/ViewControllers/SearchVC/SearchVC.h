@@ -17,6 +17,8 @@ typedef enum {
 @interface SearchVC : BaseViewController
 @property (nonatomic, assign) id <SearchVCDelegate>searchDelegate;
 @property (nonatomic, assign) SearchType searchType;
+@property (nonatomic, strong) NSString *sourceCode;
+@property (nonatomic, strong) NSString *destCode;
 @end
 @protocol SearchVCDelegate<NSObject>
 -(void)selectedLocationWithDetails:(id)locationDetails withSearchType:(SearchType)searchType;

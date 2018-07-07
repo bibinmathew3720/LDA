@@ -52,3 +52,4 @@
 "From where?" = "Wovon?";
 "To where?" = "Wohin?";
 "Search" = "Suche";
+"SourceAndDestSame" = "Die Quelle und das Ziel können nicht identisch sein";

@@ -101,8 +101,33 @@
 //}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *codeString = [[self.airportArray objectAtIndex:indexPath.row] valueForKey:@"code"];
+    if (self.searchType == searchTypeFrom){
+        if([self.destCode isEqualToString:codeString]){
+            [self showAlertForSameSourceAndDestination];
+        }
+        else{
+            [self moveToHomePageWithLocationDetails:[self.airportArray objectAtIndex:indexPath.row]];
+        }
+    }
+    else if (self.searchType == searchTypeTo){
+        if([self.sourceCode isEqualToString:codeString]){
+            [self showAlertForSameSourceAndDestination];
+        }
+        else{
+            [self moveToHomePageWithLocationDetails:[self.airportArray objectAtIndex:indexPath.row]];
+        }
+    }
+}
+-(void)showAlertForSameSourceAndDestination{
+    [self showAlertWithTitle:NSLocalizedString(@"Warning", @"Warning") Message:NSLocalizedString(@"SourceAndDestSame", @"The source and destination can not be alike") WithCompletion:^{
+        
+    }];
+}
+
+-(void)moveToHomePageWithLocationDetails:(id)locationDetails{
     if(self.searchDelegate && [self.searchDelegate respondsToSelector:@selector(selectedLocationWithDetails:withSearchType:)]){
-        [self.searchDelegate selectedLocationWithDetails:[self.airportArray objectAtIndex:indexPath.row] withSearchType:self.searchType];
+        [self.searchDelegate selectedLocationWithDetails:locationDetails withSearchType:self.searchType];
     }
     [self.navigationController popViewControllerAnimated:YES];
 }

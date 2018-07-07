@@ -53,3 +53,4 @@
 "From where?" = "来自哪里？";
 "To where?" = "去哪里？";
 "Search" = "搜索";
+"SourceAndDestSame" = "源和目的地不可能相似";

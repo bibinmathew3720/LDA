@@ -53,3 +53,4 @@
 "From where?" = "Откуда?";
 "To where?" = "Куда?";
 "Search" = "Поиск";
+"SourceAndDestSame" = "Источник и назначение не могут быть alikerch";

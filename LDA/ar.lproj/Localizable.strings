@@ -55,6 +55,7 @@
 "From where?" = "من اين؟";
 "To where?" = "إلى أين؟";
 "Search" = "بحث";
+"SourceAndDestSame" = "لا يمكن أن يكون المصدر والوجهة متشابهين";
 
 /*Storyboard Word - Special for arabic */
 

@@ -68,6 +68,8 @@ typedef enum{
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
     
+
+    
 @end
 
 @implementation HomeViewController
@@ -466,6 +468,15 @@ typedef enum{
         }
         else{
             searchVC.searchType = searchTypeTo;
+        }
+        if(self.listType == OneWayRound){
+            searchVC.sourceCode = self.onewayRoundView.fromCodeLabel.text;
+            searchVC.destCode = self.onewayRoundView.toCodeLabel.text;
+        }
+        else if(self.listType == MultipleStop){
+            NSDictionary *dict = [self.tripArray objectAtIndex:self.multipleViewSelectedIndex];
+            searchVC.sourceCode = [dict valueForKey:FromCodeKey];
+            searchVC.destCode = [dict valueForKey:ToCodeKey];
         }
     }
     else if ([segue.identifier isEqualToString:@"homeToPassengerDetails"]){

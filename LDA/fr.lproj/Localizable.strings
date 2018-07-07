@@ -52,3 +52,4 @@
 "From where?" = "D'où?";
 "To where?" = "Jusqu'où?";
 "Search" = "Chercher";
+"SourceAndDestSame" = "La source et la destination ne peuvent pas être semblables";

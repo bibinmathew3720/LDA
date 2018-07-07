@@ -54,3 +54,4 @@
 "From where?" = "From where?";
 "To where?" = "To where?";
 "Search" = "Search";
+"SourceAndDestSame" = "The source and destination can not be alike";
