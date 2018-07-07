@@ -10,8 +10,8 @@
 
 //Trip Type
 
-"One Way" = "أحادي الاتجاه";
-"Return" = "إرجاع";
+"One Way" = "ذهاب فقط"
+"Return" = "عودة";
 
 //Trip Classes
 
@@ -23,13 +23,13 @@
 "Total" = "مجموع";
 "TRIPTYPEHEADING" = "نوع الرحلة";
 "CLASSHEADING" = "الدرجة";
-"DEPARTHEADING" = "تغادر";
+"DEPARTHEADING" = "غادر";
 "FLEXIBILITYHEADING" = "المرونة";
 "RETURNHEADING" = "عودة";
-"PASSENGERSHEADING" = "ركاب";
-"BOOK" = "كتاب";
+"PASSENGERSHEADING" = "عدد الاشخاص";
+"BOOK" = "التالي";
 
-"ADD" = "أضف";
+"ADD" = "إضافة";
 "REMOVE" = "إزالة";
 "FROM" = "من";
 "TO" = "إلي";
