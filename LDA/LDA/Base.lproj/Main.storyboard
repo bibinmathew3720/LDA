@@ -153,7 +153,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cancelButton" destination="1Dv-ur-7Ck" id="Mq4-Tb-IX2"/>
                         <outlet property="datePicker" destination="R6V-mC-uRF" id="kOX-9a-byt"/>
+                        <outlet property="doneButton" destination="feV-T9-Osa" id="dL6-sN-66G"/>
                         <outlet property="languageGradientView" destination="Ar7-uc-ngM" id="LU9-QI-Eea"/>
                         <outlet property="languageView" destination="Tm6-Q7-cK7" id="xeD-hN-OEA"/>
                         <outlet property="segmentControl" destination="A6e-sV-tkY" id="DLi-tP-6RH"/>

@@ -26,7 +26,7 @@
 }
 
 -(void)initilisation{
-     self.title = @"Search";
+    self.title = NSLocalizedString(@"Search", @"Search");
     if(self.searchType == searchTypeFrom){
         self.searchBar.placeholder = NSLocalizedString(@"From where?", @"From where?");
     }

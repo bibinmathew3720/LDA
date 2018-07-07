@@ -64,6 +64,10 @@ typedef enum{
 @property (nonatomic, strong) NSArray *multipleWayClassSelectedString;
 @property (nonatomic, strong) NSArray *englishClassArray;
 @property (nonatomic, strong) NSArray *englishTripTypeArray;
+    
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
+    
 @end
 
 @implementation HomeViewController
@@ -98,7 +102,16 @@ typedef enum{
     self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.hidesBackButton = YES;
     self.languagesArray = @[@"عربى",@"中文",@"English",@"français",@"Deutsche",@"русский",@"Español"];
-   
+    [self localization];
+}
+    
+-(void)localization{
+    if ([self isArabicLanguage]){
+        [self.segmentControl setTitle:NSLocalizedString(@"One-way/Round", @"One-way/Round") forSegmentAtIndex:0];
+        [self.segmentControl setTitle:NSLocalizedString(@"Multiple Stop", @"Multiple Stop") forSegmentAtIndex:1];
+        self.doneButton.title = NSLocalizedString(@"Done", @"Done");
+        self.cancelButton.title = NSLocalizedString(@"Cancel", @"Cancel");
+    }
 }
 
 -(void)initialisingTripDictionary{

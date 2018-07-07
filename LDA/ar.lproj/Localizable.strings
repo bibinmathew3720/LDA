@@ -54,8 +54,12 @@
 
 "From where?" = "من اين؟";
 "To where?" = "إلى أين؟";
+"Search" = "بحث";
 
 /*Storyboard Word - Special for arabic */
+
+//Passenger Details
+
 "First Name" = "الاسم الاول";
 "Last Name" = "الاسم الاخير";
 "Email" = "عنوان البريد الاليكتروني";
@@ -64,3 +68,11 @@
 "Preferred Flight" = "رحلة المفضلة";
 "Submit" = "التقديم";
 "UserAgreement" = "أوافق علي شروط تعاقد المستخدم";
+
+//Home
+
+"Multiple Stop" = "توقف متعددة";
+"One-way/Round" = "في اتجاه واحد / جولة";
+"Done" = "حسنا";
+"Cancel" = "إلغاء";
+
