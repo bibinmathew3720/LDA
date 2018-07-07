@@ -10,7 +10,7 @@
 
 //Trip Type
 
-"One Way" = "ذهاب فقط"
+"One Way" = "ذهاب فقط";
 "Return" = "عودة";
 
 //Trip Classes
@@ -40,11 +40,11 @@
 
 "OK" = "حسنا";
 "Warning" = "تحذير";
-"Please enter first name" = "يرجى إدخال الاسم الأول";
-"Please enter last name" = "يرجى إدخال الاسم الأخير";
+"Please enter first name" = "أدخل الاسم الأول";
+"Please enter last name" = "إدخال اسم آخر";
 "Please enter email id" = "الرجاء إدخال معرف البريد الإلكتروني";
-"Please enter valid email id" = "الرجاء إدخال معرف البريد الإلكتروني الصحيح";
-"Please enter phone number" = "يرجى إدخال رقم الهاتف";
+"Please enter valid email id" = "أدخل معرف بريد إلكتروني صالح";
+"Please enter phone number" = "أدخل رقم الهاتف";
 "Please accept Terms and Conditions" = "يرجى قبول الشروط والأحكام";
 "Please enter valid Source and Destination" = "الرجاء إدخال المصدر والوجهة الصحيحة";
 
