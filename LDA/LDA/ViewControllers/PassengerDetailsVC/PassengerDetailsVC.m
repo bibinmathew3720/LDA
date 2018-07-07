@@ -24,7 +24,9 @@
 @property (weak, nonatomic) IBOutlet UIView *commentView;
 @property (weak, nonatomic) IBOutlet UITextView *commentTextView;
 @property (weak, nonatomic) IBOutlet UIButton *agreeButton;
-
+@property (weak, nonatomic) IBOutlet UILabel *agreeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+    
 @property (nonatomic,assign) NSString *commentsTVPlaceholder;
 
 @end
@@ -40,6 +42,16 @@
 
 -(void)localization{
     self.commentsTVPlaceholder = NSLocalizedString(@"COMMENTSPLACE", @"Comments / Special Instructions");
+    if ([self isArabicLanguage]){
+        self.firstNameTF.placeholder = NSLocalizedString(@"First Name", @"First Name");
+        self.lastNameTF.placeholder = NSLocalizedString(@"Last Name", @"Last Name");
+        self.emailTF.placeholder = NSLocalizedString(@"Email", @"Email");
+        self.phoneTF.placeholder = NSLocalizedString(@"Phone", @"Phone");
+        self.alternativePhoneTF.placeholder = NSLocalizedString(@"Alternative Phone", @"Alternative Phone");
+        self.preferredFlightTF.placeholder = NSLocalizedString(@"Preferred Flight", @"Preferred Flight");
+        self.agreeLabel.text = NSLocalizedString(@"UserAgreement", @"UserAgreement");
+        [self.submitButton setTitle:NSLocalizedString(@"Submit", @"Submit") forState:UIControlStateNormal];
+    }
 }
 
 -(void)initialisation{

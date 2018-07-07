@@ -233,7 +233,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp0-Zp-tNb">
-                                                    <rect key="frame" x="5" y="12.5" width="365" height="18"/>
+                                                    <rect key="frame" x="5" y="13" width="365" height="18"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -631,6 +631,7 @@
                     </view>
                     <connections>
                         <outlet property="agreeButton" destination="FI6-X9-zAG" id="CAw-c7-u4R"/>
+                        <outlet property="agreeLabel" destination="tTY-7z-Bn5" id="9SF-Tw-UY3"/>
                         <outlet property="alternativePhoneTF" destination="Bd3-Yz-8XA" id="HEE-G5-lS3"/>
                         <outlet property="alternativePhoneView" destination="vai-UD-uZw" id="RFj-LG-HOi"/>
                         <outlet property="commentTextView" destination="N82-Hi-vSb" id="0DJ-PT-oXL"/>
@@ -645,6 +646,7 @@
                         <outlet property="phoneView" destination="Zn7-Af-KwZ" id="Knl-0R-joG"/>
                         <outlet property="preferredFlightTF" destination="qnS-u3-r0F" id="xr5-KJ-59W"/>
                         <outlet property="preferredFlightView" destination="5gn-XX-ZDV" id="rdc-GR-TIJ"/>
+                        <outlet property="submitButton" destination="s4q-ND-VdO" id="P7w-nt-Jh2"/>
                         <segue destination="XhW-vO-qK1" kind="show" identifier="passengerDetailsToWebView" id="Gjg-KW-fb1"/>
                     </connections>
                 </viewController>

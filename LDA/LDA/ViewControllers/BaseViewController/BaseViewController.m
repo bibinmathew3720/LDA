@@ -75,6 +75,16 @@
     NSDate *date = [dateFormat dateFromString:dateString];
     return date;
 }
+    
+-(BOOL)isArabicLanguage{
+    NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
+    NSArray* languages = [defs objectForKey:@"AppleLanguages"];
+    NSString *current = [languages objectAtIndex:0];
+    if([current isEqualToString:@"ar"]){
+        return YES;
+    }
+    return NO;
+}
 
 /*
 #pragma mark - Navigation

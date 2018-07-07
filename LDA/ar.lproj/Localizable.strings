@@ -54,3 +54,13 @@
 
 "From where?" = "من اين؟";
 "To where?" = "إلى أين؟";
+
+/*Storyboard Word - Special for arabic */
+"First Name" = "الاسم الاول";
+"Last Name" = "الاسم الاخير";
+"Email" = "عنوان البريد الاليكتروني";
+"Phone" = "هاتف";
+"Alternative Phone" = "هاتف بديل";
+"Preferred Flight" = "رحلة المفضلة";
+"Submit" = "التقديم";
+"UserAgreement" = "أوافق علي شروط تعاقد المستخدم";

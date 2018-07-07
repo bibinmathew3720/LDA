@@ -24,4 +24,5 @@
 -(void)showAlertWithTitle:(NSString *)titleString Message:(NSString *)alertMessage WithCompletion:(void(^)(void))okCompletion;
 - (NSString *)convertDate:(NSDate *)currentDate toFormatedString:(NSString *)formateString withTimeZone:(NSTimeZone *)timezone;
 -(NSDate *)convertStringToDate:(NSString *)dateString;
+-(BOOL)isArabicLanguage;
 @end
