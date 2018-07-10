@@ -72,8 +72,8 @@
 
 //Home
 
-"Multiple Stop" = "توقف متعددة";
-"One-way/Round" = "في اتجاه واحد / جولة";
+"Multiple Stop" = "متعدد الوجهات";
+"One-way/Round" = "ذهاب وإياب/ذهاب فقط";
 "Done" = "حسنا";
 "Cancel" = "إلغاء";
 
