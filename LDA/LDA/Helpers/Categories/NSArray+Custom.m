@@ -2,8 +2,8 @@
 //  NSArray+Custom.m
 //  Colgate
 //
-//  Created by Vaisakh krishnan on 05/11/12.
-//  Copyright (c) 2012 Pumex. All rights reserved.
+//  Created by "" "" on 05/11/12.
+//  Copyright (c) 2012 "". All rights reserved.
 //
 
 #import "NSArray+Custom.h"

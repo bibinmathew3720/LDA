@@ -2,8 +2,8 @@
 //  NSString+Extension.m
 //  PlatformMobile
 //
-//  Created by Vaisakh krishnan on 16/01/12.
-//  Copyright (c) 2012 Pumex All rights reserved.
+//  Created by "" "" on 16/01/12.
+//  Copyright (c) 2012 "" All rights reserved.
 //
 
 #import "NSString+Extension.h"

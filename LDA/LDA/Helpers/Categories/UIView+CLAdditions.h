@@ -2,8 +2,8 @@
 //  UIView+CLAdditions.h
 //  CLToolKit
 //
-//  Created by Vaisakh krishnan on 18 Aug, 2013
-//  Copyright (c) 2013 Pumex. All rights reserved.
+//  Created by "" "" on 18 Aug, 2013
+//  Copyright (c) 2013 "". All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -2,7 +2,7 @@
 //  ResponseHandler.h
 //  uQuote
 //
-//  Created by Vaisakh Krishnan on 29/12/15.
+//  Created by "" "" on 29/12/15.
 //  Copyright © 2015 AutoLink. All rights reserved.
 //
 
